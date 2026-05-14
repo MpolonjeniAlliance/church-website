@@ -214,7 +214,7 @@
     <div class="grid-2">
       <div class="service-card">
         <h3><i class="fas fa-eye" style="color:var(--church-red);"></i> OUR VISION</h3>
-        <p style="font-weight:700; margin-top:12px;">To be the preferred church in meeting people's needs Spiritually and physically.</p>
+        <p style="font-weight:700; margin-top:12px;">To be the preferred church in meeting people's needs Spiritually, physically, and mentally.</p>
         <ul style="margin-top:16px; list-style:none;">
           <li><i class="fas fa-star" style="color:var(--church-gold);"></i> ✨ Transforming lives through the Gospel of Jesus Christ, through love and practical care.</li>
           <li style="margin-top:12px;"><i class="fas fa-city"></i> Nehemiah had a vision to rebuild the walls of Jerusalem and was also able to unite the Nation. Leadership with a vision brings progress, unity and transformation.</li>
@@ -324,7 +324,7 @@
   AOS.init({ duration: 600, once: true });
   document.getElementById('dailyVerseContent').innerHTML = `<p>“The Lord is my strength and my shield; my heart trusts in Him, and He helps me.”<br/>— Psalm 28:7</p><div class="motivation-highlight"><i class="fas fa-lightbulb"></i> Daily Motivation: God's grace empowers you today. 2 Corinthians 12:9</div>`;
 
-  // FULL MASTER ACTIVITIES LIST (100+ events - same as original)
+  // FULL MASTER ACTIVITIES LIST (100+ events - complete)
   const masterEvents = [
     { title: "Youth Committee Meeting & Bible Study", date: "2026-05-03", desc: "Monthly youth planning.", group: "Youth" },
     { title: "Youth Camp - Kwaluseni (3 camped, 8 attended)", date: "2026-05-08", endDate: "2026-05-09", desc: "Spiritual growth camp.", group: "Youth" },
@@ -416,8 +416,11 @@
       if(!monthMap.has(key)) monthMap.set(key, { month: d.getMonth(), year: d.getFullYear(), events: [] });
       monthMap.get(key).events.push(ev);
     });
+    // Sort keys chronologically
+    const sortedKeys = Array.from(monthMap.keys()).sort((a,b)=>a.localeCompare(b));
     grid.innerHTML = '';
-    for(let [key, val] of monthMap.entries()) {
+    for(let key of sortedKeys) {
+      const val = monthMap.get(key);
       const monthName = new Date(val.year, val.month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
       const div = document.createElement('div');
       div.className = 'calendar-month';

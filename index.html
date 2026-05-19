@@ -142,14 +142,7 @@ body::before {
 .btn:hover { transform: translateY(-5px); filter: brightness(1.05); }
 .hero-image { position: relative; text-align: center; }
 .hero-image img { width: 100%; max-width: 650px; border-radius: none; box-shadow: none; border: none; }
-.image-caption {
-  margin-top: 12px;
-  font-size: 0.9rem;
-  color: var(--gold);
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
+/* Removed .image-caption - pastor name no longer displayed */
 .floating-box {
   position: absolute;
   background: rgba(30, 20, 25, 0.7);
@@ -498,15 +491,17 @@ body::before {
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
 .gallery-item img:hover { transform: scale(1.02); filter: brightness(1.05); }
 .partner-card-standalone {
-  background: rgba(255, 235, 220, 0.08);
+  background: linear-gradient(135deg, #0e2a3a, #1c4e6e); /* cold blue colors */
   backdrop-filter: blur(14px);
   border-radius: 40px;
   padding: 34px;
   margin: 30px 0;
-  border: 1px solid var(--light-red);
+  border: 1px solid #3b82f6;
+  color: #e0f2fe;
 }
+.partner-card-standalone h3, .partner-card-standalone p { color: #f0f9ff; }
 .bank-info {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 24px;
   padding: 20px;
   margin-bottom: 18px;
@@ -514,6 +509,7 @@ body::before {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  border: 1px solid #38bdf8;
 }
 .bank-logo { height: 46px; width: auto; object-fit: contain; border-radius: 12px; background: #fff; padding: 6px; }
 .map-card { background: rgba(30, 50, 60, 0.5); border-radius: 38px; padding: 28px; margin: 30px 0; backdrop-filter: blur(8px); border: 1px solid rgba(255, 123, 123, 0.35); }
@@ -536,7 +532,7 @@ footer {
 }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; margin-bottom: 50px; }
 .footer-grid h3 { font-size: 1.2rem; margin-bottom: 1rem; }
-.footer-grid h3:first-of-type { color: #ffaa66; } /* bright header */
+.footer-grid div:nth-child(1) h3 { color: #ffaa66; }
 .footer-grid div:nth-child(2) h3 { color: #66ccff; }
 .footer-grid div:nth-child(3) h3 { color: #90ee90; }
 .social-links a {
@@ -584,7 +580,6 @@ footer {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* group badges in activities list with distinct colors */
 .group-badge {
   display: inline-block;
   padding: 4px 12px;
@@ -598,6 +593,7 @@ footer {
 .group-badge.women { background: #ec489a; color: white; }
 .group-badge.church { background: #10b981; color: white; }
 .group-badge.default { background: #475569; color: white; }
+.gold-heading { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -636,7 +632,7 @@ footer {
     </div>
     <div class="hero-image">
       <img src="https://i.ibb.co/Vc0CZQ3B/0.jpg" alt="Church">
-      <div class="image-caption">Rev M. Dlamini - MPAC Pastor</div>
+      <!-- image-caption removed per user request -->
       <div class="floating-box float1"><i class="fas fa-heart"></i> Redemption</div>
       <div class="floating-box float2"><i class="fas fa-hands-praying"></i> Revival</div>
     </div>
@@ -667,7 +663,7 @@ footer {
   <div class="vision-mission-grid">
     <div class="vm-card">
       <h3><i class="fas fa-eye"></i> OUR VISION</h3>
-      <p style="font-weight:600; margin-bottom:16px;">To be the preferred church in meeting people's needs Spiritually and physically.</p>
+      <p style="font-weight:600; margin-bottom:16px;">To be the preferred church in meeting people's needs Spiritually, physically, and emotionally.</p>
       <ul>
         <li><i class="fas fa-star"></i> Transforming lives through the Gospel of Jesus Christ, through love and practical care.</li>
         <li><i class="fas fa-city"></i> Nehemiah had a vision to rebuild the walls of Jerusalem and was also able to unite the Nation. Leadership with a vision brings progress, unity and transformation.</li>
@@ -759,6 +755,7 @@ footer {
 
   <div id="prayer-section" class="accordion-section"><div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-praying-hands"></i> Prayer Requests</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div><p>Share your prayer request via WhatsApp. Our prayer team will stand with you.</p><div><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>Prayer Line:</strong> <a href="https://wa.me/26876130566" target="_blank" style="color:var(--light-red);">+268 7613 0566</a></div><form id="prayerForm"><input type="text" id="prayerName" placeholder="Your Name" style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,123,123,0.4); color:white; margin:10px 0;"><textarea id="prayerRequest" rows="3" placeholder="Prayer request..." style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,123,123,0.4); color:white;"></textarea><button type="submit" class="btn-primary" style="margin-top:10px;">Submit</button></form></div></div></div></div>
 
+  <!-- Partner card with cold colors -->
   <div class="partner-card-standalone" id="partner">
     <h3><i class="fas fa-handshake"></i> Partner With Us – Support Vision 2037</h3>
     <p style="margin-bottom:20px;">Your generous giving fuels our <strong>Vision 2037</strong> project: building a 1500‑seat sanctuary, and expands our social responsibility — feeding programs, counselling, community health outreaches, and support for vulnerable families.</p>
@@ -768,7 +765,7 @@ footer {
 
   <div id="calendar-section" class="accordion-section">
     <div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-alt"></i> Church Calendar 2026 (All Events)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div id="calendarGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;"></div></div></div>
-    <div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-list-ul"></i> Complete 2026 Activities (Full List)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><button id="toggleActivitiesBtn" class="btn-primary" style="margin-bottom:18px;">📅 SHOW ALL ACTIVITIES</button><div id="activitiesContainer" style="display:none;"><div id="activitiesGrid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px;"></div></div></div></div>
+    <div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-list-ul"></i> Complete 2026 Activities (Grouped by Ministry)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><button id="toggleActivitiesBtn" class="btn-primary" style="margin-bottom:18px;">📅 SHOW ALL ACTIVITIES</button><div id="activitiesContainer" style="display:none;"><div id="activitiesGrid"></div></div></div></div>
   </div>
 
   <div id="media-section" class="accordion-section">
@@ -778,7 +775,7 @@ footer {
     </div></div>
   </div>
 
-  <!-- UPDATED VISION 2037 SECTION (Fully preserved) -->
+  <!-- VISION 2037 SECTION -->
   <div id="vision-section" class="accordion-section">
     <div class="accordion" id="accordion-vision"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-eye"></i> VISION 2037: Building a Legacy</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="vision2037">
       <h3 style="color:var(--gold); font-size:2rem;">VISION 2037</h3>
@@ -804,7 +801,7 @@ footer {
       </div>
 
       <div style="background:rgba(0,0,0,0.3); border-radius:24px; padding:24px; margin-top:20px;">
-        <h4><i class="fas fa-expand-alt"></i> Church Auditorium Extension Project</h4>
+        <h4 class="gold-heading"><i class="fas fa-expand-alt"></i> Church Auditorium Extension Project</h4>
         <p>We are expanding our current sanctuary to accommodate more worshippers, with enhanced facilities for children's ministry, youth programs, and community gatherings. In the short term, we are focusing on building classrooms and a kitchen, while the larger auditorium project will unfold progressively with an expected completion by 2037.</p>
         <div class="expansion-grid">
           <div class="capacity-card"><div class="capacity-number">400</div><div>Current Capacity<br><span style="font-size:0.9rem;">Existing sanctuary seating</span></div></div>
@@ -852,14 +849,14 @@ footer {
 
 <footer>
   <div class="footer-grid">
-    <div><h3 style="color:#ffaa66;">Mpolonjeni Alliance Church</h3><p>Transforming lives through grace and power.</p><div class="social-links">
+    <div><h3>Mpolonjeni Alliance Church</h3><p>Transforming lives through grace and power.</p><div class="social-links">
       <a href="https://www.facebook.com/profile.php?id=100083095013067" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.tiktok.com/search?q=mpolonjeni%20alliance%20church" target="_blank"><i class="fab fa-tiktok"></i></a>
       <a href="https://www.instagram.com/mpolonjeni_alliance_church/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://wa.me/26876130566" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div></div>
-    <div><h3 style="color:#66ccff;">Service Times</h3><p>Sun 11:00 AM</p><p>Wed 6:00 PM</p><p>Tue (Women) 1:00 PM</p></div>
-    <div><h3 style="color:#90ee90;">Giving</h3><p>NedBank: 020000025799 (Mbabane)</p><p>MTN MoMo: 78116629</p></div>
+    <div><h3>Service Times</h3><p>Sun 11:00 AM</p><p>Wed 6:00 PM</p><p>Tue (Women) 1:00 PM</p></div>
+    <div><h3>Giving</h3><p>NedBank: 020000025799 (Mbabane)</p><p>MTN MoMo: 78116629</p></div>
   </div>
   <p style="text-align:center; margin-top:40px; color:#bbaa99;">© 2026 Mpolonjeni Alliance Church — Light Red Theme · Revival & Grace</p>
 </footer>
@@ -881,7 +878,7 @@ document.getElementById('dailyMotivation').innerHTML = `<i class="fas fa-lightbu
 window.addEventListener('load', () => { if(!window.location.hash) window.scrollTo(0,0); });
 AOS.init({ duration: 800, once: true });
 
-// MASTER EVENTS (full set, grouped by ministry)
+// MASTER EVENTS (full set)
 const masterEvents = [
   {title:"Youth Committee Meeting & Bible Study", date:"2026-05-03", group:"Youth"},{title:"Youth Camp - Kwaluseni", date:"2026-05-08", group:"Youth"},{title:"Sigungu (Social Engagement)", date:"2026-05-10", group:"Youth"},{title:"Team Building & Discipleship", date:"2026-05-16", group:"Youth"},{title:"Sigungu Service (LCB)", date:"2026-05-17", group:"Youth"},{title:"Discipleship & Praise Team Practice", date:"2026-05-23", group:"Youth"},{title:"Baptism Service", date:"2026-05-24", group:"Church"},{title:"Month End Half Night & Fasting", date:"2026-05-29", group:"Prayer"},{title:"Discipleship & Practice", date:"2026-05-30", group:"Youth"},{title:"Youth Revivals + Youth Sunday", date:"2026-06-05", group:"Youth"},{title:"Discipleship Session", date:"2026-06-13", group:"Youth"},{title:"Lisango and Luguma", date:"2026-06-14", group:"Church"},{title:"Men's Weekend / Sports Day", date:"2026-06-19", group:"Men"},{title:"Month End Friday Prayer & Fasting", date:"2026-06-26", group:"Prayer"},{title:"Birthdays Celebration", date:"2026-06-27", group:"Fellowship"},{title:"Sigungu Service", date:"2026-06-28", group:"Youth"},{title:"Discipleship Training", date:"2026-07-04", group:"Youth"},{title:"Bible Study (Churchwide)", date:"2026-07-05", group:"Church"},{title:"Youth Empowerment", date:"2026-07-11", group:"Youth"},{title:"Team Building", date:"2026-07-18", group:"Youth"},{title:"Sigungu Service", date:"2026-07-19", group:"Youth"},{title:"Sports Day", date:"2026-07-25", group:"Youth"},{title:"Sigungu - Pastoral Team", date:"2026-07-26", group:"Church"},{title:"Soul Winning Outreach", date:"2026-08-01", group:"Evangelism"},{title:"Bible Study", date:"2026-08-02", group:"Church"},{title:"God's Chosen Generation Youth Camp", date:"2026-08-07", group:"Youth"},{title:"Soul Winning", date:"2026-08-15", group:"Evangelism"},{title:"Fasting Lesson", date:"2026-08-16", group:"Discipleship"},{title:"Evangelism Lesson", date:"2026-08-22", group:"Discipleship"},{title:"Evangelism Lesson (continued)", date:"2026-08-23", group:"Discipleship"},{title:"Mazwi Live Recording", date:"2026-08-28", group:"Worship"},{title:"YOUTH SUNDAY", date:"2026-08-30", group:"Youth"},{title:"Men's Half Night Prayers", date:"2026-03-27", group:"Men"},{title:"Men's Conference", date:"2026-06-19", group:"Men"},{title:"Home Visitation (Q1)", date:"2026-03-15", group:"Men"},{title:"Couples Outing", date:"2026-04-24", group:"Marriage"},{title:"Men's Soul Winning Challenge", date:"2026-01-01", group:"Men"},{title:"Give Food Hampers (Quarterly)", date:"2026-03-20", group:"Outreach"},{title:"Women's Home Visits", date:"2026-03-10", group:"Women"},{title:"Beginning of Year Prayer", date:"2026-02-07", group:"Women"},{title:"Women's Half Night Prayer", date:"2026-06-26", group:"Women"},{title:"Lesson on Building Healthy Families", date:"2026-05-16", group:"Women"},{title:"Women's Local Convention", date:"2026-08-28", group:"Women"},{title:"Women's Sunday", date:"2026-04-26", group:"Women"},{title:"Mother & Daughter Quarterly Lesson", date:"2026-03-21", group:"Women"},{title:"Pyjama Night", date:"2026-10-16", group:"Women"},{title:"Gift Exchange Among Ladies", date:"2026-12-18", group:"Women"},{title:"Cooking Lessons (Monthly)", date:"2026-01-10", group:"Women"},{title:"Health Issues Lesson", date:"2026-05-20", group:"Women"},{title:"CHURCH REVIVAL", date:"2026-03-25", group:"Church"},{title:"OPEN AIR CRUSADE", date:"2026-04-18", group:"Evangelism"},{title:"HALF NIGHT PRAYER", date:"2026-03-20", group:"Prayer"},{title:"CHILDREN'S MINISTRY SUNDAY", date:"2026-06-21", group:"Church"},{title:"MEN'S CONVENTION", date:"2026-07-31", group:"Men"},{title:"YOUTH WEEKEND", date:"2026-08-27", group:"Youth"},{title:"WOMEN'S WEEKEND", date:"2026-09-25", group:"Women"},{title:"SUNDAY SCHOOL CAMP", date:"2026-10-16", group:"Church"},{title:"YOUTH LOCAL CAMP", date:"2026-11-20", group:"Youth"}
 ];
@@ -903,8 +900,40 @@ function renderUpcoming(){
   }
 }
 function renderActivitiesGrid(){
-  const grid = document.getElementById('activitiesGrid');
-  if(grid) grid.innerHTML = masterEvents.map(ev => `<div style="background:rgba(255,123,123,0.1); border-radius:20px; padding:16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`).join('');
+  // Group events by group property
+  const groups = {};
+  masterEvents.forEach(ev => {
+    const g = ev.group;
+    if (!groups[g]) groups[g] = [];
+    groups[g].push(ev);
+  });
+  // Sort events within each group by date
+  for (let g in groups) {
+    groups[g].sort((a,b) => new Date(a.date) - new Date(b.date));
+  }
+  // Define order of groups
+  const groupOrder = ["Youth", "Women", "Men", "Church", "Prayer", "Evangelism", "Discipleship", "Fellowship", "Worship", "Marriage", "Outreach"];
+  let html = '';
+  for (let group of groupOrder) {
+    if (groups[group] && groups[group].length) {
+      html += `<div style="margin-bottom: 40px;"><h3 style="color: var(--gold); border-left: 5px solid var(--light-red); padding-left: 16px; margin-bottom: 20px;">${group} Ministry</h3><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">`;
+      groups[group].forEach(ev => {
+        html += `<div style="background: rgba(255,123,123,0.1); border-radius: 20px; padding: 16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`;
+      });
+      html += `</div></div>`;
+    }
+  }
+  // Also include any remaining groups not in order
+  for (let g in groups) {
+    if (!groupOrder.includes(g)) {
+      html += `<div style="margin-bottom: 40px;"><h3 style="color: var(--gold); border-left: 5px solid var(--light-red); padding-left: 16px; margin-bottom: 20px;">${g} Ministry</h3><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">`;
+      groups[g].forEach(ev => {
+        html += `<div style="background: rgba(255,123,123,0.1); border-radius: 20px; padding: 16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`;
+      });
+      html += `</div></div>`;
+    }
+  }
+  document.getElementById('activitiesGrid').innerHTML = html;
 }
 function renderCalendar(){
   const grid = document.getElementById('calendarGrid');
@@ -917,8 +946,14 @@ function renderCalendar(){
     if(!monthMap.has(key)) monthMap.set(key, { month: d.getMonth(), year: d.getFullYear(), events: [] });
     monthMap.get(key).events.push(ev);
   });
+  const sortedMonths = Array.from(monthMap.entries()).sort((a,b) => {
+    const [yearA, monthA] = a[0].split('-').map(Number);
+    const [yearB, monthB] = b[0].split('-').map(Number);
+    if(yearA !== yearB) return yearA - yearB;
+    return monthA - monthB;
+  });
   grid.innerHTML = '';
-  for(let [key, val] of monthMap.entries()){
+  for(let [key, val] of sortedMonths){
     const monthName = new Date(val.year, val.month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
     const div = document.createElement('div'); div.style.background='rgba(0,0,0,0.45)'; div.style.padding='20px'; div.style.borderRadius='24px'; div.style.borderLeft=`3px solid var(--light-red)`;
     div.innerHTML = `<h3 style="color:var(--gold);">${monthName}</h3>`;
@@ -927,7 +962,7 @@ function renderCalendar(){
   }
 }
 
-// GALLERY IMAGES (updated with the full set from the provided design)
+// GALLERY IMAGES (full set)
 const imageCodes = ["MyG3QCkh", "9mCLSJnV", "5WzK9Dd9", "nNX6cKZD", "jkJKV0FT", "zW3Q3LYC", "4wLVdfkp", "VYYTnC2R", "DyPPRyY", "d0N7tPbx", "qL2RfGCk", "YFR3Fzh8", "YTDTrp8Q", "5WyNbp4C", "qLnVybD3", "ZzD6bjNb", "rRmPnmBN", "vCrz7s1s"];
 function buildMediaGallery(){
   const gallery = document.getElementById('mediaGalleryGrid');

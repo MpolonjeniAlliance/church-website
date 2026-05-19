@@ -83,7 +83,6 @@ body::before {
   position: relative;
   overflow: hidden;
 }
-/* Watermark: full‑width, full‑height, edge‑to‑edge, more visible */
 .hero-watermark {
   position: absolute;
   top: 0;
@@ -94,7 +93,7 @@ body::before {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.35;               /* Increased visibility */
+  opacity: 0.35;
   pointer-events: none;
   z-index: 1;
 }
@@ -141,8 +140,16 @@ body::before {
 .btn-primary { background: linear-gradient(115deg, var(--light-red), #e65555); color: white; border: none; box-shadow: 0 6px 14px rgba(220, 38, 38, 0.3); }
 .btn-secondary { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(16px); border: 1px solid rgba(255, 123, 123, 0.7); color: white; }
 .btn:hover { transform: translateY(-5px); filter: brightness(1.05); }
-.hero-image { position: relative; }
+.hero-image { position: relative; text-align: center; }
 .hero-image img { width: 100%; max-width: 650px; border-radius: none; box-shadow: none; border: none; }
+.image-caption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--gold);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 .floating-box {
   position: absolute;
   background: rgba(30, 20, 25, 0.7);
@@ -196,7 +203,6 @@ body::before {
   transition: 0.2s;
 }
 .stat-box h3 { font-size: 3rem; color: var(--gold); margin-bottom: 10px; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
-/* Vision & Mission Cards (Light Red Theme) */
 .vision-mission-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -241,7 +247,6 @@ body::before {
   font-size: 1.2rem;
   margin-top: 3px;
 }
-/* Difference Accordion - Light Red Theme */
 .difference-accordion {
   margin: 40px 0;
   border-radius: var(--radius-lg);
@@ -330,7 +335,18 @@ body::before {
 }
 .event-card .event-date { color: var(--gold); font-weight: 800; margin-bottom: 12px; }
 .event-card .event-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; }
-.compact-mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+/* Grid for weekly + ministries */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  margin: 30px 0;
+}
+.compact-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
 .mini-card {
   background: rgba(20, 38, 48, 0.75);
   backdrop-filter: blur(12px);
@@ -340,6 +356,9 @@ body::before {
 }
 .mini-card h3, .mini-card h4 { font-size: 1.3rem; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; color: #ffedd5; }
 .mini-card .time { font-size: 0.75rem; font-weight: 700; color: var(--gold); margin-top: 16px; display: inline-block; background: rgba(0,0,0,0.4); padding: 6px 14px; border-radius: 40px; }
+.ministry-mini {
+  border-left-color: #ff7b7b; /* same light red as other cards */
+}
 .pill-nav {
   display: flex;
   flex-wrap: wrap;
@@ -522,6 +541,7 @@ footer {
   .hero-buttons { justify-content: center; }
   .float1, .float2 { display: none; }
   .daily-card { padding: 28px 5%; }
+  .grid-2 { grid-template-columns: 1fr; }
 }
 .container { max-width: 1500px; margin: 0 auto; padding: 0 5%; }
 </style>
@@ -536,6 +556,7 @@ footer {
   <div class="nav-links" id="navLinks">
     <a href="#" data-scroll="home">HOME</a>
     <a href="#" data-scroll="weekly">WEEKLY</a>
+    <a href="#" data-scroll="ministries">MINISTRIES</a>
     <a href="#" data-scroll="activities">ACTIVITIES</a>
     <a href="#" data-scroll="calendar">CALENDAR</a>
     <a href="#" data-scroll="vision2037">Vision 2037</a>
@@ -549,7 +570,6 @@ footer {
 </div>
 
 <section class="hero" id="home">
-  <!-- Watermark: stretches edge-to-edge, more visible -->
   <div class="hero-watermark"></div>
   <div class="hero-grid">
     <div>
@@ -562,6 +582,7 @@ footer {
     </div>
     <div class="hero-image">
       <img src="https://i.ibb.co/Vc0CZQ3B/0.jpg" alt="Church">
+      <div class="image-caption">Rev M. Dlamini - MPAC Pastor</div>
       <div class="floating-box float1"><i class="fas fa-heart"></i> Redemption</div>
       <div class="floating-box float2"><i class="fas fa-hands-praying"></i> Revival</div>
     </div>
@@ -583,12 +604,12 @@ footer {
 
   <div class="stats">
     <div class="stat-box"><h3>2000+</h3><p>Souls Reached</p></div>
-    <div class="stat-box"><h3>25+</h3><p>Active Ministries</p></div>
+    <div class="stat-box"><h3>4</h3><p>Active Ministries</p></div>
     <div class="stat-box"><h3>400+</h3><p>Members</p></div>
     <div class="stat-box"><h3>1500</h3><p>Future Capacity</p></div>
   </div>
 
-  <!-- VISION AND MISSION SECTION (added from reference) -->
+  <!-- VISION AND MISSION SECTION -->
   <div class="vision-mission-grid">
     <div class="vm-card">
       <h3><i class="fas fa-eye"></i> OUR VISION</h3>
@@ -608,7 +629,7 @@ footer {
     </div>
   </div>
 
-  <!-- THE DIFFERENCE WE NEED (FULL ACCORDION) -->
+  <!-- THE DIFFERENCE WE NEED -->
   <div class="difference-accordion" id="differenceAccordion">
     <div class="difference-header" onclick="toggleDifference()">
       <span><i class="fas fa-chart-line"></i> The Difference We Need</span>
@@ -632,12 +653,27 @@ footer {
 
   <div class="upcoming-section"><h2 class="section-title" style="font-size:2rem;">📅 UPCOMING ACTIVITIES</h2><div id="upcomingEventsContainer" class="upcoming-row"></div></div>
 
-  <div id="weekly"><h2 class="section-title" style="font-size:2rem;">🕊️ WEEKLY GATHERINGS</h2><div class="compact-mini-grid">
-    <div class="mini-card"><h3><i class="fas fa-users"></i> TIGUNGU (Cell Groups)</h3><div class="time">Sunday 10:00 – 11:00 AM</div><p>Fellowship before service</p></div>
-    <div class="mini-card"><h3><i class="fas fa-church"></i> SUNDAY SERVICE</h3><div class="time">11:00 AM – 1:30 PM</div><p>Main worship & teaching</p></div>
-    <div class="mini-card"><h3><i class="fas fa-fire"></i> WEDNESDAY PRAYER</h3><div class="time">6:00 PM – 8:00 PM</div><p>Midweek power hour</p></div>
-    <div class="mini-card"><h3><i class="fas fa-female"></i> WOMEN'S TUESDAY SERVICE</h3><div class="time">Tuesday 1:00 PM – 3:00 PM</div><p>Worship, fellowship, empowerment</p></div>
-  </div></div>
+  <!-- WEEKLY GATHERINGS + MINISTRIES (two-column grid) -->
+  <div class="grid-2" id="weekly">
+    <div>
+      <h2 class="section-title" style="font-size:2rem;">🕊️ WEEKLY GATHERINGS</h2>
+      <div class="compact-mini-grid">
+        <div class="mini-card"><h3><i class="fas fa-users"></i> TIGUNGU (Cell Groups)</h3><div class="time">Sunday 10:00 – 11:00 AM</div><p>Fellowship before service</p></div>
+        <div class="mini-card"><h3><i class="fas fa-church"></i> SUNDAY SERVICE</h3><div class="time">11:00 AM – 1:30 PM</div><p>Main worship & teaching</p></div>
+        <div class="mini-card"><h3><i class="fas fa-fire"></i> WEDNESDAY PRAYER</h3><div class="time">6:00 PM – 8:00 PM</div><p>Midweek power hour</p></div>
+        <div class="mini-card"><h3><i class="fas fa-female"></i> WOMEN'S TUESDAY SERVICE</h3><div class="time">Tuesday 1:00 PM – 3:00 PM</div><p>Worship, fellowship, empowerment</p></div>
+      </div>
+    </div>
+    <div id="ministries">
+      <h2 class="section-title" style="font-size:2rem;">🙌 OUR MINISTRIES</h2>
+      <div class="compact-mini-grid">
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-child"></i> Children's Ministry</h4><p>Sunday school & faith foundations</p></div>
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-users"></i> Youth Ministry</h4><p>Empowering the next generation</p></div>
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-female"></i> Ladies Ministry</h4><p>Women of faith & fellowship</p></div>
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-male"></i> Men's Ministry</h4><p>Brothers building leaders</p></div>
+      </div>
+    </div>
+  </div>
 
   <!-- MAP WITH PINPOINTED LOCATION -->
   <div class="map-card">
@@ -702,10 +738,11 @@ footer {
       <div class="expansion-grid"><div class="capacity-card"><div class="capacity-number">400</div><div>Current Capacity</div></div><div class="capacity-card"><div class="capacity-number">1500+</div><div>Expanded Capacity</div></div></div>
       <h4 style="color:var(--gold);">Strategic Pillars</h4>
       <div class="pillars-container">
-        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-bullhorn"></i></div><h4>Evangelism</h4><p>Open-air crusades, digital outreach. Target: 5,000 souls by 2037.</p></div>
-        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div><h4>Social Impact</h4><p>Food hampers, counseling, support for vulnerable families. Goal: 10,000+ meals yearly.</p></div>
-        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-dove"></i></div><h4>Spiritual Impact</h4><p>Holistic teaching, sound Bible programs, healthy ministers.</p></div>
-        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-building-columns"></i></div><h4>Governance & Leadership</h4><p>Leadership policies, strategic training, accountability structures.</p></div>
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-bullhorn"></i></div><h4>Evangelism</h4><p>We are taking the Gospel beyond our walls through open-air crusades, door-to-door outreach, community evangelism, and digital ministry. Open-air crusades, digital outreach. Target: 10,000 souls by 2037.</p></div>
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div><h4>Social Impact</h4><p>We are demonstrating God's love through practical action. We are reaching out to brethren and other individuals in need through food hampers, clothing, counselling, and more. The goal is to reach more people in communities, and establishing partnerships with other faith-based organizations engaged in social projects, and running initiatives that provide support to those in need.Food hampers, counseling, support for vulnerable families. Goal: 10,000+ meals yearly.</p></div>
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-dove"></i></div><h4>Spiritual Impact</h4><p>Taking the gospel of Jesus Christ to where people are | Developing balance teaching ministryDeveloping spiritual, emotional, and physical healthy ministers for a healthy church |
+|	Developing sound Bible Study programs for maturing believers.</p></div>
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-building-columns"></i></div><h4>Governance & Leadership</h4><p>Develop leadership polices | Strategic and purposeful leadership trainings and developing future leaders | Developing proper governing structures with accountability. | Networking with various Leadership Training Organizations for empowerment purposes.</p></div>
       </div>
       <div style="background:rgba(0,0,0,0.3); border-radius:24px; padding:24px; margin-top:20px;">
         <h4><i class="fas fa-building"></i> Auditorium Extension Project</h4>
@@ -896,7 +933,7 @@ document.getElementById('menuToggle')?.addEventListener('click',()=>document.get
 document.getElementById('backToTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 document.getElementById('adminBtn')?.addEventListener('click',()=>alert('Admin dashboard coming soon'));
 renderUpcoming(); renderCalendar(); buildMediaGallery();
-document.querySelectorAll('[data-scroll]').forEach(l=>{l.addEventListener('click',(e)=>{e.preventDefault();let t=l.getAttribute('data-scroll'); if(t==='home')window.scrollTo({top:0,behavior:'smooth'}); else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'}); else if(t==='activities')showSection('calendar'); else if(t==='calendar')showSection('calendar'); else if(t==='vision2037')showSection('vision','accordion-vision'); else if(t==='media')showSection('media'); else if(t==='archives')showSection('archives','accordion-archives'); else if(t==='history')showSection('vision','accordion-history'); else if(t==='about'){
+document.querySelectorAll('[data-scroll]').forEach(l=>{l.addEventListener('click',(e)=>{e.preventDefault();let t=l.getAttribute('data-scroll'); if(t==='home')window.scrollTo({top:0,behavior:'smooth'}); else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'}); else if(t==='ministries')document.getElementById('ministries')?.scrollIntoView({behavior:'smooth'}); else if(t==='activities')showSection('calendar'); else if(t==='calendar')showSection('calendar'); else if(t==='vision2037')showSection('vision','accordion-vision'); else if(t==='media')showSection('media'); else if(t==='archives')showSection('archives','accordion-archives'); else if(t==='history')showSection('vision','accordion-history'); else if(t==='about'){
     const aboutSec = document.getElementById('about');
     aboutSec.style.display = 'block';
     aboutSec.scrollIntoView({ behavior: 'smooth', block: 'start' });

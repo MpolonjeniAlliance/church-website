@@ -142,7 +142,6 @@ body::before {
 .btn:hover { transform: translateY(-5px); filter: brightness(1.05); }
 .hero-image { position: relative; text-align: center; }
 .hero-image img { width: 100%; max-width: 650px; border-radius: none; box-shadow: none; border: none; }
-/* Removed .image-caption - pastor name no longer displayed */
 .floating-box {
   position: absolute;
   background: rgba(30, 20, 25, 0.7);
@@ -491,15 +490,17 @@ body::before {
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
 .gallery-item img:hover { transform: scale(1.02); filter: brightness(1.05); }
 .partner-card-standalone {
-  background: linear-gradient(135deg, #0e2a3a, #1c4e6e); /* cold blue colors */
-  backdrop-filter: blur(14px);
-  border-radius: 40px;
-  padding: 34px;
+  background: rgba(230, 90, 90, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 28px;
+  padding: 36px 32px;
   margin: 30px 0;
-  border: 1px solid #3b82f6;
-  color: #e0f2fe;
+  border: 1px solid rgba(255, 123, 123, 0.5);
+  color: #fef3e6;
+  text-align: center;
+  transition: 0.2s;
 }
-.partner-card-standalone h3, .partner-card-standalone p { color: #f0f9ff; }
+.partner-card-standalone h3, .partner-card-standalone p { color: #fff4e6; }
 .bank-info {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 24px;
@@ -509,7 +510,8 @@ body::before {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  border: 1px solid #38bdf8;
+  border: 1px solid #facc15;
+  text-align: left;
 }
 .bank-logo { height: 46px; width: auto; object-fit: contain; border-radius: 12px; background: #fff; padding: 6px; }
 .map-card { background: rgba(30, 50, 60, 0.5); border-radius: 38px; padding: 28px; margin: 30px 0; backdrop-filter: blur(8px); border: 1px solid rgba(255, 123, 123, 0.35); }
@@ -632,7 +634,6 @@ footer {
     </div>
     <div class="hero-image">
       <img src="https://i.ibb.co/Vc0CZQ3B/0.jpg" alt="Church">
-      <!-- image-caption removed per user request -->
       <div class="floating-box float1"><i class="fas fa-heart"></i> Redemption</div>
       <div class="floating-box float2"><i class="fas fa-hands-praying"></i> Revival</div>
     </div>
@@ -659,7 +660,6 @@ footer {
     <div class="stat-box"><h3>1500</h3><p>Future Capacity</p></div>
   </div>
 
-  <!-- VISION AND MISSION SECTION -->
   <div class="vision-mission-grid">
     <div class="vm-card">
       <h3><i class="fas fa-eye"></i> OUR VISION</h3>
@@ -667,7 +667,7 @@ footer {
       <ul>
         <li><i class="fas fa-star"></i> Transforming lives through the Gospel of Jesus Christ, through love and practical care.</li>
         <li><i class="fas fa-city"></i> Nehemiah had a vision to rebuild the walls of Jerusalem and was also able to unite the Nation. Leadership with a vision brings progress, unity and transformation.</li>
-        <li><i class="fas fa-church"></i> During the time of Eli there was no spiritual vision and the Nation suffered. The Nation without a vision was weak and defeated by their enemies. Leadership without a vision leads confusion, stagnation and decline.</li>
+        <li><i class="fas fa-church"></i> During the time of Eli there was no spiritual vision and the Nation suffered. The Nation without a vision was weak and defeated by their enemies.</li>
       </ul>
     </div>
     <div class="vm-card">
@@ -679,7 +679,6 @@ footer {
     </div>
   </div>
 
-  <!-- THE DIFFERENCE WE NEED -->
   <div class="difference-accordion" id="differenceAccordion">
     <div class="difference-header" onclick="toggleDifference()">
       <span><i class="fas fa-chart-line"></i> The Difference We Need</span>
@@ -703,7 +702,6 @@ footer {
 
   <div class="upcoming-section"><h2 class="section-title" style="font-size:2rem;">📅 UPCOMING ACTIVITIES</h2><div id="upcomingEventsContainer" class="upcoming-row"></div></div>
 
-  <!-- WEEKLY GATHERINGS + MINISTRIES -->
   <div class="grid-2" id="weekly">
     <div>
       <h2 class="section-title" style="font-size:2rem;">🕊️ WEEKLY GATHERINGS</h2>
@@ -725,7 +723,6 @@ footer {
     </div>
   </div>
 
-  <!-- MAP -->
   <div class="map-card">
     <h3><i class="fas fa-map-marker-alt" style="color:var(--light-red);"></i> Find Us – Mpolonjeni Alliance Church (Pinpointed)</h3>
     <div class="map-container">
@@ -738,16 +735,14 @@ footer {
     <h2 class="section-title" style="font-size:2rem;">About Us</h2>
     <p>Mpolonjeni Alliance Church is situated in the Mpolonjeni Community in Mbabane, Eswatini, in the Hhohho Region. The church is in close proximity to Nhlanganisweni High School, making it a spiritual landmark for both the local community and surrounding areas. Founded in the year 2000 through the apostolic vision of Rev. S.P. Dlamini, our church has grown from a small tent‑crusade movement into a vibrant, Spirit‑filled congregation dedicated to transforming lives through the grace and power of God.</p>
     <p>Our mission is to bring people back to God and to teach them to become Christ's disciples. We believe in holistic transformation — spiritually, emotionally, socially, and physically. Through our various ministries (Children, Youth, Women, Men, Worship, Prayer, and Outreach), we serve as a beacon of hope, providing practical care, feeding programs, counselling, and community development initiatives.</p>
-    <p>We are strategically located near Nhlanganisweni High School, which allows us to engage with young people and families, offering mentorship, discipleship, and spiritual guidance. Our doors are open to everyone, regardless of background, as we build a family of faith, love, and unity. Under the leadership of our pastoral team and elders, we continue to pursue the Great Commission, reaching souls, making disciples, and preparing for the fulfillment of Vision 2037 — a 1500‑seat auditorium that will serve as a hub for worship, community outreach, and kingdom advancement.</p>
-    <p><strong>Core Values:</strong> Worship, Discipleship, Prayer, Unity, Service, and Generosity. We invite you to join us in this life‑changing journey.</p>
   </div>
 
   <div class="pill-nav">
     <div class="pill" data-section="prayer-section">🙏 Prayer</div>
-    <div class="pill" data-section="calendar-section">📅 Calendar</div>
-    <div class="pill" data-section="calendar-section">🔥 All Activities</div>
+    <div class="pill" data-section="calendar-section" data-focus="accordion-calendar">📅 Calendar</div>
+    <div class="pill" data-section="calendar-section" data-focus="accordion-activities">🔥 All Activities</div>
     <div class="pill" data-section="vision-section">🌍 Vision 2037</div>
-    <div class="pill" data-section="media-section">📸 Media Gallery</div>
+    <div class="pill" data-section="media-section" data-focus="accordion-media">📸 Media Gallery</div>
     <div class="pill" data-section="archives-section" data-focus="accordion-archives">📁 Archives (Sermons)</div>
     <div class="pill" data-section="vision-section" data-focus="history">⛪ History</div>
   </div>
@@ -755,27 +750,28 @@ footer {
 
   <div id="prayer-section" class="accordion-section"><div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-praying-hands"></i> Prayer Requests</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div><p>Share your prayer request via WhatsApp. Our prayer team will stand with you.</p><div><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>Prayer Line:</strong> <a href="https://wa.me/26876130566" target="_blank" style="color:var(--light-red);">+268 7613 0566</a></div><form id="prayerForm"><input type="text" id="prayerName" placeholder="Your Name" style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,123,123,0.4); color:white; margin:10px 0;"><textarea id="prayerRequest" rows="3" placeholder="Prayer request..." style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,123,123,0.4); color:white;"></textarea><button type="submit" class="btn-primary" style="margin-top:10px;">Submit</button></form></div></div></div></div>
 
-  <!-- Partner card with cold colors -->
+  <!-- Partner card with updated background (Join Us style) -->
   <div class="partner-card-standalone" id="partner">
-    <h3><i class="fas fa-handshake"></i> Partner With Us – Support Vision 2037</h3>
+    <h3><i class="fas fa-handshake"></i> 🙏 Join Us in Building God's House</h3>
     <p style="margin-bottom:20px;">Your generous giving fuels our <strong>Vision 2037</strong> project: building a 1500‑seat sanctuary, and expands our social responsibility — feeding programs, counselling, community health outreaches, and support for vulnerable families.</p>
+    <p>We appeal to prayer partners, associate church partners, and financial supporters to join this noble project.</p>
     <div class="bank-info"><img src="https://i.ibb.co/hJz4bXcV/0.jpg" class="bank-logo" onerror="this.src='https://placehold.co/70x40/1e2a3a/white?text=NedBank'"><div><strong>NedBank (Mbabane, Eswatini)</strong><br>020000025799 | Branch: 360164<br>SWIFT: NEDSZAZX</div></div>
     <div class="bank-info"><img src="https://i.ibb.co/RTtvsv4T/0.jpg" class="bank-logo" onerror="this.src='https://placehold.co/70x40/ffcc00/black?text=MTN+MoMo'"><div><strong>MTN Mobile Money</strong><br>78116629</div></div>
+    <a href="#partner" class="btn-primary" style="margin-top:18px; display:inline-block;">Support This Vision →</a>
   </div>
 
   <div id="calendar-section" class="accordion-section">
-    <div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-alt"></i> Church Calendar 2026 (All Events)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div id="calendarGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;"></div></div></div>
-    <div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-list-ul"></i> Complete 2026 Activities (Grouped by Ministry)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><button id="toggleActivitiesBtn" class="btn-primary" style="margin-bottom:18px;">📅 SHOW ALL ACTIVITIES</button><div id="activitiesContainer" style="display:none;"><div id="activitiesGrid"></div></div></div></div>
+    <div class="accordion" id="accordion-calendar"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-alt"></i> Church Calendar 2026 (All Events)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div id="calendarGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;"></div></div></div>
+    <div class="accordion" id="accordion-activities"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-list-ul"></i> Complete 2026 Activities (Grouped by Ministry)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><button id="toggleActivitiesBtn" class="btn-primary" style="margin-bottom:18px;">📅 SHOW ALL ACTIVITIES</button><div id="activitiesContainer" style="display:none;"><div id="activitiesGrid"></div></div></div></div>
   </div>
 
   <div id="media-section" class="accordion-section">
-    <div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-images"></i> Media Gallery – Moments of Worship & Fellowship</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content">
+    <div class="accordion" id="accordion-media"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-images"></i> Media Gallery – Moments of Worship & Fellowship</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content">
       <h3 class="section-title" style="font-size:1.5rem;">Capturing moments of worship, revival, fellowship, and impact.</h3>
       <div class="gallery-grid" id="mediaGalleryGrid"></div>
     </div></div>
   </div>
 
-  <!-- VISION 2037 SECTION -->
   <div id="vision-section" class="accordion-section">
     <div class="accordion" id="accordion-vision"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-eye"></i> VISION 2037: Building a Legacy</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="vision2037">
       <h3 style="color:var(--gold); font-size:2rem;">VISION 2037</h3>
@@ -820,11 +816,6 @@ footer {
           <div><strong>💰 Fundraising Goal</strong><br>E10 Million</div>
           <div><strong>📈 Current Progress</strong><br><span style="color:var(--gold);">E100,000 Raised</span></div>
         </div>
-      </div>
-      <div style="background:rgba(230, 90, 90, 0.2); border-radius:24px; padding:28px; text-align:center; margin-top:32px;">
-        <h5>🙏 Join Us in Building God's House</h5>
-        <p style="margin-top:8px;">We appeal to prayer partners, associate church partners, and financial supporters to join this noble project.</p>
-        <a href="#partner" class="btn-primary" style="margin-top:18px; display:inline-block;">Support This Vision →</a>
       </div>
     </div></div></div>
 
@@ -900,36 +891,15 @@ function renderUpcoming(){
   }
 }
 function renderActivitiesGrid(){
-  // Group events by group property
   const groups = {};
-  masterEvents.forEach(ev => {
-    const g = ev.group;
-    if (!groups[g]) groups[g] = [];
-    groups[g].push(ev);
-  });
-  // Sort events within each group by date
-  for (let g in groups) {
-    groups[g].sort((a,b) => new Date(a.date) - new Date(b.date));
-  }
-  // Define order of groups
+  masterEvents.forEach(ev => { const g = ev.group; if (!groups[g]) groups[g] = []; groups[g].push(ev); });
+  for (let g in groups) groups[g].sort((a,b) => new Date(a.date) - new Date(b.date));
   const groupOrder = ["Youth", "Women", "Men", "Church", "Prayer", "Evangelism", "Discipleship", "Fellowship", "Worship", "Marriage", "Outreach"];
   let html = '';
   for (let group of groupOrder) {
     if (groups[group] && groups[group].length) {
       html += `<div style="margin-bottom: 40px;"><h3 style="color: var(--gold); border-left: 5px solid var(--light-red); padding-left: 16px; margin-bottom: 20px;">${group} Ministry</h3><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">`;
-      groups[group].forEach(ev => {
-        html += `<div style="background: rgba(255,123,123,0.1); border-radius: 20px; padding: 16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`;
-      });
-      html += `</div></div>`;
-    }
-  }
-  // Also include any remaining groups not in order
-  for (let g in groups) {
-    if (!groupOrder.includes(g)) {
-      html += `<div style="margin-bottom: 40px;"><h3 style="color: var(--gold); border-left: 5px solid var(--light-red); padding-left: 16px; margin-bottom: 20px;">${g} Ministry</h3><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">`;
-      groups[g].forEach(ev => {
-        html += `<div style="background: rgba(255,123,123,0.1); border-radius: 20px; padding: 16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`;
-      });
+      groups[group].forEach(ev => { html += `<div style="background: rgba(255,123,123,0.1); border-radius: 20px; padding: 16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`; });
       html += `</div></div>`;
     }
   }
@@ -962,30 +932,59 @@ function renderCalendar(){
   }
 }
 
-// GALLERY IMAGES (full set)
 const imageCodes = ["MyG3QCkh", "9mCLSJnV", "5WzK9Dd9", "nNX6cKZD", "jkJKV0FT", "zW3Q3LYC", "4wLVdfkp", "VYYTnC2R", "DyPPRyY", "d0N7tPbx", "qL2RfGCk", "YFR3Fzh8", "YTDTrp8Q", "5WyNbp4C", "qLnVybD3", "ZzD6bjNb", "rRmPnmBN", "vCrz7s1s"];
 function buildMediaGallery(){
   const gallery = document.getElementById('mediaGalleryGrid');
   if(gallery) gallery.innerHTML = imageCodes.map(code => `<div class="gallery-item" onclick="window.open('https://ibb.co/${code}', '_blank')"><img src="https://i.ibb.co/${code}/0.jpg" loading="lazy" onerror="this.src='https://placehold.co/600x450/1e3a5f/white?text=Photo';"></div>`).join('');
 }
 
-window.toggleAccordion=function(h){let c=h.nextElementSibling; let i=h.querySelector('i:last-child'); c.classList.toggle('show'); if(i) i.style.transform=c.classList.contains('show')?'rotate(180deg)':'rotate(0)';};
+window.toggleAccordion = function(h){ let c = h.nextElementSibling; let i = h.querySelector('i:last-child'); c.classList.toggle('show'); if(i) i.style.transform = c.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; };
 window.toggleDifference = function() { const content = document.getElementById('differenceContent'); const icon = document.getElementById('differenceIcon'); content.classList.toggle('show'); icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; };
-function closeAll(){document.querySelectorAll('.accordion-content').forEach(c=>{if(c.classList.contains('show')){let h=c.previousElementSibling; if(h) h.click();}});}
-function expandAll(){document.querySelectorAll('.accordion-content').forEach(c=>{if(!c.classList.contains('show')){let h=c.previousElementSibling; if(h) h.click();}});}
+function closeAll(){ document.querySelectorAll('.accordion-content').forEach(c=>{ if(c.classList.contains('show')){ let h=c.previousElementSibling; if(h) h.click(); } }); }
+function expandAll(){ document.querySelectorAll('.accordion-content').forEach(c=>{ if(!c.classList.contains('show')){ let h=c.previousElementSibling; if(h) h.click(); } }); }
 document.getElementById('expandAllBtn')?.addEventListener('click',expandAll);
 document.getElementById('collapseAllBtn')?.addEventListener('click',closeAll);
-const sections={prayer:document.getElementById('prayer-section'),calendar:document.getElementById('calendar-section'),vision:document.getElementById('vision-section'),media:document.getElementById('media-section'),archives:document.getElementById('archives-section')};
-function showSection(id,focus){Object.values(sections).forEach(s=>s?.classList.remove('active-section')); let t=sections[id]; if(t){t.classList.add('active-section'); if(focus){let acc=document.getElementById(focus); if(acc){let c=acc.querySelector('.accordion-content'),h=acc.querySelector('.accordion-header'); if(c&&!c.classList.contains('show')&&h)h.click(); acc.scrollIntoView({behavior:'smooth',block:'start'});}}else t.scrollIntoView({behavior:'smooth'});}}
-document.querySelectorAll('.pill').forEach(p=>{p.addEventListener('click',()=>{let sec=p.getAttribute('data-section'),focus=p.getAttribute('data-focus'); if(sec==='prayer-section')showSection('prayer'); else if(sec==='calendar-section')showSection('calendar'); else if(sec==='vision-section')showSection('vision',focus==='history'?'accordion-history':'accordion-vision'); else if(sec==='media-section')showSection('media'); else if(sec==='archives-section')showSection('archives','accordion-archives');});});
-document.querySelector('.vision2037-trigger')?.addEventListener('click',(e)=>{e.preventDefault(); showSection('vision','accordion-vision');});
-let act=false; document.getElementById('toggleActivitiesBtn')?.addEventListener('click',()=>{let c=document.getElementById('activitiesContainer'); if(act){c.style.display='none'; document.getElementById('toggleActivitiesBtn').innerHTML='📅 SHOW ALL ACTIVITIES';}else{c.style.display='block'; renderActivitiesGrid(); document.getElementById('toggleActivitiesBtn').innerHTML='✖️ HIDE ACTIVITIES';} act=!act;});
-document.getElementById('prayerForm')?.addEventListener('submit',(e)=>{e.preventDefault(); let n=document.getElementById('prayerName').value.trim(); let r=document.getElementById('prayerRequest').value.trim(); if(n&&r){window.open(`https://wa.me/26876130566?text=Prayer%20from%20${encodeURIComponent(n)}%3A%20${encodeURIComponent(r)}`,'_blank'); alert('Opened in WhatsApp.'); e.target.reset();}else alert('Fill all fields');});
+
+const sections = { prayer: document.getElementById('prayer-section'), calendar: document.getElementById('calendar-section'), vision: document.getElementById('vision-section'), media: document.getElementById('media-section'), archives: document.getElementById('archives-section') };
+function showSection(id, focusAccordionId) {
+  Object.values(sections).forEach(s => s?.classList.remove('active-section'));
+  let target = sections[id];
+  if(target) target.classList.add('active-section');
+  if(focusAccordionId) {
+    let accordionDiv = document.getElementById(focusAccordionId);
+    if(accordionDiv) {
+      let header = accordionDiv.querySelector('.accordion-header');
+      let content = accordionDiv.querySelector('.accordion-content');
+      if(content && !content.classList.contains('show') && header) header.click();
+      accordionDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if(focusAccordionId === 'accordion-activities') {
+        let btn = document.getElementById('toggleActivitiesBtn');
+        let container = document.getElementById('activitiesContainer');
+        if(container && btn && container.style.display !== 'block') { btn.click(); }
+      }
+    }
+  } else if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.querySelectorAll('.pill').forEach(p => {
+  p.addEventListener('click', () => {
+    let sec = p.getAttribute('data-section'), focus = p.getAttribute('data-focus');
+    if(sec === 'prayer-section') showSection('prayer');
+    else if(sec === 'calendar-section') showSection('calendar', focus);
+    else if(sec === 'vision-section') showSection('vision', focus === 'history' ? 'accordion-history' : 'accordion-vision');
+    else if(sec === 'media-section') showSection('media', 'accordion-media');
+    else if(sec === 'archives-section') showSection('archives', 'accordion-archives');
+  });
+});
+document.querySelector('.vision2037-trigger')?.addEventListener('click',(e)=>{ e.preventDefault(); showSection('vision','accordion-vision'); });
+
+let act = false; document.getElementById('toggleActivitiesBtn')?.addEventListener('click',()=>{ let c=document.getElementById('activitiesContainer'); if(act){ c.style.display='none'; document.getElementById('toggleActivitiesBtn').innerHTML='📅 SHOW ALL ACTIVITIES'; } else { c.style.display='block'; renderActivitiesGrid(); document.getElementById('toggleActivitiesBtn').innerHTML='✖️ HIDE ACTIVITIES'; } act=!act; });
+document.getElementById('prayerForm')?.addEventListener('submit',(e)=>{ e.preventDefault(); let n=document.getElementById('prayerName').value.trim(); let r=document.getElementById('prayerRequest').value.trim(); if(n&&r){ window.open(`https://wa.me/26876130566?text=Prayer%20from%20${encodeURIComponent(n)}%3A%20${encodeURIComponent(r)}`,'_blank'); alert('Opened in WhatsApp.'); e.target.reset(); } else alert('Fill all fields'); });
 document.getElementById('menuToggle')?.addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('active'));
 document.getElementById('backToTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 document.getElementById('adminBtn')?.addEventListener('click',()=>alert('Admin dashboard coming soon'));
 renderUpcoming(); renderCalendar(); buildMediaGallery();
-document.querySelectorAll('[data-scroll]').forEach(l=>{l.addEventListener('click',(e)=>{e.preventDefault();let t=l.getAttribute('data-scroll'); if(t==='home')window.scrollTo({top:0,behavior:'smooth'}); else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'}); else if(t==='ministries')document.getElementById('ministries')?.scrollIntoView({behavior:'smooth'}); else if(t==='activities')showSection('calendar'); else if(t==='calendar')showSection('calendar'); else if(t==='vision2037')showSection('vision','accordion-vision'); else if(t==='media')showSection('media'); else if(t==='archives')showSection('archives','accordion-archives'); else if(t==='history')showSection('vision','accordion-history'); else if(t==='about'){ const aboutSec = document.getElementById('about'); aboutSec.style.display = 'block'; aboutSec.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else if(t==='prayer')showSection('prayer'); else if(t==='partner')showSection('prayer');});});
+document.querySelectorAll('[data-scroll]').forEach(l=>{ l.addEventListener('click',(e)=>{ e.preventDefault(); let t=l.getAttribute('data-scroll'); if(t==='home')window.scrollTo({top:0,behavior:'smooth'}); else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'}); else if(t==='ministries')document.getElementById('ministries')?.scrollIntoView({behavior:'smooth'}); else if(t==='activities')showSection('calendar','accordion-activities'); else if(t==='calendar')showSection('calendar','accordion-calendar'); else if(t==='vision2037')showSection('vision','accordion-vision'); else if(t==='media')showSection('media','accordion-media'); else if(t==='archives')showSection('archives','accordion-archives'); else if(t==='history')showSection('vision','accordion-history'); else if(t==='about'){ const aboutSec = document.getElementById('about'); aboutSec.style.display = 'block'; aboutSec.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else if(t==='prayer')showSection('prayer'); else if(t==='partner')showSection('prayer'); }); });
 </script>
 </body>
 </html>

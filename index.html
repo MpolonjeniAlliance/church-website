@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-<title>Mpolonjeni Alliance Church · Vision 2037 · 10 Epic Themes</title>
+<title>Mpolonjeni Alliance Church · Vision 2037 · 20 Epic Themes</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -33,6 +33,7 @@
   
   /* Extended theme variables */
   --body-bg: #0c1a24;
+  --text-primary: #fef9ef;
   --btn-dark-end: #e65555;
   --third-accent: #ffbc7a;
   --third-accent2: #ffe0b5;
@@ -47,12 +48,15 @@
   --stat-box-bg: linear-gradient(135deg, rgba(255, 123, 123, 0.12), rgba(0, 0, 0, 0.4));
   --pill-bg: #3a2a2a;
   --pill-hover: var(--light-red);
+  --hero-text: #fef9ef;
+  --card-text: #ffe6d5;
+  --footer-bg: #07131c;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--body-bg);
-  color: #fef9ef;
+  color: var(--text-primary);
   overflow-x: hidden;
   scroll-behavior: smooth;
   transition: background 0.25s ease, color 0.2s;
@@ -140,7 +144,7 @@ body::before {
 .hero { min-height: 100vh; display: flex; align-items: center; padding: 140px 5% 80px; position: relative; overflow: hidden; }
 .hero-watermark { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://i.imgur.com/kTumLOY.jpg'); background-size: cover; opacity: 0.35; pointer-events: none; z-index: 1; }
 .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; width: 100%; max-width: 1500px; margin: auto; align-items: center; }
-.hero h2 { font-size: 5rem; line-height: 1; font-weight: 900; margin-bottom: 25px; }
+.hero h2 { font-size: 5rem; line-height: 1; font-weight: 900; margin-bottom: 25px; color: var(--hero-text); }
 .hero h2 span { background: linear-gradient(135deg, var(--light-red), var(--gold), var(--third-accent)); -webkit-background-clip: text; color: transparent; }
 .hero p { font-size: 1.15rem; line-height: 1.8; color: rgba(255, 248, 235, 0.85); margin-bottom: 40px; max-width: 700px; }
 .hero-buttons { display: flex; gap: 18px; flex-wrap: wrap; }
@@ -201,7 +205,7 @@ body::before {
 .bank-info { background: rgba(0, 0, 0, 0.5); border-radius: 24px; padding: 20px; margin-bottom: 18px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; border: 1px solid var(--gold); }
 .map-card { background: rgba(30, 50, 60, 0.5); border-radius: 38px; padding: 28px; margin: 30px 0; backdrop-filter: blur(8px); border: 1px solid var(--card-border-glow); }
 .map-container iframe { width: 100%; height: 350px; border-radius: 28px; border: 0; }
-footer { background: #07131c; margin-top: 100px; padding: 70px 5% 40px; border-top: 1px solid var(--light-red); }
+footer { background: var(--footer-bg); margin-top: 100px; padding: 70px 5% 40px; border-top: 1px solid var(--light-red); }
 .social-links a { width: 44px; height: 44px; background: rgba(var(--light-red-rgb), 0.2); border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; margin-right: 14px; color: #ffe0b5; transition: 0.2s; text-decoration: none; font-size: 1.3rem; }
 .social-links a:hover { background: var(--light-red); color: #131a20; }
 .admin-btn, .back-to-top { position: fixed; width: 50px; height: 50px; border-radius: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; background: var(--light-red); color: white; }
@@ -221,7 +225,7 @@ footer { background: #07131c; margin-top: 100px; padding: 70px 5% 40px; border-t
     <img src="https://i.imgur.com/kTumLOY.jpg" class="church-logo">
     <div class="logo-text"><h1>MPOLONJENI ALLIANCE CHURCH</h1><p>The Difference We Need</p></div>
   </div>
-  <!-- 10 Epic Themes Selector -->
+  <!-- 20 Epic Themes Selector -->
   <div class="theme-picker">
     <label><i class="fas fa-palette"></i> EPIC THEME</label>
     <select id="epicThemeSelect" class="theme-select">
@@ -235,6 +239,17 @@ footer { background: #07131c; margin-top: 100px; padding: 70px 5% 40px; border-t
       <option value="amber">🍂 Rustic Amber</option>
       <option value="forest">🌲 Forest Revival</option>
       <option value="rose">🌹 Velvet Rose</option>
+      <!-- 10 NEW THEMES -->
+      <option value="whiteGrace">🤍 White Grace</option>
+      <option value="redWhiteBlue">🇺🇸 Patriot Radiance (Red/White/Blue)</option>
+      <option value="iceberg">❄️ Iceberg Frost</option>
+      <option value="pearl">🪷 Pearl Lumina</option>
+      <option value="flagFire">🎌 Flagfire Triad</option>
+      <option value="snowCap">🏔️ Snowcap Majesty</option>
+      <option value="rubyDove">❤️ Ruby & Dove</option>
+      <option value="arcticDawn">🌅 Arctic Dawn</option>
+      <option value="starSpangled">⭐ Star‑Spangled Revival</option>
+      <option value="linenVirtue">📜 Linen & Virtue</option>
     </select>
   </div>
   <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
@@ -272,72 +287,139 @@ footer { background: #07131c; margin-top: 100px; padding: 70px 5% 40px; border-t
   <div id="vision-section" class="accordion-section"><div class="accordion" id="accordion-vision"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-eye"></i> VISION 2037: Building a Legacy</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="vision2037"><h3 style="color:var(--gold);">VISION 2037</h3><p>Enlarging our tent: 1500-seat auditorium, counseling hub, feeding kitchens, discipleship center. “Enlarge the place of your tent” Isaiah 54:2.</p><div class="expansion-grid"><div class="capacity-card"><div class="capacity-number">400</div><div>Current Capacity</div></div><div class="capacity-card"><div class="capacity-number">1500+</div><div>Expanded Capacity</div></div></div></div></div></div><div class="accordion" id="accordion-history"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-church"></i> ⛪ Church History</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="history-timeline"><div class="timeline-item"><div class="timeline-icon"><i class="fas fa-eye"></i></div><div class="timeline-content"><h3>2000 – Apostolic Vision</h3><p>Founded by Rev. S.P. Dlamini through tent crusades.</p></div></div></div></div></div></div>
   <div id="archives-section" class="accordion-section"><div class="accordion" id="accordion-archives"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-archive"></i> Sermon Archives</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div><div style="background:rgba(var(--light-red-rgb),0.15); border-radius:20px; padding:16px;">Grace That Transforms – Pastor M. Dlamini</div><div style="background:rgba(var(--light-red-rgb),0.15); border-radius:20px; padding:16px; margin-top:12px;">The Power of the Cross – Rev. S.P. Dlamini</div></div></div></div></div>
 </div>
-<footer><div class="footer-grid"><div><h3>Mpolonjeni Alliance Church</h3><div class="social-links"><a href="https://www.facebook.com/profile.php?id=100083095013067" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://wa.me/26876130566" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div><div><h3>Service Times</h3><p>Sun 11:00 AM | Wed 6:00 PM | Tue (Women) 1:00 PM</p></div><div><h3>Giving</h3><p>NedBank: 020000025799 | MTN MoMo: 78116629</p></div></div><p style="text-align:center;">© 2026 Mpolonjeni Alliance Church — Epic Theme · Revival & Grace</p></footer>
+<footer><div class="footer-grid"><div><h3>Mpolonjeni Alliance Church</h3><div class="social-links"><a href="https://www.facebook.com/profile.php?id=100083095013067" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://wa.me/26876130566" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div><div><h3>Service Times</h3><p>Sun 11:00 AM | Wed 6:00 PM | Tue (Women) 1:00 PM</p></div><div><h3>Giving</h3><p>NedBank: 020000025799 | MTN MoMo: 78116629</p></div></div><p style="text-align:center;">© 2026 Mpolonjeni Alliance Church — 20 Epic Themes · Revival & Grace</p></footer>
 <div class="admin-btn" id="adminBtn"><i class="fas fa-chart-line"></i></div><div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-// ========== 10 EPIC THEMES DEFINITION ==========
+// ========== 20 EPIC THEMES (10 original + 10 new) ==========
 const themes = {
+  // original 10
   crimson: {
     '--primary': '#0b1a2a', '--gold': '#fbbf24', '--light-red': '#ff7b7b', '--light-red-rgb': '255,123,123',
     '--btn-dark-end': '#e65555', '--third-accent': '#ffbc7a', '--third-accent2': '#ffe0b5', '--body-bg': '#0c1a24',
     '--header-gradient-start': '#1a2e3c', '--header-gradient-end': '#0f1f2b', '--pill-bg': '#3a2a2a', '--pill-hover': '#ff7b7b',
-    '--stat-box-bg': 'linear-gradient(135deg, rgba(255,123,123,0.12), rgba(0,0,0,0.4))', '--card-border-glow': 'rgba(255,123,123,0.4)'
+    '--stat-box-bg': 'linear-gradient(135deg, rgba(255,123,123,0.12), rgba(0,0,0,0.4))', '--card-border-glow': 'rgba(255,123,123,0.4)',
+    '--text-primary': '#fef9ef', '--footer-bg': '#07131c', '--hero-text': '#fef9ef'
   },
   sapphire: {
     '--primary': '#071a2b', '--gold': '#ffd966', '--light-red': '#4d9eff', '--light-red-rgb': '77,158,255',
     '--btn-dark-end': '#2c7af0', '--third-accent': '#b6d8ff', '--third-accent2': '#cce4ff', '--body-bg': '#0a1428',
     '--header-gradient-start': '#122c44', '--header-gradient-end': '#081c2c', '--pill-bg': '#1f3b4c', '--pill-hover': '#4d9eff',
-    '--stat-box-bg': 'linear-gradient(135deg, rgba(77,158,255,0.12), rgba(0,0,0,0.4))', '--card-border-glow': 'rgba(77,158,255,0.4)'
+    '--stat-box-bg': 'linear-gradient(135deg, rgba(77,158,255,0.12), rgba(0,0,0,0.4))', '--card-border-glow': 'rgba(77,158,255,0.4)',
+    '--text-primary': '#f0f4fa', '--footer-bg': '#04101a', '--hero-text': '#eef3fc'
   },
   emerald: {
     '--primary': '#0b2a1f', '--gold': '#ffcd7e', '--light-red': '#2ecc71', '--light-red-rgb': '46,204,113',
     '--btn-dark-end': '#27ae60', '--third-accent': '#abebc6', '--third-accent2': '#d5f5e3', '--body-bg': '#0a2218',
     '--header-gradient-start': '#1e3d2f', '--header-gradient-end': '#0e2a1f', '--pill-bg': '#2d4a3a', '--pill-hover': '#2ecc71',
-    '--card-border-glow': 'rgba(46,204,113,0.4)'
+    '--text-primary': '#eafaf1', '--footer-bg': '#051b10', '--hero-text': '#eefaf3'
   },
   midnight: {
     '--primary': '#0a0e1a', '--gold': '#e7c45e', '--light-red': '#c084fc', '--light-red-rgb': '192,132,252',
     '--btn-dark-end': '#a855f7', '--third-accent': '#e9d5ff', '--third-accent2': '#f3e8ff', '--body-bg': '#030712',
     '--header-gradient-start': '#1f1b2e', '--header-gradient-end': '#100d1d', '--pill-bg': '#2e2a42', '--pill-hover': '#c084fc',
-    '--card-border-glow': 'rgba(192,132,252,0.4)'
+    '--text-primary': '#f3e8ff', '--footer-bg': '#020408', '--hero-text': '#f5edff'
   },
   sunrise: {
     '--primary': '#3e2a1f', '--gold': '#ffb347', '--light-red': '#ff8c42', '--light-red-rgb': '255,140,66',
     '--btn-dark-end': '#ff6b35', '--third-accent': '#ffd8b5', '--third-accent2': '#ffe6cc', '--body-bg': '#251b10',
     '--header-gradient-start': '#593c24', '--header-gradient-end': '#3a2a1a', '--pill-bg': '#73563a', '--pill-hover': '#ff8c42',
-    '--card-border-glow': 'rgba(255,140,66,0.4)'
+    '--text-primary': '#fff4e8', '--footer-bg': '#1f1308', '--hero-text': '#fff3e6'
   },
   purple: {
     '--primary': '#1e102b', '--gold': '#e2b8ff', '--light-red': '#bb86fc', '--light-red-rgb': '187,134,252',
     '--btn-dark-end': '#9b59b6', '--third-accent': '#d9b4ff', '--third-accent2': '#ecd9ff', '--body-bg': '#130c1c',
     '--header-gradient-start': '#2c1e40', '--header-gradient-end': '#1c112e', '--pill-bg': '#3d2b5c', '--pill-hover': '#bb86fc',
-    '--card-border-glow': 'rgba(187,134,252,0.4)'
+    '--text-primary': '#f8f0ff', '--footer-bg': '#0c0614', '--hero-text': '#f9f1ff'
   },
   ocean: {
     '--primary': '#083344', '--gold': '#ffdd88', '--light-red': '#38bdf8', '--light-red-rgb': '56,189,248',
     '--btn-dark-end': '#0e95d6', '--third-accent': '#bae6fd', '--third-accent2': '#e0f2fe', '--body-bg': '#082f3c',
     '--header-gradient-start': '#145c7a', '--header-gradient-end': '#0a4158', '--pill-bg': '#1e6279', '--pill-hover': '#38bdf8',
-    '--card-border-glow': 'rgba(56,189,248,0.4)'
+    '--text-primary': '#e0f2fe', '--footer-bg': '#04222b', '--hero-text': '#ecf9ff'
   },
   amber: {
     '--primary': '#2d1f00', '--gold': '#f5b042', '--light-red': '#e67e22', '--light-red-rgb': '230,126,34',
     '--btn-dark-end': '#d35400', '--third-accent': '#f7d9b5', '--third-accent2': '#ffe2be', '--body-bg': '#211700',
     '--header-gradient-start': '#5c3e1a', '--header-gradient-end': '#3f2a10', '--pill-bg': '#7d5a2b', '--pill-hover': '#e67e22',
-    '--card-border-glow': 'rgba(230,126,34,0.4)'
+    '--text-primary': '#fff3e0', '--footer-bg': '#1a1000', '--hero-text': '#fff2df'
   },
   forest: {
     '--primary': '#142b1a', '--gold': '#d4d47c', '--light-red': '#6fbf4c', '--light-red-rgb': '111,191,76',
     '--btn-dark-end': '#568c30', '--third-accent': '#c4e0af', '--third-accent2': '#dcf0cc', '--body-bg': '#0a1f12',
     '--header-gradient-start': '#2e5438', '--header-gradient-end': '#1b3824', '--pill-bg': '#3c6e42', '--pill-hover': '#6fbf4c',
-    '--card-border-glow': 'rgba(111,191,76,0.4)'
+    '--text-primary': '#edf7e9', '--footer-bg': '#05180c', '--hero-text': '#f0f9ec'
   },
   rose: {
     '--primary': '#2f1420', '--gold': '#ffb7c5', '--light-red': '#f472b6', '--light-red-rgb': '244,114,182',
     '--btn-dark-end': '#db2777', '--third-accent': '#ffcee1', '--third-accent2': '#ffe5f0', '--body-bg': '#220e18',
     '--header-gradient-start': '#572c40', '--header-gradient-end': '#3b1e2c', '--pill-bg': '#6e3c53', '--pill-hover': '#f472b6',
-    '--card-border-glow': 'rgba(244,114,182,0.4)'
+    '--text-primary': '#ffeaf2', '--footer-bg': '#1b0912', '--hero-text': '#fff0f6'
+  },
+  // ========== NEW 10 EPIC THEMES ==========
+  whiteGrace: {
+    '--primary': '#d4d4d8', '--gold': '#eab308', '--light-red': '#f97316', '--light-red-rgb': '249,115,22',
+    '--btn-dark-end': '#ea580c', '--third-accent': '#fef9c3', '--third-accent2': '#fff3e0', '--body-bg': '#fefefe',
+    '--header-gradient-start': '#f1f5f9', '--header-gradient-end': '#e2e8f0', '--pill-bg': '#cbd5e1', '--pill-hover': '#f97316',
+    '--stat-box-bg': 'linear-gradient(135deg, rgba(249,115,22,0.08), rgba(0,0,0,0.02))', '--card-border-glow': 'rgba(249,115,22,0.25)',
+    '--text-primary': '#1e293b', '--footer-bg': '#0f172a', '--hero-text': '#0f172a',
+    '--btn-secondary-border': 'rgba(249,115,22,0.5)'
+  },
+  redWhiteBlue: {
+    '--primary': '#1e3a8a', '--gold': '#facc15', '--light-red': '#ef4444', '--light-red-rgb': '239,68,68',
+    '--btn-dark-end': '#dc2626', '--third-accent': '#bfdbfe', '--third-accent2': '#dbeafe', '--body-bg': '#f8fafc',
+    '--header-gradient-start': '#1e3a8a', '--header-gradient-end': '#2563eb', '--pill-bg': '#2563eb', '--pill-hover': '#ef4444',
+    '--stat-box-bg': 'linear-gradient(135deg, rgba(239,68,68,0.1), rgba(0,0,0,0.02))', '--card-border-glow': 'rgba(37,99,235,0.3)',
+    '--text-primary': '#0f172a', '--footer-bg': '#0f172a', '--hero-text': '#0f172a'
+  },
+  iceberg: {
+    '--primary': '#cbd5e1', '--gold': '#fbbf24', '--light-red': '#60a5fa', '--light-red-rgb': '96,165,250',
+    '--btn-dark-end': '#3b82f6', '--third-accent': '#e0f2fe', '--third-accent2': '#f0f9ff', '--body-bg': '#ffffff',
+    '--header-gradient-start': '#f1f5f9', '--header-gradient-end': '#e2e8f0', '--pill-bg': '#94a3b8', '--pill-hover': '#60a5fa',
+    '--stat-box-bg': 'linear-gradient(135deg, rgba(96,165,250,0.08), rgba(0,0,0,0.01))', '--text-primary': '#0f172a', '--footer-bg': '#0f172a', '--hero-text': '#0f172a'
+  },
+  pearl: {
+    '--primary': '#fef3c7', '--gold': '#eab308', '--light-red': '#fb923c', '--light-red-rgb': '251,146,60',
+    '--btn-dark-end': '#f97316', '--third-accent': '#fff7ed', '--third-accent2': '#ffedd5', '--body-bg': '#fefcf5',
+    '--header-gradient-start': '#fefce8', '--header-gradient-end': '#fef9c3', '--pill-bg': '#fed7aa', '--pill-hover': '#fb923c',
+    '--text-primary': '#3b2e1e', '--footer-bg': '#2c2214', '--hero-text': '#3b2e1e'
+  },
+  flagFire: {
+    '--primary': '#b91c1c', '--gold': '#fcd34d', '--light-red': '#dc2626', '--light-red-rgb': '220,38,38',
+    '--btn-dark-end': '#991b1b', '--third-accent': '#bfdbfe', '--third-accent2': '#dbeafe', '--body-bg': '#fff5f5',
+    '--header-gradient-start': '#991b1b', '--header-gradient-end': '#ef4444', '--pill-bg': '#2563eb', '--pill-hover': '#ef4444',
+    '--text-primary': '#1e1b4b', '--footer-bg': '#1e1b4b', '--hero-text': '#1e1b4b'
+  },
+  snowCap: {
+    '--primary': '#e2e8f0', '--gold': '#facc15', '--light-red': '#9ca3af', '--light-red-rgb': '156,163,175',
+    '--btn-dark-end': '#6b7280', '--third-accent': '#f3f4f6', '--third-accent2': '#ffffff', '--body-bg': '#f9fafb',
+    '--header-gradient-start': '#f8fafc', '--header-gradient-end': '#e2e8f0', '--pill-bg': '#cbd5e1', '--pill-hover': '#9ca3af',
+    '--text-primary': '#111827', '--footer-bg': '#1f2937', '--hero-text': '#111827'
+  },
+  rubyDove: {
+    '--primary': '#881337', '--gold': '#fbbf24', '--light-red': '#e11d48', '--light-red-rgb': '225,29,72',
+    '--btn-dark-end': '#be123c', '--third-accent': '#fecdd3', '--third-accent2': '#ffe4e8', '--body-bg': '#fff1f2',
+    '--header-gradient-start': '#be123c', '--header-gradient-end': '#e11d48', '--pill-bg': '#9f1239', '--pill-hover': '#e11d48',
+    '--text-primary': '#2c0e1a', '--footer-bg': '#2c0e1a', '--hero-text': '#2c0e1a'
+  },
+  arcticDawn: {
+    '--primary': '#c7d2fe', '--gold': '#fde047', '--light-red': '#818cf8', '--light-red-rgb': '129,140,248',
+    '--btn-dark-end': '#4f46e5', '--third-accent': '#e0e7ff', '--third-accent2': '#eef2ff', '--body-bg': '#f5f3ff',
+    '--header-gradient-start': '#e0e7ff', '--header-gradient-end': '#c7d2fe', '--pill-bg': '#a5b4fc', '--pill-hover': '#818cf8',
+    '--text-primary': '#1e1b4b', '--footer-bg': '#1e1b4b', '--hero-text': '#1e1b4b'
+  },
+  starSpangled: {
+    '--primary': '#1e3a8a', '--gold': '#facc15', '--light-red': '#dc2626', '--light-red-rgb': '220,38,38',
+    '--btn-dark-end': '#b91c1c', '--third-accent': '#bfdbfe', '--third-accent2': '#dbeafe', '--body-bg': '#fef9e6',
+    '--header-gradient-start': '#1e3a8a', '--header-gradient-end': '#3b82f6', '--pill-bg': '#2563eb', '--pill-hover': '#dc2626',
+    '--text-primary': '#0c1a2e', '--footer-bg': '#0c1a2e', '--hero-text': '#0c1a2e'
+  },
+  linenVirtue: {
+    '--primary': '#e9e5dc', '--gold': '#d4a373', '--light-red': '#b5835a', '--light-red-rgb': '181,131,90',
+    '--btn-dark-end': '#936639', '--third-accent': '#fefae0', '--third-accent2': '#faedcd', '--body-bg': '#faf7f0',
+    '--header-gradient-start': '#f5ebe0', '--header-gradient-end': '#e3d5ca', '--pill-bg': '#d5bdaf', '--pill-hover': '#b5835a',
+    '--text-primary': '#2c221b', '--footer-bg': '#2c221b', '--hero-text': '#2c221b'
   }
 };
 
@@ -356,7 +438,7 @@ if (themeSelect) {
   themeSelect.addEventListener('change', (e) => applyTheme(e.target.value));
 }
 
-// existing website functionality
+// Rest of website functionality (unchanged, includes daily verse, events, etc.)
 const dailyContent = [{ verse:"“The Lord is my strength and my shield; my heart trusts in Him.” — Psalm 28:7", motivation:"God's grace empowers you today." },{ verse:"“I can do all things through Christ who strengthens me.” — Philippians 4:13", motivation:"You are never alone; Christ is your strength." },{ verse:"“Be strong and courageous. Do not be afraid; for the Lord your God will be with you.” — Joshua 1:9", motivation:"Courage comes from trusting God's presence." }];
 const todayIdx = new Date().getDate() % dailyContent.length;
 document.getElementById('dailyVerseContent').innerHTML = dailyContent[todayIdx].verse;

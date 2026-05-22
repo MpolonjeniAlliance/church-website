@@ -27,8 +27,6 @@
   --radius-md: 18px;
   --radius-lg: 26px;
   --radius-xl: 34px;
-  
-  /* alias for compatibility */
   --light-red: var(--sapphire);
   --red: var(--sapphire-dark);
   --soft-red: var(--sapphire-light);
@@ -171,7 +169,6 @@ body::before {
   -webkit-background-clip: text;
   color: transparent;
 }
-.section-subtitle { color: rgba(255, 250, 240, 0.75); max-width: 800px; line-height: 1.8; margin-bottom: 50px; }
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -185,9 +182,8 @@ body::before {
   text-align: center;
   border-radius: 32px;
   border: 1px solid rgba(42, 111, 219, 0.4);
-  transition: 0.2s;
 }
-.stat-box h3 { font-size: 3rem; color: var(--gold); margin-bottom: 10px; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+.stat-box h3 { font-size: 3rem; color: var(--gold); margin-bottom: 10px; }
 .vision-mission-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -202,29 +198,12 @@ body::before {
   border: 1px solid rgba(42, 111, 219, 0.5);
   transition: 0.3s;
 }
-.vm-card:hover {
-  transform: translateY(-6px);
-  background: rgba(42, 111, 219, 0.2);
-  border-color: var(--gold);
-}
-.vm-card h3 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--gold);
-}
+.vm-card:hover { transform: translateY(-6px); background: rgba(42, 111, 219, 0.2); border-color: var(--gold); }
+.vm-card h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; color: var(--gold); }
 .vm-card ul { list-style: none; margin-top: 16px; }
 .vm-card li { margin-bottom: 14px; display: flex; gap: 12px; align-items: flex-start; line-height: 1.5; }
-.vm-card li i { color: var(--sapphire-light); font-size: 1.2rem; margin-top: 3px; }
-.difference-accordion {
-  margin: 40px 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: transparent;
-}
+.vm-card li i { color: var(--sapphire-light); font-size: 1.2rem; }
+.difference-accordion { margin: 40px 0; border-radius: var(--radius-lg); overflow: hidden; }
 .difference-header {
   background: linear-gradient(135deg, #0f2e4a, #08213a);
   color: #ffe3c6;
@@ -236,11 +215,8 @@ body::before {
   font-size: 1.3rem;
   font-weight: 800;
   border-radius: var(--radius-md);
-  transition: 0.2s;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   border: 1px solid var(--sapphire);
 }
-.difference-header:hover { background: linear-gradient(135deg, #1c4a74, #0a2f4f); transform: translateY(-2px); }
 .difference-content { display: none; }
 .difference-content.show { display: block; animation: fadeSlide 0.3s ease; }
 .difference-inner {
@@ -263,13 +239,11 @@ body::before {
   padding: 32px;
   text-align: center;
   border: 1px solid rgba(42, 111, 219, 0.45);
-  color: #ffe6d5;
   transition: all 0.3s ease;
 }
 .difference-card:hover { transform: translateY(-8px); background: rgba(42, 111, 219, 0.28); border-color: var(--gold); }
 .difference-icon { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
-.difference-card h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; font-weight: 800; }
-.difference-card p { color: #fef3e6; line-height: 1.6; }
+.difference-card h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; }
 .difference-quote {
   margin-top: 40px;
   text-align: center;
@@ -277,7 +251,6 @@ body::before {
   font-style: italic;
   padding: 20px;
   border-top: 1px solid rgba(42, 111, 219, 0.4);
-  color: rgba(255, 245, 230, 0.9);
 }
 .upcoming-section {
   background: rgba(15, 42, 74, 0.5);
@@ -295,7 +268,6 @@ body::before {
   backdrop-filter: blur(10px);
   border-radius: var(--radius-md);
   padding: 24px;
-  transition: 0.2s;
   border-right: 2px solid var(--sapphire-light);
 }
 .event-card .event-date { color: var(--gold); font-weight: 800; margin-bottom: 12px; }
@@ -320,7 +292,6 @@ body::before {
 }
 .mini-card h3, .mini-card h4 { font-size: 1.3rem; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; color: #ffedd5; }
 .mini-card .time { font-size: 0.75rem; font-weight: 700; color: var(--gold); margin-top: 16px; display: inline-block; background: rgba(0,0,0,0.4); padding: 6px 14px; border-radius: 40px; }
-.ministry-mini { border-left-color: var(--sapphire-light); }
 .pill-nav {
   display: flex;
   flex-wrap: wrap;
@@ -345,9 +316,8 @@ body::before {
   cursor: pointer;
   color: #ffe6d5;
   transition: 0.2s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
-.pill:hover { background: var(--sapphire); color: #1f1a12; transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.25); }
+.pill:hover { background: var(--sapphire); color: #1f1a12; transform: translateY(-3px); }
 .accordion-section { display: none; margin: 40px 0 20px; }
 .accordion-section.active-section { display: block; }
 .accordion {
@@ -411,7 +381,6 @@ body::before {
   border: 1px solid rgba(42,111,219,0.45);
 }
 .feature-item i { font-size: 2.2rem; color: var(--gold); margin-bottom: 12px; display: block; }
-.feature-item h5 { font-size: 1.2rem; margin-bottom: 8px; color: #ffefcf; }
 .history-timeline {
   background: rgba(10, 28, 48, 0.9);
   border-radius: 36px;
@@ -447,9 +416,8 @@ body::before {
   gap: 20px;
   margin: 25px 0;
 }
-.gallery-item { border-radius: 24px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; transition: 0.2s; border: 1px solid rgba(42,111,219,0.5); background: #1a3a58; }
+.gallery-item { border-radius: 24px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; border: 1px solid rgba(42,111,219,0.5); background: #1a3a58; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
-.gallery-item img:hover { transform: scale(1.02); filter: brightness(1.05); }
 .partner-card-standalone {
   background: rgba(42, 111, 219, 0.2);
   backdrop-filter: blur(12px);
@@ -457,9 +425,7 @@ body::before {
   padding: 36px 32px;
   margin: 30px 0;
   border: 1px solid rgba(42, 111, 219, 0.6);
-  color: #fef3e6;
   text-align: center;
-  transition: 0.2s;
 }
 .bank-info {
   background: rgba(0, 0, 0, 0.5);
@@ -485,7 +451,14 @@ body::before {
   border: 1px solid rgba(42, 111, 219, 0.45);
   display: none;
 }
-.about-section p { margin-bottom: 16px; line-height: 1.7; color: #ffe6d5; }
+.contact-highlight {
+  background: rgba(42, 111, 219, 0.25);
+  border-radius: 28px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  border: 1px solid var(--gold);
+}
 footer {
   background: #041227;
   margin-top: 100px;
@@ -494,9 +467,6 @@ footer {
 }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; margin-bottom: 50px; }
 .footer-grid h3 { font-size: 1.2rem; margin-bottom: 1rem; }
-.footer-grid div:nth-child(1) h3 { color: #ffaa66; }
-.footer-grid div:nth-child(2) h3 { color: #66ccff; }
-.footer-grid div:nth-child(3) h3 { color: #90ee90; }
 .social-links a {
   width: 44px;
   height: 44px;
@@ -532,7 +502,6 @@ footer {
   .hero h2 { font-size: 3rem; }
   .daily-card { padding: 28px 5%; }
   .grid-2 { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
 }
 .container { max-width: 1500px; margin: 0 auto; padding: 0 5%; }
 @keyframes fadeSlide {
@@ -551,8 +520,6 @@ footer {
 .group-badge.men { background: #1e3a5f; color: white; }
 .group-badge.women { background: #ec489a; color: white; }
 .group-badge.church { background: #10b981; color: white; }
-.group-badge.default { background: #475569; color: white; }
-.gold-heading { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -638,7 +605,7 @@ footer {
     </div>
     <div class="difference-content" id="differenceContent">
       <div class="difference-inner">
-        <p style="text-align:center;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto 30px auto;">In a world longing for change, Mpolonjeni Alliance Church is committed to being the catalyst for transformation through faith, action, and community impact.</p>
+        <p style="text-align:center;max-width:800px;margin:0 auto 30px auto;">In a world longing for change, Mpolonjeni Alliance Church is committed to being the catalyst for transformation through faith, action, and community impact.</p>
         <div class="difference-grid">
           <div class="difference-card"><div class="difference-icon"><i class="fas fa-heart"></i></div><h3>Spiritual Renewal</h3><p>Deepening our relationship with God through authentic worship, prayer, and discipleship that transforms hearts from the inside out.</p></div>
           <div class="difference-card"><div class="difference-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>Community Impact</h3><p>Going beyond church walls to serve, uplift, and bring hope to families, the vulnerable, and those in need in our community.</p></div>
@@ -667,20 +634,24 @@ footer {
     <div id="ministries">
       <h2 class="section-title" style="font-size:2rem;">🙌 OUR MINISTRIES</h2>
       <div class="compact-mini-grid">
-        <div class="mini-card ministry-mini"><h4><i class="fas fa-child"></i> Children's Ministry</h4><p>Sunday school & faith foundations</p></div>
-        <div class="mini-card ministry-mini"><h4><i class="fas fa-users"></i> Youth Ministry</h4><p>Empowering the next generation</p></div>
-        <div class="mini-card ministry-mini"><h4><i class="fas fa-female"></i> Ladies Ministry</h4><p>Women of faith & fellowship</p></div>
-        <div class="mini-card ministry-mini"><h4><i class="fas fa-male"></i> Men's Ministry</h4><p>Brothers building leaders</p></div>
+        <div class="mini-card"><h4><i class="fas fa-child"></i> Children's Ministry</h4><p>Sunday school & faith foundations</p></div>
+        <div class="mini-card"><h4><i class="fas fa-users"></i> Youth Ministry</h4><p>Empowering the next generation</p></div>
+        <div class="mini-card"><h4><i class="fas fa-female"></i> Ladies Ministry</h4><p>Women of faith & fellowship</p></div>
+        <div class="mini-card"><h4><i class="fas fa-male"></i> Men's Ministry</h4><p>Brothers building leaders</p></div>
       </div>
     </div>
   </div>
 
   <div class="map-card">
-    <h3><i class="fas fa-map-marker-alt" style="color:var(--sapphire-light);"></i> Find Us – Mpolonjeni Alliance Church (Pinpointed)</h3>
+    <h3><i class="fas fa-map-marker-alt" style="color:var(--sapphire-light);"></i> Find Us – Mpolonjeni Alliance Church</h3>
     <div class="map-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3595.123456789!2d31.091688!3d-26.308998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE4JzMyLjQiUyAzMcKwMDUnMzAuMSJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <p style="margin-top:18px;"><i class="fas fa-location-dot"></i> <strong>Exact location:</strong> Latitude -26.308998, Longitude 31.091688 – Mpolonjeni Area, Mbabane, Eswatini. Everyone is welcome!</p>
+  </div>
+
+  <div class="contact-highlight">
+    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> mpolonjenialliancechurch@gmail.com &nbsp;|&nbsp; <i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +268 7613 0566 &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +268 7613 0566</p>
   </div>
 
   <div id="about" class="about-section">
@@ -702,7 +673,6 @@ footer {
 
   <div id="prayer-section" class="accordion-section"><div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-praying-hands"></i> Prayer Requests</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div><p>Share your prayer request via WhatsApp. Our prayer team will stand with you.</p><div><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>Prayer Line:</strong> <a href="https://wa.me/26876130566" target="_blank" style="color:var(--sapphire-light);">+268 7613 0566</a></div><form id="prayerForm"><input type="text" id="prayerName" placeholder="Your Name" style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid var(--sapphire); color:white; margin:10px 0;"><textarea id="prayerRequest" rows="3" placeholder="Prayer request..." style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid var(--sapphire); color:white;"></textarea><button type="submit" class="btn-primary" style="margin-top:10px;">Submit</button></form></div></div></div></div>
 
-  <!-- Partner / Giving section -->
   <div class="partner-card-standalone" id="partner">
     <h3><i class="fas fa-handshake"></i> 🙏 Join Us in Building God's House</h3>
     <p style="margin-bottom:20px;">Your generous giving fuels our <strong>Vision 2037</strong> project: building a 1500‑seat sanctuary, and expands our social responsibility — feeding programs, counselling, community health outreaches, and support for vulnerable families.</p>
@@ -719,7 +689,6 @@ footer {
 
   <div id="media-section" class="accordion-section">
     <div class="accordion" id="accordion-media"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-images"></i> Media Gallery – Moments of Worship & Fellowship</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content">
-      <h3 class="section-title" style="font-size:1.5rem;">Capturing moments of worship, revival, fellowship, and impact.</h3>
       <div class="gallery-grid" id="mediaGalleryGrid"></div>
     </div></div>
   </div>
@@ -799,7 +768,7 @@ footer {
       <a href="https://wa.me/26876130566" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div></div>
     <div><h3>Service Times</h3><p>Sun 11:00 AM</p><p>Wed 6:00 PM</p><p>Tue (Women) 1:00 PM</p></div>
-    <div><h3>Giving</h3><p>NedBank: 020000025799 (Mbabane)</p><p>MTN MoMo: 78116629</p></div>
+    <div><h3>Contact & Giving</h3><p><i class="fas fa-envelope"></i> mpolonjenialliancechurch@gmail.com</p><p><i class="fas fa-phone-alt"></i> +268 7613 0566</p><p><i class="fas fa-hand-holding-heart"></i> NedBank: 020000025799</p><p>MTN MoMo: 78116629</p></div>
   </div>
   <p style="text-align:center; margin-top:40px; color:#bbaa99;">© 2026 Mpolonjeni Alliance Church — Royal Sapphire Theme · Revival & Grace</p>
 </footer>
@@ -808,7 +777,6 @@ footer {
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-// Daily verses
 const dailyContent = [
   { verse: "“The Lord is my strength and my shield; my heart trusts in Him, and He helps me.” — Psalm 28:7", motivation: "God's grace empowers you today. 2 Corinthians 12:9" },
   { verse: "“I can do all things through Christ who strengthens me.” — Philippians 4:13", motivation: "You are never alone; Christ is your strength." },
@@ -817,126 +785,34 @@ const dailyContent = [
 const todayIdx = new Date().getDate() % dailyContent.length;
 document.getElementById('dailyVerseContent').innerHTML = dailyContent[todayIdx].verse;
 document.getElementById('dailyMotivation').innerHTML = `<i class="fas fa-lightbulb"></i> ${dailyContent[todayIdx].motivation}`;
-
-window.addEventListener('load', () => { if(!window.location.hash) window.scrollTo(0,0); });
 AOS.init({ duration: 800, once: true });
 
-// MASTER EVENTS (full set)
 const masterEvents = [
   {title:"Youth Committee Meeting & Bible Study", date:"2026-05-03", group:"Youth"},{title:"Youth Camp - Kwaluseni", date:"2026-05-08", group:"Youth"},{title:"Sigungu (Social Engagement)", date:"2026-05-10", group:"Youth"},{title:"Team Building & Discipleship", date:"2026-05-16", group:"Youth"},{title:"Sigungu Service (LCB)", date:"2026-05-17", group:"Youth"},{title:"Discipleship & Praise Team Practice", date:"2026-05-23", group:"Youth"},{title:"Baptism Service", date:"2026-05-24", group:"Church"},{title:"Month End Half Night & Fasting", date:"2026-05-29", group:"Prayer"},{title:"Discipleship & Practice", date:"2026-05-30", group:"Youth"},{title:"Youth Revivals + Youth Sunday", date:"2026-06-05", group:"Youth"},{title:"Discipleship Session", date:"2026-06-13", group:"Youth"},{title:"Lisango and Luguma", date:"2026-06-14", group:"Church"},{title:"Men's Weekend / Sports Day", date:"2026-06-19", group:"Men"},{title:"Month End Friday Prayer & Fasting", date:"2026-06-26", group:"Prayer"},{title:"Birthdays Celebration", date:"2026-06-27", group:"Fellowship"},{title:"Sigungu Service", date:"2026-06-28", group:"Youth"},{title:"Discipleship Training", date:"2026-07-04", group:"Youth"},{title:"Bible Study (Churchwide)", date:"2026-07-05", group:"Church"},{title:"Youth Empowerment", date:"2026-07-11", group:"Youth"},{title:"Team Building", date:"2026-07-18", group:"Youth"},{title:"Sigungu Service", date:"2026-07-19", group:"Youth"},{title:"Sports Day", date:"2026-07-25", group:"Youth"},{title:"Sigungu - Pastoral Team", date:"2026-07-26", group:"Church"},{title:"Soul Winning Outreach", date:"2026-08-01", group:"Evangelism"},{title:"Bible Study", date:"2026-08-02", group:"Church"},{title:"God's Chosen Generation Youth Camp", date:"2026-08-07", group:"Youth"},{title:"Soul Winning", date:"2026-08-15", group:"Evangelism"},{title:"Fasting Lesson", date:"2026-08-16", group:"Discipleship"},{title:"Evangelism Lesson", date:"2026-08-22", group:"Discipleship"},{title:"Evangelism Lesson (continued)", date:"2026-08-23", group:"Discipleship"},{title:"Mazwi Live Recording", date:"2026-08-28", group:"Worship"},{title:"YOUTH SUNDAY", date:"2026-08-30", group:"Youth"},{title:"Men's Half Night Prayers", date:"2026-03-27", group:"Men"},{title:"Men's Conference", date:"2026-06-19", group:"Men"},{title:"Home Visitation (Q1)", date:"2026-03-15", group:"Men"},{title:"Couples Outing", date:"2026-04-24", group:"Marriage"},{title:"Men's Soul Winning Challenge", date:"2026-01-01", group:"Men"},{title:"Give Food Hampers (Quarterly)", date:"2026-03-20", group:"Outreach"},{title:"Women's Home Visits", date:"2026-03-10", group:"Women"},{title:"Beginning of Year Prayer", date:"2026-02-07", group:"Women"},{title:"Women's Half Night Prayer", date:"2026-06-26", group:"Women"},{title:"Lesson on Building Healthy Families", date:"2026-05-16", group:"Women"},{title:"Women's Local Convention", date:"2026-08-28", group:"Women"},{title:"Women's Sunday", date:"2026-04-26", group:"Women"},{title:"Mother & Daughter Quarterly Lesson", date:"2026-03-21", group:"Women"},{title:"Pyjama Night", date:"2026-10-16", group:"Women"},{title:"Gift Exchange Among Ladies", date:"2026-12-18", group:"Women"},{title:"Cooking Lessons (Monthly)", date:"2026-01-10", group:"Women"},{title:"Health Issues Lesson", date:"2026-05-20", group:"Women"},{title:"CHURCH REVIVAL", date:"2026-03-25", group:"Church"},{title:"OPEN AIR CRUSADE", date:"2026-04-18", group:"Evangelism"},{title:"HALF NIGHT PRAYER", date:"2026-03-20", group:"Prayer"},{title:"CHILDREN'S MINISTRY SUNDAY", date:"2026-06-21", group:"Church"},{title:"MEN'S CONVENTION", date:"2026-07-31", group:"Men"},{title:"YOUTH WEEKEND", date:"2026-08-27", group:"Youth"},{title:"WOMEN'S WEEKEND", date:"2026-09-25", group:"Women"},{title:"SUNDAY SCHOOL CAMP", date:"2026-10-16", group:"Church"},{title:"YOUTH LOCAL CAMP", date:"2026-11-20", group:"Youth"}
 ];
-
-function getGroupBadge(group) {
-  let cls = "group-badge ";
-  if (group === "Youth") cls += "youth";
-  else if (group === "Men") cls += "men";
-  else if (group === "Women") cls += "women";
-  else cls += "church";
-  return `<span class="${cls}">${group}</span>`;
-}
-function renderUpcoming(){
-  const container = document.getElementById('upcomingEventsContainer');
-  if(container){
-    const now = new Date();
-    const upcoming = masterEvents.filter(ev => new Date(ev.date) >= now).sort((a,b)=>new Date(a.date)-new Date(b.date)).slice(0,4);
-    container.innerHTML = upcoming.map(ev => `<div class="event-card"><div class="event-date">📅 ${ev.date}</div><div class="event-title">${ev.title}</div>${getGroupBadge(ev.group)}</div>`).join('');
-  }
-}
-function renderActivitiesGrid(){
-  const groups = {};
-  masterEvents.forEach(ev => { const g = ev.group; if (!groups[g]) groups[g] = []; groups[g].push(ev); });
-  for (let g in groups) groups[g].sort((a,b) => new Date(a.date) - new Date(b.date));
-  const groupOrder = ["Youth", "Women", "Men", "Church", "Prayer", "Evangelism", "Discipleship", "Fellowship", "Worship", "Marriage", "Outreach"];
-  let html = '';
-  for (let group of groupOrder) {
-    if (groups[group] && groups[group].length) {
-      html += `<div style="margin-bottom: 40px;"><h3 style="color: var(--gold); border-left: 5px solid var(--sapphire); padding-left: 16px; margin-bottom: 20px;">${group} Ministry</h3><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">`;
-      groups[group].forEach(ev => { html += `<div style="background: rgba(42,111,219,0.1); border-radius: 20px; padding: 16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`; });
-      html += `</div></div>`;
-    }
-  }
-  document.getElementById('activitiesGrid').innerHTML = html;
-}
-function renderCalendar(){
-  const grid = document.getElementById('calendarGrid');
-  if(!grid) return;
-  const monthMap = new Map();
-  masterEvents.forEach(ev => {
-    let d = new Date(ev.date);
-    if(isNaN(d.getTime())) return;
-    let key = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
-    if(!monthMap.has(key)) monthMap.set(key, { month: d.getMonth(), year: d.getFullYear(), events: [] });
-    monthMap.get(key).events.push(ev);
-  });
-  const sortedMonths = Array.from(monthMap.entries()).sort((a,b) => {
-    const [yearA, monthA] = a[0].split('-').map(Number);
-    const [yearB, monthB] = b[0].split('-').map(Number);
-    if(yearA !== yearB) return yearA - yearB;
-    return monthA - monthB;
-  });
-  grid.innerHTML = '';
-  for(let [key, val] of sortedMonths){
-    const monthName = new Date(val.year, val.month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
-    const div = document.createElement('div'); div.style.background='rgba(0,0,0,0.45)'; div.style.padding='20px'; div.style.borderRadius='24px'; div.style.borderLeft=`3px solid var(--sapphire)`;
-    div.innerHTML = `<h3 style="color:var(--gold);">${monthName}</h3>`;
-    val.events.sort((a,b)=>new Date(a.date)-new Date(b.date)).forEach(ev => { div.innerHTML += `<div style="margin-bottom:10px;"><strong>${ev.date}</strong> – ${ev.title}<br>${getGroupBadge(ev.group)}</div>`; });
-    grid.appendChild(div);
-  }
-}
-
-const imageCodes = ["MyG3QCkh", "9mCLSJnV", "5WzK9Dd9", "nNX6cKZD", "jkJKV0FT", "zW3Q3LYC", "4wLVdfkp", "VYYTnC2R", "DyPPRyY", "d0N7tPbx", "qL2RfGCk", "YFR3Fzh8", "YTDTrp8Q", "5WyNbp4C", "qLnVybD3", "ZzD6bjNb", "rRmPnmBN", "vCrz7s1s"];
-function buildMediaGallery(){
-  const gallery = document.getElementById('mediaGalleryGrid');
-  if(gallery) gallery.innerHTML = imageCodes.map(code => `<div class="gallery-item" onclick="window.open('https://ibb.co/${code}', '_blank')"><img src="https://i.ibb.co/${code}/0.jpg" loading="lazy" onerror="this.src='https://placehold.co/600x450/1e3a5f/white?text=Photo';"></div>`).join('');
-}
-
-window.toggleAccordion = function(h){ let c = h.nextElementSibling; let i = h.querySelector('i:last-child'); c.classList.toggle('show'); if(i) i.style.transform = c.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; };
-window.toggleDifference = function() { const content = document.getElementById('differenceContent'); const icon = document.getElementById('differenceIcon'); content.classList.toggle('show'); icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; };
+function getGroupBadge(g){ let c="group-badge "; if(g==="Youth")c+="youth"; else if(g==="Men")c+="men"; else if(g==="Women")c+="women"; else c+="church"; return `<span class="${c}">${g}</span>`; }
+function renderUpcoming(){ let c=document.getElementById('upcomingEventsContainer'); if(c){ let now=new Date(); let upcoming=masterEvents.filter(ev=>new Date(ev.date)>=now).sort((a,b)=>new Date(a.date)-new Date(b.date)).slice(0,4); c.innerHTML=upcoming.map(ev=>`<div class="event-card"><div class="event-date">📅 ${ev.date}</div><div class="event-title">${ev.title}</div>${getGroupBadge(ev.group)}</div>`).join(''); } }
+function renderActivitiesGrid(){ let groups={}; masterEvents.forEach(ev=>{ if(!groups[ev.group]) groups[ev.group]=[]; groups[ev.group].push(ev); }); for(let g in groups) groups[g].sort((a,b)=>new Date(a.date)-new Date(b.date)); let order=["Youth","Women","Men","Church","Prayer","Evangelism","Discipleship","Fellowship","Worship","Marriage","Outreach"]; let html=''; for(let gr of order){ if(groups[gr]&&groups[gr].length){ html+=`<div style="margin-bottom:40px;"><h3 style="color:var(--gold); border-left:5px solid var(--sapphire); padding-left:16px;">${gr} Ministry</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;">`; groups[gr].forEach(ev=>{ html+=`<div style="background:rgba(42,111,219,0.12); border-radius:20px; padding:16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`; }); html+=`</div></div>`; } } document.getElementById('activitiesGrid').innerHTML=html; }
+function renderCalendar(){ let grid=document.getElementById('calendarGrid'); if(!grid)return; let monthMap=new Map(); masterEvents.forEach(ev=>{ let d=new Date(ev.date); if(isNaN(d.getTime()))return; let key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`; if(!monthMap.has(key))monthMap.set(key,{month:d.getMonth(),year:d.getFullYear(),events:[]}); monthMap.get(key).events.push(ev); }); let sorted=Array.from(monthMap.entries()).sort((a,b)=>{ let[yA,mA]=a[0].split('-').map(Number),[yB,mB]=b[0].split('-').map(Number); if(yA!==yB)return yA-yB; return mA-mB;}); grid.innerHTML=''; for(let[key,val]of sorted){ let monthName=new Date(val.year,val.month,1).toLocaleString('default',{month:'long',year:'numeric'}); let div=document.createElement('div'); div.style.background='rgba(0,0,0,0.45)'; div.style.padding='20px'; div.style.borderRadius='24px'; div.style.borderLeft=`3px solid var(--sapphire)`; div.innerHTML=`<h3 style="color:var(--gold);">${monthName}</h3>`; val.events.sort((a,b)=>new Date(a.date)-new Date(b.date)).forEach(ev=>{ div.innerHTML+=`<div style="margin-bottom:10px;"><strong>${ev.date}</strong> – ${ev.title}<br>${getGroupBadge(ev.group)}</div>`; }); grid.appendChild(div); } }
+const imageCodes=["MyG3QCkh","9mCLSJnV","5WzK9Dd9","nNX6cKZD","jkJKV0FT","zW3Q3LYC","4wLVdfkp","VYYTnC2R","DyPPRyY","d0N7tPbx","qL2RfGCk","YFR3Fzh8","YTDTrp8Q","5WyNbp4C","qLnVybD3","ZzD6bjNb","rRmPnmBN","vCrz7s1s"];
+function buildMediaGallery(){ let g=document.getElementById('mediaGalleryGrid'); if(g) g.innerHTML=imageCodes.map(code=>`<div class="gallery-item" onclick="window.open('https://ibb.co/${code}', '_blank')"><img src="https://i.ibb.co/${code}/0.jpg" loading="lazy" onerror="this.src='https://placehold.co/600x450/1e3a5f/white?text=Photo';"></div>`).join(''); }
+window.toggleAccordion=function(h){ let c=h.nextElementSibling; let i=h.querySelector('i:last-child'); c.classList.toggle('show'); if(i) i.style.transform=c.classList.contains('show')?'rotate(180deg)':'rotate(0)'; };
+window.toggleDifference=function(){ let c=document.getElementById('differenceContent'); let i=document.getElementById('differenceIcon'); c.classList.toggle('show'); i.style.transform=c.classList.contains('show')?'rotate(180deg)':'rotate(0)'; };
 function closeAll(){ document.querySelectorAll('.accordion-content').forEach(c=>{ if(c.classList.contains('show')){ let h=c.previousElementSibling; if(h) h.click(); } }); }
 function expandAll(){ document.querySelectorAll('.accordion-content').forEach(c=>{ if(!c.classList.contains('show')){ let h=c.previousElementSibling; if(h) h.click(); } }); }
 document.getElementById('expandAllBtn')?.addEventListener('click',expandAll);
 document.getElementById('collapseAllBtn')?.addEventListener('click',closeAll);
-
 const sections = { prayer: document.getElementById('prayer-section'), calendar: document.getElementById('calendar-section'), vision: document.getElementById('vision-section'), media: document.getElementById('media-section'), archives: document.getElementById('archives-section') };
-function showSection(id, focusAccordionId) {
-  Object.values(sections).forEach(s => s?.classList.remove('active-section'));
-  let target = sections[id];
-  if(target) target.classList.add('active-section');
-  if(focusAccordionId) {
-    let accordionDiv = document.getElementById(focusAccordionId);
-    if(accordionDiv) {
-      let header = accordionDiv.querySelector('.accordion-header');
-      let content = accordionDiv.querySelector('.accordion-content');
-      if(content && !content.classList.contains('show') && header) header.click();
-      accordionDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      if(focusAccordionId === 'accordion-activities') {
-        let btn = document.getElementById('toggleActivitiesBtn');
-        let container = document.getElementById('activitiesContainer');
-        if(container && btn && container.style.display !== 'block') { btn.click(); }
-      }
-    }
-  } else if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-document.querySelectorAll('.pill').forEach(p => {
-  p.addEventListener('click', () => {
-    let sec = p.getAttribute('data-section'), focus = p.getAttribute('data-focus');
-    if(sec === 'prayer-section') showSection('prayer');
-    else if(sec === 'calendar-section') showSection('calendar', focus);
-    else if(sec === 'vision-section') showSection('vision', focus === 'history' ? 'accordion-history' : 'accordion-vision');
-    else if(sec === 'media-section') showSection('media', 'accordion-media');
-    else if(sec === 'archives-section') showSection('archives', 'accordion-archives');
-  });
-});
+function showSection(id, focusAccordionId){ Object.values(sections).forEach(s=>s?.classList.remove('active-section')); let target=sections[id]; if(target) target.classList.add('active-section'); if(focusAccordionId){ let accordionDiv=document.getElementById(focusAccordionId); if(accordionDiv){ let header=accordionDiv.querySelector('.accordion-header'); let content=accordionDiv.querySelector('.accordion-content'); if(content&&!content.classList.contains('show')&&header) header.click(); accordionDiv.scrollIntoView({behavior:'smooth',block:'start'}); if(focusAccordionId==='accordion-activities'){ let btn=document.getElementById('toggleActivitiesBtn'); let container=document.getElementById('activitiesContainer'); if(container&&btn&&container.style.display!=='block') btn.click(); } } } else if(target) target.scrollIntoView({behavior:'smooth',block:'start'}); if(id==='prayer'&&target){ let prayerHeader=target.querySelector('.accordion-header'); if(prayerHeader&&!prayerHeader.nextElementSibling.classList.contains('show')) prayerHeader.click(); } }
+document.querySelectorAll('.pill').forEach(p=>{ p.addEventListener('click',()=>{ let sec=p.getAttribute('data-section'), focus=p.getAttribute('data-focus'); if(sec==='prayer-section') showSection('prayer'); else if(sec==='calendar-section') showSection('calendar', focus); else if(sec==='vision-section') showSection('vision', focus==='history'?'accordion-history':'accordion-vision'); else if(sec==='media-section') showSection('media','accordion-media'); else if(sec==='archives-section') showSection('archives','accordion-archives'); }); });
 document.querySelector('.vision2037-trigger')?.addEventListener('click',(e)=>{ e.preventDefault(); showSection('vision','accordion-vision'); });
-
-let act = false; document.getElementById('toggleActivitiesBtn')?.addEventListener('click',()=>{ let c=document.getElementById('activitiesContainer'); if(act){ c.style.display='none'; document.getElementById('toggleActivitiesBtn').innerHTML='📅 SHOW ALL ACTIVITIES'; } else { c.style.display='block'; renderActivitiesGrid(); document.getElementById('toggleActivitiesBtn').innerHTML='✖️ HIDE ACTIVITIES'; } act=!act; });
+let act=false; document.getElementById('toggleActivitiesBtn')?.addEventListener('click',()=>{ let c=document.getElementById('activitiesContainer'); if(act){ c.style.display='none'; this.innerHTML='📅 SHOW ALL ACTIVITIES'; } else{ c.style.display='block'; renderActivitiesGrid(); this.innerHTML='✖️ HIDE ACTIVITIES'; } act=!act; });
 document.getElementById('prayerForm')?.addEventListener('submit',(e)=>{ e.preventDefault(); let n=document.getElementById('prayerName').value.trim(); let r=document.getElementById('prayerRequest').value.trim(); if(n&&r){ window.open(`https://wa.me/26876130566?text=Prayer%20from%20${encodeURIComponent(n)}%3A%20${encodeURIComponent(r)}`,'_blank'); alert('Opened in WhatsApp.'); e.target.reset(); } else alert('Fill all fields'); });
 document.getElementById('menuToggle')?.addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('active'));
 document.getElementById('backToTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 document.getElementById('adminBtn')?.addEventListener('click',()=>alert('Admin dashboard coming soon'));
 renderUpcoming(); renderCalendar(); buildMediaGallery();
-document.querySelectorAll('[data-scroll]').forEach(l=>{ l.addEventListener('click',(e)=>{ e.preventDefault(); let t=l.getAttribute('data-scroll'); if(t==='home')window.scrollTo({top:0,behavior:'smooth'}); else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'}); else if(t==='ministries')document.getElementById('ministries')?.scrollIntoView({behavior:'smooth'}); else if(t==='activities')showSection('calendar','accordion-activities'); else if(t==='calendar')showSection('calendar','accordion-calendar'); else if(t==='vision2037')showSection('vision','accordion-vision'); else if(t==='media')showSection('media','accordion-media'); else if(t==='archives')showSection('archives','accordion-archives'); else if(t==='history')showSection('vision','accordion-history'); else if(t==='about'){ const aboutSec = document.getElementById('about'); aboutSec.style.display = 'block'; aboutSec.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else if(t==='prayer')showSection('prayer'); else if(t==='partner')showSection('prayer'); }); });
+document.querySelectorAll('[data-scroll]').forEach(l=>{ l.addEventListener('click',(e)=>{ e.preventDefault(); let t=l.getAttribute('data-scroll'); if(t==='home')window.scrollTo({top:0,behavior:'smooth'}); else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'}); else if(t==='ministries')document.getElementById('ministries')?.scrollIntoView({behavior:'smooth'}); else if(t==='activities')showSection('calendar','accordion-activities'); else if(t==='calendar')showSection('calendar','accordion-calendar'); else if(t==='vision2037')showSection('vision','accordion-vision'); else if(t==='media')showSection('media','accordion-media'); else if(t==='archives')showSection('archives','accordion-archives'); else if(t==='history')showSection('vision','accordion-history'); else if(t==='about'){ const aboutSec=document.getElementById('about'); aboutSec.style.display='block'; aboutSec.scrollIntoView({behavior:'smooth'}); } else if(t==='prayer')showSection('prayer'); else if(t==='partner')showSection('prayer'); }); });
 </script>
 </body>
 </html>

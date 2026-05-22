@@ -13,7 +13,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --primary: #071a3b;
   --secondary: #0f2a4a;
@@ -28,14 +27,13 @@
   --radius-md: 18px;
   --radius-lg: 26px;
   --radius-xl: 34px;
-
-  /* Compatibility overrides (royal sapphire replaces all red tones) */
+  
+  /* alias for compatibility */
   --light-red: var(--sapphire);
   --red: var(--sapphire-dark);
   --soft-red: var(--sapphire-light);
   --dark-red: var(--sapphire-dark);
 }
-
 body {
   font-family: 'Inter', sans-serif;
   background: #06132c;
@@ -43,25 +41,23 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background: radial-gradient(circle at top left, rgba(42, 111, 219, 0.12), transparent 35%),
               radial-gradient(circle at bottom right, rgba(240, 180, 41, 0.08), transparent 40%),
-              radial-gradient(circle at center, rgba(62, 131, 240, 0.06), transparent 50%);
+              radial-gradient(circle at center, rgba(62, 131, 240, 0.05), transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
-
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(6, 19, 44, 0.9);
+  background: rgba(6, 19, 44, 0.92);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   padding: 8px 5%;
@@ -70,23 +66,20 @@ body::before {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .logo-area { display: flex; align-items: center; gap: 12px; }
 .church-logo { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 0 10px rgba(42, 111, 219, 0.5); }
 .logo-text h1 { font-size: 1.7rem; font-weight: 900; background: linear-gradient(135deg, #fff8f0, var(--gold), var(--sapphire-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .logo-text p { font-size: 0.7rem; color: var(--gold); letter-spacing: 1px; font-weight: 600; }
 .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 .nav-links a { color: #fff5ea; text-decoration: none; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; transition: 0.3s; letter-spacing: 0.5px; }
-.nav-links a:hover { color: var(--sapphire-light); text-shadow: 0 0 8px var(--sapphire); }
+.nav-links a:hover { color: var(--sapphire-light); text-shadow: 0 0 6px var(--sapphire); }
 .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
-
 @media (max-width: 900px) {
   .menu-toggle { display: block; }
   .nav-links { display: none; width: 100%; flex-direction: column; background: rgba(7, 26, 59, 0.98); backdrop-filter: blur(14px); border-radius: 28px; padding: 24px; margin-top: 12px; gap: 1.2rem; border: 1px solid var(--sapphire); }
   .nav-links.active { display: flex; }
   .logo-text h1 { font-size: 1.2rem; }
 }
-
 .hero {
   min-height: 100vh;
   display: flex;
@@ -95,7 +88,6 @@ body::before {
   position: relative;
   overflow: hidden;
 }
-
 .hero-watermark {
   position: absolute;
   top: 0;
@@ -110,7 +102,6 @@ body::before {
   pointer-events: none;
   z-index: 1;
 }
-
 .hero-grid {
   position: relative;
   z-index: 2;
@@ -122,20 +113,17 @@ body::before {
   margin: 0 auto;
   text-align: center;
 }
-
 .hero h2 {
   font-size: 4.2rem;
   line-height: 1.1;
   font-weight: 900;
   margin-bottom: 25px;
 }
-
 .hero h2 span {
   background: linear-gradient(135deg, var(--sapphire-light), var(--gold), #ffd966);
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .hero p {
   font-size: 1.15rem;
   line-height: 1.8;
@@ -145,9 +133,7 @@ body::before {
   margin-left: auto;
   margin-right: auto;
 }
-
 .hero-buttons { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
-
 .btn {
   padding: 18px 36px;
   border-radius: 999px;
@@ -158,11 +144,9 @@ body::before {
   align-items: center;
   gap: 10px;
 }
-
 .btn-primary { background: linear-gradient(115deg, var(--sapphire), var(--sapphire-dark)); color: white; border: none; box-shadow: 0 6px 14px rgba(42, 111, 219, 0.4); }
 .btn-secondary { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(16px); border: 1px solid rgba(42, 111, 219, 0.7); color: white; }
 .btn:hover { transform: translateY(-5px); filter: brightness(1.05); }
-
 .daily-card {
   background: linear-gradient(105deg, #0a1c36, #0e2a47);
   padding: 28px 5%;
@@ -177,10 +161,8 @@ body::before {
   border-top: 1px solid var(--sapphire);
   border-bottom: 1px solid var(--sapphire);
 }
-
 .daily-verse { font-size: 1.2rem; font-weight: 500; margin-bottom: 16px; color: #ffe3c6; }
 .daily-motivation { color: var(--gold); font-weight: 700; display: inline-block; background: rgba(42, 111, 219, 0.25); padding: 8px 20px; border-radius: 40px; }
-
 .section-title {
   font-size: 3rem;
   font-weight: 900;
@@ -189,16 +171,13 @@ body::before {
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .section-subtitle { color: rgba(255, 250, 240, 0.75); max-width: 800px; line-height: 1.8; margin-bottom: 50px; }
-
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   margin: 60px 0;
 }
-
 .stat-box {
   background: linear-gradient(135deg, rgba(42, 111, 219, 0.12), rgba(0, 0, 0, 0.4));
   backdrop-filter: blur(4px);
@@ -208,16 +187,13 @@ body::before {
   border: 1px solid rgba(42, 111, 219, 0.4);
   transition: 0.2s;
 }
-
 .stat-box h3 { font-size: 3rem; color: var(--gold); margin-bottom: 10px; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
-
 .vision-mission-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
   margin: 40px 0;
 }
-
 .vm-card {
   background: rgba(15, 42, 74, 0.65);
   backdrop-filter: blur(12px);
@@ -226,13 +202,11 @@ body::before {
   border: 1px solid rgba(42, 111, 219, 0.5);
   transition: 0.3s;
 }
-
 .vm-card:hover {
   transform: translateY(-6px);
   background: rgba(42, 111, 219, 0.2);
   border-color: var(--gold);
 }
-
 .vm-card h3 {
   font-size: 1.8rem;
   font-weight: 800;
@@ -242,18 +216,15 @@ body::before {
   gap: 12px;
   color: var(--gold);
 }
-
 .vm-card ul { list-style: none; margin-top: 16px; }
 .vm-card li { margin-bottom: 14px; display: flex; gap: 12px; align-items: flex-start; line-height: 1.5; }
 .vm-card li i { color: var(--sapphire-light); font-size: 1.2rem; margin-top: 3px; }
-
 .difference-accordion {
   margin: 40px 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: transparent;
 }
-
 .difference-header {
   background: linear-gradient(135deg, #0f2e4a, #08213a);
   color: #ffe3c6;
@@ -269,7 +240,6 @@ body::before {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   border: 1px solid var(--sapphire);
 }
-
 .difference-header:hover { background: linear-gradient(135deg, #1c4a74, #0a2f4f); transform: translateY(-2px); }
 .difference-content { display: none; }
 .difference-content.show { display: block; animation: fadeSlide 0.3s ease; }
@@ -280,14 +250,12 @@ body::before {
   margin-top: 12px;
   border: 1px solid var(--sapphire);
 }
-
 .difference-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 35px;
   margin-top: 20px;
 }
-
 .difference-card {
   background: linear-gradient(135deg, rgba(42, 111, 219, 0.15), rgba(0, 0, 0, 0.4));
   backdrop-filter: blur(8px);
@@ -298,13 +266,19 @@ body::before {
   color: #ffe6d5;
   transition: all 0.3s ease;
 }
-
 .difference-card:hover { transform: translateY(-8px); background: rgba(42, 111, 219, 0.28); border-color: var(--gold); }
 .difference-icon { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
 .difference-card h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; font-weight: 800; }
 .difference-card p { color: #fef3e6; line-height: 1.6; }
-.difference-quote { margin-top: 40px; text-align: center; font-size: 1.2rem; font-style: italic; padding: 20px; border-top: 1px solid rgba(42, 111, 219, 0.4); color: rgba(255, 245, 230, 0.9); }
-
+.difference-quote {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 20px;
+  border-top: 1px solid rgba(42, 111, 219, 0.4);
+  color: rgba(255, 245, 230, 0.9);
+}
 .upcoming-section {
   background: rgba(15, 42, 74, 0.5);
   backdrop-filter: blur(12px);
@@ -313,7 +287,6 @@ body::before {
   margin: 40px 0;
   border: 1px solid rgba(42, 111, 219, 0.5);
 }
-
 .upcoming-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
 @media (max-width: 1100px) { .upcoming-row { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 700px) { .upcoming-row { grid-template-columns: 1fr; } }
@@ -327,20 +300,17 @@ body::before {
 }
 .event-card .event-date { color: var(--gold); font-weight: 800; margin-bottom: 12px; }
 .event-card .event-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; }
-
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 32px;
   margin: 30px 0;
 }
-
 .compact-mini-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
-
 .mini-card {
   background: rgba(10, 35, 60, 0.8);
   backdrop-filter: blur(12px);
@@ -351,7 +321,6 @@ body::before {
 .mini-card h3, .mini-card h4 { font-size: 1.3rem; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; color: #ffedd5; }
 .mini-card .time { font-size: 0.75rem; font-weight: 700; color: var(--gold); margin-top: 16px; display: inline-block; background: rgba(0,0,0,0.4); padding: 6px 14px; border-radius: 40px; }
 .ministry-mini { border-left-color: var(--sapphire-light); }
-
 .pill-nav {
   display: flex;
   flex-wrap: wrap;
@@ -367,7 +336,6 @@ body::before {
   z-index: 90;
   border: 1px solid var(--sapphire);
 }
-
 .pill {
   background: #1f3b5c;
   padding: 8px 24px;
@@ -379,9 +347,7 @@ body::before {
   transition: 0.2s;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
-
 .pill:hover { background: var(--sapphire); color: #1f1a12; transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.25); }
-
 .accordion-section { display: none; margin: 40px 0 20px; }
 .accordion-section.active-section { display: block; }
 .accordion {
@@ -405,27 +371,47 @@ body::before {
 }
 .accordion-content { display: none; padding: 28px; background: rgba(0, 0, 0, 0.4); border-top: 1px solid rgba(42, 111, 219, 0.4); }
 .accordion-content.show { display: block; }
-
 .vision2037 {
   background: linear-gradient(125deg, #0b1f3a, #142f4e);
   padding: 48px;
   border-radius: 40px;
   border: 1px solid var(--sapphire);
 }
-
 .expansion-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 30px 0; }
 .capacity-card { background: rgba(0, 0, 0, 0.55); padding: 28px; border-radius: 32px; text-align: center; border: 1px solid var(--sapphire); }
 .capacity-number { font-size: 2.8rem; font-weight: 900; color: var(--gold); }
-.pillars-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin: 40px 0; }
-.pillar-card { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(8px); border-radius: 28px; padding: 32px; border: 1px solid rgba(42, 111, 219, 0.4); transition: all 0.2s; }
+.pillars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+.pillar-card {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+  padding: 32px;
+  border: 1px solid rgba(42, 111, 219, 0.4);
+  transition: all 0.2s;
+}
 .pillar-card:hover { transform: translateY(-4px); background: rgba(42, 111, 219, 0.18); }
 .pillar-icon { font-size: 2.5rem; color: var(--sapphire-light); margin-bottom: 18px; }
 .pillar-card h4 { font-size: 1.5rem; margin-bottom: 14px; font-weight: 800; color: var(--gold); }
-.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin: 30px 0; }
-.feature-item { background: rgba(0,0,0,0.4); border-radius: 24px; padding: 24px; text-align: center; border: 1px solid rgba(42,111,219,0.45); }
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+.feature-item {
+  background: rgba(0,0,0,0.4);
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid rgba(42,111,219,0.45);
+}
 .feature-item i { font-size: 2.2rem; color: var(--gold); margin-bottom: 12px; display: block; }
 .feature-item h5 { font-size: 1.2rem; margin-bottom: 8px; color: #ffefcf; }
-
 .history-timeline {
   background: rgba(10, 28, 48, 0.9);
   border-radius: 36px;
@@ -455,7 +441,6 @@ body::before {
   border: 2px solid var(--gold);
 }
 .timeline-content { background: rgba(0, 0, 0, 0.55); padding: 22px 28px; border-radius: 28px; flex: 1; }
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -465,7 +450,6 @@ body::before {
 .gallery-item { border-radius: 24px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; transition: 0.2s; border: 1px solid rgba(42,111,219,0.5); background: #1a3a58; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
 .gallery-item img:hover { transform: scale(1.02); filter: brightness(1.05); }
-
 .partner-card-standalone {
   background: rgba(42, 111, 219, 0.2);
   backdrop-filter: blur(12px);
@@ -486,7 +470,7 @@ body::before {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  border: 1px solid var(--gold);
+  border: 1px solid #facc15;
   text-align: left;
 }
 .bank-logo { height: 46px; width: auto; object-fit: contain; border-radius: 12px; background: #fff; padding: 6px; }
@@ -502,7 +486,6 @@ body::before {
   display: none;
 }
 .about-section p { margin-bottom: 16px; line-height: 1.7; color: #ffe6d5; }
-
 footer {
   background: #041227;
   margin-top: 100px;
@@ -511,6 +494,9 @@ footer {
 }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; margin-bottom: 50px; }
 .footer-grid h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+.footer-grid div:nth-child(1) h3 { color: #ffaa66; }
+.footer-grid div:nth-child(2) h3 { color: #66ccff; }
+.footer-grid div:nth-child(3) h3 { color: #90ee90; }
 .social-links a {
   width: 44px;
   height: 44px;
@@ -526,7 +512,6 @@ footer {
   font-size: 1.3rem;
 }
 .social-links a:hover { background: var(--sapphire); color: #131a20; transform: translateY(-4px); }
-
 .admin-btn, .back-to-top {
   position: fixed;
   width: 50px;
@@ -543,7 +528,6 @@ footer {
 }
 .admin-btn { bottom: 24px; right: 24px; }
 .back-to-top { bottom: 24px; left: 24px; background: var(--primary); border: 1px solid var(--sapphire); }
-
 @media (max-width: 1000px) {
   .hero h2 { font-size: 3rem; }
   .daily-card { padding: 28px 5%; }
@@ -551,8 +535,18 @@ footer {
   .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
 }
 .container { max-width: 1500px; margin: 0 auto; padding: 0 5%; }
-@keyframes fadeSlide { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-.group-badge { display: inline-block; padding: 4px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; margin-top: 8px; }
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.group-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
 .group-badge.youth { background: #f97316; color: white; }
 .group-badge.men { background: #1e3a5f; color: white; }
 .group-badge.women { background: #ec489a; color: white; }
@@ -563,11 +557,24 @@ footer {
 </head>
 <body>
 <div class="fixed-header">
-  <div class="logo-area"><img src="https://i.imgur.com/kTumLOY.jpg" class="church-logo"><div class="logo-text"><h1>MPOLONJENI ALLIANCE CHURCH</h1><p>The Difference We Need</p></div></div>
+  <div class="logo-area">
+    <img src="https://i.imgur.com/kTumLOY.jpg" class="church-logo">
+    <div class="logo-text"><h1>MPOLONJENI ALLIANCE CHURCH</h1><p>The Difference We Need</p></div>
+  </div>
   <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
   <div class="nav-links" id="navLinks">
-    <a href="#" data-scroll="home">HOME</a><a href="#" data-scroll="weekly">WEEKLY</a><a href="#" data-scroll="ministries">MINISTRIES</a><a href="#" data-scroll="activities">ACTIVITIES</a><a href="#" data-scroll="calendar">CALENDAR</a>
-    <a href="#" data-scroll="vision2037">Vision 2037</a><a href="#" data-scroll="media">MEDIA</a><a href="#" data-scroll="archives">ARCHIVES</a><a href="#" data-scroll="history">HISTORY</a><a href="#" data-scroll="about">ABOUT US</a><a href="#" data-scroll="prayer">PRAYER</a><a href="#" data-scroll="partner">GIVE</a>
+    <a href="#" data-scroll="home">HOME</a>
+    <a href="#" data-scroll="weekly">WEEKLY</a>
+    <a href="#" data-scroll="ministries">MINISTRIES</a>
+    <a href="#" data-scroll="activities">ACTIVITIES</a>
+    <a href="#" data-scroll="calendar">CALENDAR</a>
+    <a href="#" data-scroll="vision2037">Vision 2037</a>
+    <a href="#" data-scroll="media">MEDIA</a>
+    <a href="#" data-scroll="archives">ARCHIVES</a>
+    <a href="#" data-scroll="history">HISTORY</a>
+    <a href="#" data-scroll="about">ABOUT US</a>
+    <a href="#" data-scroll="prayer">PRAYER</a>
+    <a href="#" data-scroll="partner">GIVE</a>
   </div>
 </div>
 
@@ -577,80 +584,359 @@ footer {
     <div>
       <h2>Transforming Lives, <span>serving God with a purpose</span></h2>
       <p>Welcome to Mpolonjeni Alliance Church — a sanctuary of worship, transformation, discipleship, prayer, kingdom impact, and spiritual renewal.</p>
-      <div class="hero-buttons"><a href="#weekly" class="btn btn-primary"><i class="fas fa-church"></i> Service Times</a><a href="#" class="btn btn-secondary vision2037-trigger"><i class="fas fa-eye"></i> Vision 2037</a></div>
+      <div class="hero-buttons">
+        <a href="#weekly" class="btn btn-primary"><i class="fas fa-church"></i> Service Times</a>
+        <a href="#" class="btn btn-secondary vision2037-trigger"><i class="fas fa-eye"></i> Vision 2037</a>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="daily-card"><i class="fas fa-bible" style="color:var(--sapphire-light); font-size:2rem; margin-bottom:12px; display:inline-block;"></i><h3 style="display:inline-block; margin-left:12px; color:#ffddbb;">📖 Daily Living Word</h3><div id="dailyVerseContent" class="daily-verse"></div><div id="dailyMotivation" class="daily-motivation"></div></div>
+<div class="daily-card">
+  <i class="fas fa-bible" style="color:var(--sapphire-light); font-size:2rem; margin-bottom:12px; display:inline-block;"></i>
+  <h3 style="display:inline-block; margin-left:12px; color:#ffddbb;">📖 Daily Living Word</h3>
+  <div id="dailyVerseContent" class="daily-verse"></div>
+  <div id="dailyMotivation" class="daily-motivation"></div>
+</div>
 
 <div class="container">
-  <div style="text-align: center;"><h2 class="section-title" style="font-size:2rem;">Church Impact</h2><p style="color: rgba(255, 245, 230, 0.8); max-width: 800px; margin: 16px auto 0;">Transforming communities spiritually and physically through worship, discipleship, outreach, prayer, and kingdom-centered leadership.</p></div>
-  <div class="stats"><div class="stat-box"><h3>2000+</h3><p>Souls Reached</p></div><div class="stat-box"><h3>4</h3><p>Active Ministries</p></div><div class="stat-box"><h3>400+</h3><p>Members</p></div><div class="stat-box"><h3>1500</h3><p>Future Capacity</p></div></div>
-
-  <div class="vision-mission-grid">
-    <div class="vm-card"><h3><i class="fas fa-eye"></i> OUR VISION</h3><p style="font-weight:600; margin-bottom:16px;">To be the preferred church in meeting people's needs Spiritually, physically, and emotionally.</p><ul><li><i class="fas fa-star"></i> Transforming lives through the Gospel of Jesus Christ, through love and practical care.</li><li><i class="fas fa-city"></i> Nehemiah had a vision to rebuild the walls of Jerusalem and was also able to unite the Nation. Leadership with a vision brings progress, unity and transformation.</li><li><i class="fas fa-church"></i> During the time of Eli there was no spiritual vision and the Nation suffered. The Nation without a vision was weak and defeated by their enemies.</li></ul></div>
-    <div class="vm-card"><h3><i class="fas fa-bullseye"></i> OUR MISSION</h3><p style="font-weight:600; margin-bottom:16px;">To bring people back to God and to teach them to become Christ's disciples.</p><ul><li><i class="fas fa-book-open"></i> Winning the lost, Making disciples, building faith, and advancing the Kingdom.</li></ul></div>
+  <div style="text-align: center;">
+    <h2 class="section-title" style="font-size:2rem;">Church Impact</h2>
+    <p style="color: rgba(255, 245, 230, 0.8); max-width: 800px; margin: 16px auto 0;">Transforming communities spiritually and physically through worship, discipleship, outreach, prayer, and kingdom-centered leadership.</p>
   </div>
 
-  <div class="difference-accordion" id="differenceAccordion"><div class="difference-header" onclick="toggleDifference()"><span><i class="fas fa-chart-line"></i> The Difference We Need</span><i class="fas fa-chevron-down" id="differenceIcon"></i></div><div class="difference-content" id="differenceContent"><div class="difference-inner"><p style="text-align:center;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto 30px auto;">In a world longing for change, Mpolonjeni Alliance Church is committed to being the catalyst for transformation through faith, action, and community impact.</p><div class="difference-grid"><div class="difference-card"><div class="difference-icon"><i class="fas fa-heart"></i></div><h3>Spiritual Renewal</h3><p>Deepening our relationship with God through authentic worship, prayer, and discipleship that transforms hearts from the inside out.</p></div><div class="difference-card"><div class="difference-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>Community Impact</h3><p>Going beyond church walls to serve, uplift, and bring hope to families, the vulnerable, and those in need in our community.</p></div><div class="difference-card"><div class="difference-icon"><i class="fas fa-users"></i></div><h3>Unity & Fellowship</h3><p>Building a family where everyone belongs, regardless of background, creating a culture of love, support, and genuine connection.</p></div><div class="difference-card"><div class="difference-icon"><i class="fas fa-church"></i></div><h3>Kingdom Expansion</h3><p>Raising leaders, planting seeds of faith, and extending God's Kingdom through evangelism, mentorship, and strategic outreach.</p></div><div class="difference-card"><div class="difference-icon"><i class="fas fa-female"></i></div><h3>Women Empowerment</h3><p>Our Tuesday Women's Service is a beacon of hope, equipping women to rise, lead, and make a lasting difference in families and society.</p></div><div class="difference-card"><div class="difference-icon"><i class="fas fa-seedling"></i></div><h3>Next Generation</h3><p>Investing in our youth and children, nurturing the next generation of faith-filled leaders who will carry the vision forward.</p></div></div><div class="difference-quote"><i class="fas fa-quote-left"></i> We are not just a church — we are a movement of transformation. Together, we are the difference our community needs. <i class="fas fa-quote-right"></i></div></div></div></div>
+  <div class="stats">
+    <div class="stat-box"><h3>2000+</h3><p>Souls Reached</p></div>
+    <div class="stat-box"><h3>4</h3><p>Active Ministries</p></div>
+    <div class="stat-box"><h3>400+</h3><p>Members</p></div>
+    <div class="stat-box"><h3>1500</h3><p>Future Capacity</p></div>
+  </div>
+
+  <div class="vision-mission-grid">
+    <div class="vm-card">
+      <h3><i class="fas fa-eye"></i> OUR VISION</h3>
+      <p style="font-weight:600; margin-bottom:16px;">To be the preferred church in meeting people's needs Spiritually, physically, and emotionally.</p>
+      <ul>
+        <li><i class="fas fa-star"></i> Transforming lives through the Gospel of Jesus Christ, through love and practical care.</li>
+        <li><i class="fas fa-city"></i> Nehemiah had a vision to rebuild the walls of Jerusalem and was also able to unite the Nation. Leadership with a vision brings progress, unity and transformation.</li>
+        <li><i class="fas fa-church"></i> During the time of Eli there was no spiritual vision and the Nation suffered. The Nation without a vision was weak and defeated by their enemies.</li>
+      </ul>
+    </div>
+    <div class="vm-card">
+      <h3><i class="fas fa-bullseye"></i> OUR MISSION</h3>
+      <p style="font-weight:600; margin-bottom:16px;">To bring people back to God and to teach them to become Christ's disciples.</p>
+      <ul>
+        <li><i class="fas fa-book-open"></i> Winning the lost, Making disciples, building faith, and advancing the Kingdom.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="difference-accordion" id="differenceAccordion">
+    <div class="difference-header" onclick="toggleDifference()">
+      <span><i class="fas fa-chart-line"></i> The Difference We Need</span>
+      <i class="fas fa-chevron-down" id="differenceIcon"></i>
+    </div>
+    <div class="difference-content" id="differenceContent">
+      <div class="difference-inner">
+        <p style="text-align:center;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto 30px auto;">In a world longing for change, Mpolonjeni Alliance Church is committed to being the catalyst for transformation through faith, action, and community impact.</p>
+        <div class="difference-grid">
+          <div class="difference-card"><div class="difference-icon"><i class="fas fa-heart"></i></div><h3>Spiritual Renewal</h3><p>Deepening our relationship with God through authentic worship, prayer, and discipleship that transforms hearts from the inside out.</p></div>
+          <div class="difference-card"><div class="difference-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>Community Impact</h3><p>Going beyond church walls to serve, uplift, and bring hope to families, the vulnerable, and those in need in our community.</p></div>
+          <div class="difference-card"><div class="difference-icon"><i class="fas fa-users"></i></div><h3>Unity & Fellowship</h3><p>Building a family where everyone belongs, regardless of background, creating a culture of love, support, and genuine connection.</p></div>
+          <div class="difference-card"><div class="difference-icon"><i class="fas fa-church"></i></div><h3>Kingdom Expansion</h3><p>Raising leaders, planting seeds of faith, and extending God's Kingdom through evangelism, mentorship, and strategic outreach.</p></div>
+          <div class="difference-card"><div class="difference-icon"><i class="fas fa-female"></i></div><h3>Women Empowerment</h3><p>Our Tuesday Women's Service is a beacon of hope, equipping women to rise, lead, and make a lasting difference in families and society.</p></div>
+          <div class="difference-card"><div class="difference-icon"><i class="fas fa-seedling"></i></div><h3>Next Generation</h3><p>Investing in our youth and children, nurturing the next generation of faith-filled leaders who will carry the vision forward.</p></div>
+        </div>
+        <div class="difference-quote"><i class="fas fa-quote-left"></i> We are not just a church — we are a movement of transformation. Together, we are the difference our community needs. <i class="fas fa-quote-right"></i></div>
+      </div>
+    </div>
+  </div>
 
   <div class="upcoming-section"><h2 class="section-title" style="font-size:2rem;">📅 UPCOMING ACTIVITIES</h2><div id="upcomingEventsContainer" class="upcoming-row"></div></div>
 
-  <div class="grid-2" id="weekly"><div><h2 class="section-title" style="font-size:2rem;">🕊️ WEEKLY GATHERINGS</h2><div class="compact-mini-grid"><div class="mini-card"><h3><i class="fas fa-users"></i> TIGUNGU (Cell Groups)</h3><div class="time">Sunday 10:00 – 11:00 AM</div><p>Fellowship before service</p></div><div class="mini-card"><h3><i class="fas fa-church"></i> SUNDAY SERVICE</h3><div class="time">11:00 AM – 1:30 PM</div><p>Main worship & teaching</p></div><div class="mini-card"><h3><i class="fas fa-fire"></i> WEDNESDAY PRAYER</h3><div class="time">6:00 PM – 8:00 PM</div><p>Midweek power hour</p></div><div class="mini-card"><h3><i class="fas fa-female"></i> WOMEN'S TUESDAY SERVICE</h3><div class="time">Tuesday 1:00 PM – 3:00 PM</div><p>Worship, fellowship, empowerment</p></div></div></div><div id="ministries"><h2 class="section-title" style="font-size:2rem;">🙌 OUR MINISTRIES</h2><div class="compact-mini-grid"><div class="mini-card ministry-mini"><h4><i class="fas fa-child"></i> Children's Ministry</h4><p>Sunday school & faith foundations</p></div><div class="mini-card ministry-mini"><h4><i class="fas fa-users"></i> Youth Ministry</h4><p>Empowering the next generation</p></div><div class="mini-card ministry-mini"><h4><i class="fas fa-female"></i> Ladies Ministry</h4><p>Women of faith & fellowship</p></div><div class="mini-card ministry-mini"><h4><i class="fas fa-male"></i> Men's Ministry</h4><p>Brothers building leaders</p></div></div></div></div>
+  <div class="grid-2" id="weekly">
+    <div>
+      <h2 class="section-title" style="font-size:2rem;">🕊️ WEEKLY GATHERINGS</h2>
+      <div class="compact-mini-grid">
+        <div class="mini-card"><h3><i class="fas fa-users"></i> TIGUNGU (Cell Groups)</h3><div class="time">Sunday 10:00 – 11:00 AM</div><p>Fellowship before service</p></div>
+        <div class="mini-card"><h3><i class="fas fa-church"></i> SUNDAY SERVICE</h3><div class="time">11:00 AM – 1:30 PM</div><p>Main worship & teaching</p></div>
+        <div class="mini-card"><h3><i class="fas fa-fire"></i> WEDNESDAY PRAYER</h3><div class="time">6:00 PM – 8:00 PM</div><p>Midweek power hour</p></div>
+        <div class="mini-card"><h3><i class="fas fa-female"></i> WOMEN'S TUESDAY SERVICE</h3><div class="time">Tuesday 1:00 PM – 3:00 PM</div><p>Worship, fellowship, empowerment</p></div>
+      </div>
+    </div>
+    <div id="ministries">
+      <h2 class="section-title" style="font-size:2rem;">🙌 OUR MINISTRIES</h2>
+      <div class="compact-mini-grid">
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-child"></i> Children's Ministry</h4><p>Sunday school & faith foundations</p></div>
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-users"></i> Youth Ministry</h4><p>Empowering the next generation</p></div>
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-female"></i> Ladies Ministry</h4><p>Women of faith & fellowship</p></div>
+        <div class="mini-card ministry-mini"><h4><i class="fas fa-male"></i> Men's Ministry</h4><p>Brothers building leaders</p></div>
+      </div>
+    </div>
+  </div>
 
-  <div class="map-card"><h3><i class="fas fa-map-marker-alt" style="color:var(--sapphire-light);"></i> Find Us – Mpolonjeni Alliance Church</h3><div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3595.123456789!2d31.091688!3d-26.308998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE4JzMyLjQiUyAzMcKwMDUnMzAuMSJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe></div><p style="margin-top:18px;"><i class="fas fa-location-dot"></i> <strong>Exact location:</strong> Latitude -26.308998, Longitude 31.091688 – Mpolonjeni Area, Mbabane, Eswatini. Everyone is welcome!</p></div>
+  <div class="map-card">
+    <h3><i class="fas fa-map-marker-alt" style="color:var(--sapphire-light);"></i> Find Us – Mpolonjeni Alliance Church (Pinpointed)</h3>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3595.123456789!2d31.091688!3d-26.308998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE4JzMyLjQiUyAzMcKwMDUnMzAuMSJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <p style="margin-top:18px;"><i class="fas fa-location-dot"></i> <strong>Exact location:</strong> Latitude -26.308998, Longitude 31.091688 – Mpolonjeni Area, Mbabane, Eswatini. Everyone is welcome!</p>
+  </div>
 
-  <div id="about" class="about-section"><h2 class="section-title" style="font-size:2rem;">About Us</h2><p>Mpolonjeni Alliance Church is situated in the Mpolonjeni Community in Mbabane, Eswatini, in the Hhohho Region. The church is in close proximity to Nhlanganisweni High School, making it a spiritual landmark for both the local community and surrounding areas. Founded in the year 2000 through the apostolic vision of Rev. S.P. Dlamini, our church has grown from a small tent‑crusade movement into a vibrant, Spirit‑filled congregation dedicated to transforming lives through the grace and power of God.</p><p>Our mission is to bring people back to God and to teach them to become Christ's disciples. We believe in holistic transformation — spiritually, emotionally, socially, and physically. Through our various ministries (Children, Youth, Women, Men, Worship, Prayer, and Outreach), we serve as a beacon of hope, providing practical care, feeding programs, counselling, and community development initiatives.</p></div>
+  <div id="about" class="about-section">
+    <h2 class="section-title" style="font-size:2rem;">About Us</h2>
+    <p>Mpolonjeni Alliance Church is situated in the Mpolonjeni Community in Mbabane, Eswatini, in the Hhohho Region. The church is in close proximity to Nhlanganisweni High School, making it a spiritual landmark for both the local community and surrounding areas. Founded in the year 2000 through the apostolic vision of Rev. S.P. Dlamini, our church has grown from a small tent‑crusade movement into a vibrant, Spirit‑filled congregation dedicated to transforming lives through the grace and power of God.</p>
+    <p>Our mission is to bring people back to God and to teach them to become Christ's disciples. We believe in holistic transformation — spiritually, emotionally, socially, and physically. Through our various ministries (Children, Youth, Women, Men, Worship, Prayer, and Outreach), we serve as a beacon of hope, providing practical care, feeding programs, counselling, and community development initiatives.</p>
+  </div>
 
-  <div class="pill-nav"><div class="pill" data-section="prayer-section">🙏 Prayer</div><div class="pill" data-section="calendar-section" data-focus="accordion-calendar">📅 Calendar</div><div class="pill" data-section="calendar-section" data-focus="accordion-activities">🔥 All Activities</div><div class="pill" data-section="vision-section">🌍 Vision 2037</div><div class="pill" data-section="media-section" data-focus="accordion-media">📸 Media Gallery</div><div class="pill" data-section="archives-section" data-focus="accordion-archives">📁 Archives (Sermons)</div><div class="pill" data-section="vision-section" data-focus="history">⛪ History</div></div>
+  <div class="pill-nav">
+    <div class="pill" data-section="prayer-section">🙏 Prayer</div>
+    <div class="pill" data-section="calendar-section" data-focus="accordion-calendar">📅 Calendar</div>
+    <div class="pill" data-section="calendar-section" data-focus="accordion-activities">🔥 All Activities</div>
+    <div class="pill" data-section="vision-section">🌍 Vision 2037</div>
+    <div class="pill" data-section="media-section" data-focus="accordion-media">📸 Media Gallery</div>
+    <div class="pill" data-section="archives-section" data-focus="accordion-archives">📁 Archives (Sermons)</div>
+    <div class="pill" data-section="vision-section" data-focus="history">⛪ History</div>
+  </div>
   <div style="display:flex; justify-content:flex-end; gap:12px; margin-bottom:20px;"><button id="expandAllBtn" class="pill" style="background:#264e70;">Expand All</button><button id="collapseAllBtn" class="pill" style="background:#264e70;">Collapse All</button></div>
 
   <div id="prayer-section" class="accordion-section"><div class="accordion"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-praying-hands"></i> Prayer Requests</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div><p>Share your prayer request via WhatsApp. Our prayer team will stand with you.</p><div><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>Prayer Line:</strong> <a href="https://wa.me/26876130566" target="_blank" style="color:var(--sapphire-light);">+268 7613 0566</a></div><form id="prayerForm"><input type="text" id="prayerName" placeholder="Your Name" style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid var(--sapphire); color:white; margin:10px 0;"><textarea id="prayerRequest" rows="3" placeholder="Prayer request..." style="width:100%; padding:14px; border-radius:20px; background:rgba(255,255,255,0.1); border:1px solid var(--sapphire); color:white;"></textarea><button type="submit" class="btn-primary" style="margin-top:10px;">Submit</button></form></div></div></div></div>
 
-  <div class="partner-card-standalone" id="partner"><h3><i class="fas fa-handshake"></i> 🙏 Join Us in Building God's House</h3><p style="margin-bottom:20px;">Your generous giving fuels our <strong>Vision 2037</strong> project: building a 1500‑seat sanctuary, and expands our social responsibility — feeding programs, counselling, community health outreaches, and support for vulnerable families.</p><p>We appeal to prayer partners, associate church partners, and financial supporters to join this noble project.</p><div class="bank-info"><img src="https://i.ibb.co/hJz4bXcV/0.jpg" class="bank-logo" onerror="this.src='https://placehold.co/70x40/1e2a3a/white?text=NedBank'"><div><strong>NedBank (Mbabane, Eswatini)</strong><br>020000025799 | Branch: 360164<br>SWIFT: NEDSZAZX</div></div><div class="bank-info"><img src="https://i.ibb.co/RTtvsv4T/0.jpg" class="bank-logo" onerror="this.src='https://placehold.co/70x40/ffcc00/black?text=MTN+MoMo'"><div><strong>MTN Mobile Money</strong><br>78116629</div></div><a href="#partner" class="btn-primary" style="margin-top:18px; display:inline-block;">Support This Vision →</a></div>
+  <!-- Partner / Giving section -->
+  <div class="partner-card-standalone" id="partner">
+    <h3><i class="fas fa-handshake"></i> 🙏 Join Us in Building God's House</h3>
+    <p style="margin-bottom:20px;">Your generous giving fuels our <strong>Vision 2037</strong> project: building a 1500‑seat sanctuary, and expands our social responsibility — feeding programs, counselling, community health outreaches, and support for vulnerable families.</p>
+    <p>We appeal to prayer partners, associate church partners, and financial supporters to join this noble project.</p>
+    <div class="bank-info"><img src="https://i.ibb.co/hJz4bXcV/0.jpg" class="bank-logo" onerror="this.src='https://placehold.co/70x40/1e2a3a/white?text=NedBank'"><div><strong>NedBank (Mbabane, Eswatini)</strong><br>020000025799 | Branch: 360164<br>SWIFT: NEDSZAZX</div></div>
+    <div class="bank-info"><img src="https://i.ibb.co/RTtvsv4T/0.jpg" class="bank-logo" onerror="this.src='https://placehold.co/70x40/ffcc00/black?text=MTN+MoMo'"><div><strong>MTN Mobile Money</strong><br>78116629</div></div>
+    <a href="#partner" class="btn-primary" style="margin-top:18px; display:inline-block;">Support This Vision →</a>
+  </div>
 
-  <div id="calendar-section" class="accordion-section"><div class="accordion" id="accordion-calendar"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-alt"></i> Church Calendar 2026 (All Events)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div id="calendarGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;"></div></div></div><div class="accordion" id="accordion-activities"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-list-ul"></i> Complete 2026 Activities (Grouped by Ministry)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><button id="toggleActivitiesBtn" class="btn-primary" style="margin-bottom:18px;">📅 SHOW ALL ACTIVITIES</button><div id="activitiesContainer" style="display:none;"><div id="activitiesGrid"></div></div></div></div></div>
-  <div id="media-section" class="accordion-section"><div class="accordion" id="accordion-media"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-images"></i> Media Gallery – Moments of Worship & Fellowship</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><h3 class="section-title" style="font-size:1.5rem;">Capturing moments of worship, revival, fellowship, and impact.</h3><div class="gallery-grid" id="mediaGalleryGrid"></div></div></div></div>
-  <div id="vision-section" class="accordion-section"><div class="accordion" id="accordion-vision"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-eye"></i> VISION 2037: Building a Legacy</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="vision2037"><h3 style="color:var(--gold); font-size:2rem;">VISION 2037</h3><p>Mpolonjeni Alliance Church is constructing a new state-of-the-art auditorium to accommodate its rapidly growing congregation and to serve as a center for community outreach and Christian-based events. Located in a fast-developing area, the church has experienced steady growth, with its current building no longer meeting the needs of its expanding membership. Vision 2037 is a long-term project to complete a modern auditorium designed to host 1,500 worshipers.</p><p style="margin-top:20px;">We are extending our current church structure to accommodate more families, expand our ministries, and create a greater impact in our community. Vision 2037 also seeks to provide a home for international brethren who can join us through our live streaming services. This vision is not only aimed at touching local souls but even from all corners of the world. We believe God is calling us to enlarge our tent and build a legacy of faith for generations to come.</p><p style="margin-top:20px;"><i class="fas fa-quote-left"></i> Enlarge the place of your tent, and let the curtains of your habitations be stretched out; do not hold back; lengthen your cords and strengthen your stakes. <i class="fas fa-quote-right"></i> — Isaiah 54:2</p><h4 style="color:var(--gold); margin: 40px 0 20px;"><i class="fas fa-building"></i> The Auditorium Church Complex</h4><div class="feature-grid"><div class="feature-item"><i class="fas fa-chalkboard-user"></i><h5>Classrooms</h5><p>Discipleship training</p></div><div class="feature-item"><i class="fas fa-head-side-medical"></i><h5>Counselling Centre</h5><p>Spiritual guidance</p></div><div class="feature-item"><i class="fas fa-utensils"></i><h5>Kitchen Facilities</h5><p>Community feeding</p></div><div class="feature-item"><i class="fas fa-parking"></i><h5>Underground Parking</h5><p>Safe parking</p></div></div><h4 style="color:var(--gold); margin: 50px 0 20px;">Strategic Pillars</h4><div class="pillars-container"><div class="pillar-card"><div class="pillar-icon"><i class="fas fa-bullhorn"></i></div><h4>Evangelism</h4><p>Taking the Gospel beyond our walls through open-air crusades, door-to-door outreach, community evangelism, and digital ministry. <strong>Target: 5,000 souls for Christ by 2037</strong>, establishing new believers through discipleship.<br><span style="color:var(--gold);">🎯 5,000 Souls Target | 100+ Discipleship Groups</span></p></div><div class="pillar-card"><div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div><h4>Social Impact</h4><p>Demonstrating God's love through practical action: food hampers, counseling, partnerships, and initiatives that support vulnerable families. <strong>Goal: 10,000+ meals yearly, 500+ children supported.</strong></p></div><div class="pillar-card"><div class="pillar-icon"><i class="fas fa-dove"></i></div><h4>Spiritual Impact</h4><p>Taking the gospel of Jesus Christ to where people are. Developing balanced teaching ministry, spiritually/emotionally/physically healthy ministers, and sound Bible study programs for maturing believers.</p></div><div class="pillar-card"><div class="pillar-icon"><i class="fas fa-building-columns"></i></div><h4>Church Governance & Leadership</h4><p>Developing leadership policies, strategic and purposeful leadership trainings, proper governing structures with accountability, and networking with leadership training organizations for empowerment.</p></div></div><div style="background:rgba(0,0,0,0.3); border-radius:24px; padding:24px; margin-top:20px;"><h4 class="gold-heading"><i class="fas fa-expand-alt"></i> Church Auditorium Extension Project</h4><p>We are expanding our current sanctuary to accommodate more worshippers, with enhanced facilities for children's ministry, youth programs, and community gatherings.</p><div class="expansion-grid"><div class="capacity-card"><div class="capacity-number">400</div><div>Current Capacity</div></div><div class="capacity-card"><div class="capacity-number">1500+</div><div>Expanded Capacity</div></div></div></div></div></div></div><div class="accordion" id="accordion-history"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-church"></i> ⛪ Complete Church History</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="history-timeline"><div class="timeline-item"><div class="timeline-icon"><i class="fas fa-eye"></i></div><div class="timeline-content"><h3>Foundation and Apostolic Vision (2000)</h3><p>Mpolonjeni Alliance Church was birthed from a strategic apostolic vision...</p></div></div><div class="timeline-item"><div class="timeline-icon"><i class="fas fa-seedling"></i></div><div class="timeline-content"><h3>The Season of Harvest (1998–2000)</h3><p>Three pivotal tent crusades brought spiritual awakening; countless souls were won.</p></div></div><div class="timeline-item"><div class="timeline-icon"><i class="fas fa-church"></i></div><div class="timeline-content"><h3>Establishing a Local Sanctuary</h3><p>Mpolonjeni Alliance Church (MPAC) was formally established.</p></div></div><div class="timeline-item"><div class="timeline-icon"><i class="fas fa-users"></i></div><div class="timeline-content"><h3>Commissioning the Leaders</h3><p>Pastor Dlamini commissioned Mr. B. Tsela and Mr. T. Mthupha as the first elders.</p></div></div><div class="timeline-item"><div class="timeline-icon"><i class="fas fa-hands-praying"></i></div><div class="timeline-content"><h3>MPAC Today</h3><p>MPAC stands as a vibrant beacon of hope, relentlessly pursuing the vision of reaching souls.</p></div></div></div></div></div></div>
-  <div id="archives-section" class="accordion-section"><div class="accordion" id="accordion-archives"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-archive"></i> 📁 Archives – Sermons & Teachings</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="sermons-list"><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light);"></i> <strong>Grace That Transforms</strong> – Pastor M. Dlamini</div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light);"></i> <strong>Women Arise & Shine</strong> – Women's Ministry</div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light);"></i> <strong>The Power of the Cross</strong> – Rev. S.P. Dlamini</div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light);"></i> <strong>Building a Legacy of Faith</strong> – Leadership Team</div></div></div></div></div>
+  <div id="calendar-section" class="accordion-section">
+    <div class="accordion" id="accordion-calendar"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-alt"></i> Church Calendar 2026 (All Events)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div id="calendarGrid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;"></div></div></div>
+    <div class="accordion" id="accordion-activities"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-list-ul"></i> Complete 2026 Activities (Grouped by Ministry)</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><button id="toggleActivitiesBtn" class="btn-primary" style="margin-bottom:18px;">📅 SHOW ALL ACTIVITIES</button><div id="activitiesContainer" style="display:none;"><div id="activitiesGrid"></div></div></div></div>
+  </div>
+
+  <div id="media-section" class="accordion-section">
+    <div class="accordion" id="accordion-media"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-images"></i> Media Gallery – Moments of Worship & Fellowship</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content">
+      <h3 class="section-title" style="font-size:1.5rem;">Capturing moments of worship, revival, fellowship, and impact.</h3>
+      <div class="gallery-grid" id="mediaGalleryGrid"></div>
+    </div></div>
+  </div>
+
+  <div id="vision-section" class="accordion-section">
+    <div class="accordion" id="accordion-vision"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-eye"></i> VISION 2037: Building a Legacy</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="vision2037">
+      <h3 style="color:var(--gold); font-size:2rem;">VISION 2037</h3>
+      <p>Mpolonjeni Alliance Church is constructing a new state-of-the-art auditorium to accommodate its rapidly growing congregation and to serve as a center for community outreach and Christian-based events. Located in a fast-developing area, the church has experienced steady growth, with its current building no longer meeting the needs of its expanding membership. Vision 2037 is a long-term project to complete a modern auditorium designed to host 1,500 worshipers.</p>
+      <p style="margin-top:20px;">We are extending our current church structure to accommodate more families, expand our ministries, and create a greater impact in our community. Vision 2037 also seeks to provide a home for international brethren who can join us through our live streaming services. This vision is not only aimed at touching local souls but even from all corners of the world. We believe God is calling us to enlarge our tent and build a legacy of faith for generations to come.</p>
+      <p style="margin-top:20px;"><i class="fas fa-quote-left"></i> Enlarge the place of your tent, and let the curtains of your habitations be stretched out; do not hold back; lengthen your cords and strengthen your stakes. <i class="fas fa-quote-right"></i> — Isaiah 54:2</p>
+
+      <h4 style="color:var(--gold); margin: 40px 0 20px;"><i class="fas fa-building"></i> The Auditorium Church Complex</h4>
+      <div class="feature-grid">
+        <div class="feature-item"><i class="fas fa-chalkboard-user"></i><h5>Classrooms</h5><p>Discipleship training</p></div>
+        <div class="feature-item"><i class="fas fa-head-side-medical"></i><h5>Counselling Centre</h5><p>Spiritual guidance</p></div>
+        <div class="feature-item"><i class="fas fa-utensils"></i><h5>Kitchen Facilities</h5><p>Community feeding</p></div>
+        <div class="feature-item"><i class="fas fa-parking"></i><h5>Underground Parking</h5><p>Safe parking</p></div>
+      </div>
+      <p style="margin-top:10px; font-style:italic;">Our vision goes beyond building a structure. We are building a spiritual and social hub that will help us make a difference in people's lives, in our society, and in the ecosystem—while fulfilling the Great Commission.</p>
+
+      <h4 style="color:var(--gold); margin: 50px 0 20px;">Strategic Pillars</h4>
+      <div class="pillars-container">
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-bullhorn"></i></div><h4>Evangelism</h4><p>Taking the Gospel beyond our walls through open-air crusades, door-to-door outreach, community evangelism, and digital ministry. <strong>Target: 5,000 souls for Christ by 2037</strong>, establishing new believers through discipleship.<br><span style="color:var(--gold);">🎯 5,000 Souls Target | 100+ Discipleship Groups</span></p></div>
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-hand-holding-heart"></i></div><h4>Social Impact</h4><p>Demonstrating God's love through practical action: food hampers, counseling, partnerships, and initiatives that support vulnerable families. <strong>Goal: 10,000+ meals yearly, 500+ children supported.</strong></p></div>
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-dove"></i></div><h4>Spiritual Impact</h4><p>Taking the gospel of Jesus Christ to where people are. Developing balanced teaching ministry, spiritually/emotionally/physically healthy ministers, and sound Bible study programs for maturing believers.</p></div>
+        <div class="pillar-card"><div class="pillar-icon"><i class="fas fa-building-columns"></i></div><h4>Church Governance & Leadership</h4><p>Developing leadership policies, strategic and purposeful leadership trainings, proper governing structures with accountability, and networking with leadership training organizations for empowerment.</p></div>
+      </div>
+
+      <div style="background:rgba(0,0,0,0.3); border-radius:24px; padding:24px; margin-top:20px;">
+        <h4 class="gold-heading"><i class="fas fa-expand-alt"></i> Church Auditorium Extension Project</h4>
+        <p>We are expanding our current sanctuary to accommodate more worshippers, with enhanced facilities for children's ministry, youth programs, and community gatherings. In the short term, we are focusing on building classrooms and a kitchen, while the larger auditorium project will unfold progressively with an expected completion by 2037.</p>
+        <div class="expansion-grid">
+          <div class="capacity-card"><div class="capacity-number">400</div><div>Current Capacity<br><span style="font-size:0.9rem;">Existing sanctuary seating</span></div></div>
+          <div class="capacity-card"><div class="capacity-number">1500+</div><div>Expanded Capacity<br><span style="font-size:0.9rem;">With balcony extension</span></div></div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin:20px 0; justify-content:center;">
+          <span style="background:rgba(42,111,219,0.25); padding:6px 14px; border-radius:30px;"><i class="fas fa-child"></i> Children's Ministry Wing</span>
+          <span style="background:rgba(42,111,219,0.25); padding:6px 14px; border-radius:30px;"><i class="fas fa-music"></i> Enhanced Worship Stage</span>
+          <span style="background:rgba(42,111,219,0.25); padding:6px 14px; border-radius:30px;"><i class="fas fa-video"></i> Modern AV System</span>
+          <span style="background:rgba(42,111,219,0.25); padding:6px 14px; border-radius:30px;"><i class="fas fa-wheelchair"></i> Accessibility Features</span>
+          <span style="background:rgba(42,111,219,0.25); padding:6px 14px; border-radius:30px;"><i class="fas fa-utensils"></i> Fellowship Hall</span>
+          <span style="background:rgba(42,111,219,0.25); padding:6px 14px; border-radius:30px;"><i class="fas fa-school"></i> Pre-School</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; background:rgba(0,0,0,0.5); border-radius:20px; padding:20px; margin-top:20px;">
+          <div><strong>📅 Project Timeline</strong><br>2026 - 2030</div>
+          <div><strong>💰 Fundraising Goal</strong><br>E10 Million</div>
+          <div><strong>📈 Current Progress</strong><br><span style="color:var(--gold);">E100,000 Raised</span></div>
+        </div>
+      </div>
+    </div></div></div>
+
+    <div class="accordion" id="accordion-history"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-church"></i> ⛪ Complete Church History</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="history-timeline">
+      <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-eye"></i></div><div class="timeline-content"><h3>Foundation and Apostolic Vision (2000)</h3><p>Mpolonjeni Alliance Church was birthed from a strategic apostolic vision. Rev. S.P. Dlamini, Pastor of Mbabane Alliance Church, was driven by a divine mandate to expand the Gospel beyond the city limits through tent crusades across Sidwashini, Manzana, and Mpolonjeni.</p></div></div>
+      <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-seedling"></i></div><div class="timeline-content"><h3>The Season of Harvest (1998–2000)</h3><p>Three pivotal tent crusades brought spiritual awakening; countless souls were won, and many received Jesus Christ as Lord and Savior.</p></div></div>
+      <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-church"></i></div><div class="timeline-content"><h3>Establishing a Local Sanctuary</h3><p>As converts grew, land was secured through engagement with traditional structures. Mpolonjeni Alliance Church (MPAC) was formally established.</p></div></div>
+      <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-users"></i></div><div class="timeline-content"><h3>Commissioning the Leaders</h3><p>Pastor Dlamini commissioned Mr. B. Tsela and Mr. T. Mthupha as the first elders, charging them with stewardship of this new frontier.</p></div></div>
+      <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-hands-praying"></i></div><div class="timeline-content"><h3>MPAC Today</h3><p>Today, MPAC stands as a vibrant beacon of hope, relentlessly pursuing the vision of reaching souls and transforming lives through the Gospel of Jesus Christ.</p></div></div>
+    </div></div></div>
+  </div>
+
+  <div id="archives-section" class="accordion-section"><div class="accordion" id="accordion-archives"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-archive"></i> 📁 Archives – Sermons & Teachings</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content">
+    <div class="sermons-list">
+      <div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Grace That Transforms</strong> – Pastor M. Dlamini <span style="color:rgba(255,255,255,0.7);">(March 2026)</span></div>
+      <div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Women Arise & Shine</strong> – Women's Ministry <span style="color:rgba(255,255,255,0.7);">(February 2026)</span></div>
+      <div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>The Power of the Cross</strong> – Rev. S.P. Dlamini <span style="color:rgba(255,255,255,0.7);">(Easter 2026)</span></div>
+      <div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Building a Legacy of Faith</strong> – Leadership Team <span style="color:rgba(255,255,255,0.7);">(Vision Sunday)</span></div>
+    </div>
+  </div></div></div>
 </div>
 
-<footer><div class="footer-grid"><div><h3>Mpolonjeni Alliance Church</h3><p>Transforming lives through grace and power.</p><div class="social-links"><a href="https://www.facebook.com/profile.php?id=100083095013067" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.tiktok.com/search?q=mpolonjeni%20alliance%20church" target="_blank"><i class="fab fa-tiktok"></i></a><a href="https://www.instagram.com/mpolonjeni_alliance_church/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/26876130566" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div><div><h3>Service Times</h3><p>Sun 11:00 AM</p><p>Wed 6:00 PM</p><p>Tue (Women) 1:00 PM</p></div><div><h3>Giving</h3><p>NedBank: 020000025799 (Mbabane)</p><p>MTN MoMo: 78116629</p></div></div><p style="text-align:center; margin-top:40px; color:#bbaa99;">© 2026 Mpolonjeni Alliance Church — Royal Sapphire · Revival & Grace</p></footer>
-<div class="admin-btn" id="adminBtn"><i class="fas fa-chart-line"></i></div><div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+<footer>
+  <div class="footer-grid">
+    <div><h3>Mpolonjeni Alliance Church</h3><p>Transforming lives through grace and power.</p><div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=100083095013067" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/search?q=mpolonjeni%20alliance%20church" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/mpolonjeni_alliance_church/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/26876130566" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div></div>
+    <div><h3>Service Times</h3><p>Sun 11:00 AM</p><p>Wed 6:00 PM</p><p>Tue (Women) 1:00 PM</p></div>
+    <div><h3>Giving</h3><p>NedBank: 020000025799 (Mbabane)</p><p>MTN MoMo: 78116629</p></div>
+  </div>
+  <p style="text-align:center; margin-top:40px; color:#bbaa99;">© 2026 Mpolonjeni Alliance Church — Royal Sapphire Theme · Revival & Grace</p>
+</footer>
+<div class="admin-btn" id="adminBtn"><i class="fas fa-chart-line"></i></div>
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-const dailyContent = [{ verse: "“The Lord is my strength and my shield; my heart trusts in Him, and He helps me.” — Psalm 28:7", motivation: "God's grace empowers you today. 2 Corinthians 12:9" },{ verse: "“I can do all things through Christ who strengthens me.” — Philippians 4:13", motivation: "You are never alone; Christ is your strength." },{ verse: "“Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you.” — Joshua 1:9", motivation: "Courage comes from trusting God's presence." }];
+// Daily verses
+const dailyContent = [
+  { verse: "“The Lord is my strength and my shield; my heart trusts in Him, and He helps me.” — Psalm 28:7", motivation: "God's grace empowers you today. 2 Corinthians 12:9" },
+  { verse: "“I can do all things through Christ who strengthens me.” — Philippians 4:13", motivation: "You are never alone; Christ is your strength." },
+  { verse: "“Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you.” — Joshua 1:9", motivation: "Courage comes from trusting God's presence." }
+];
 const todayIdx = new Date().getDate() % dailyContent.length;
 document.getElementById('dailyVerseContent').innerHTML = dailyContent[todayIdx].verse;
 document.getElementById('dailyMotivation').innerHTML = `<i class="fas fa-lightbulb"></i> ${dailyContent[todayIdx].motivation}`;
+
+window.addEventListener('load', () => { if(!window.location.hash) window.scrollTo(0,0); });
 AOS.init({ duration: 800, once: true });
 
-const masterEvents = [ {title:"Youth Committee Meeting & Bible Study", date:"2026-05-03", group:"Youth"},{title:"Youth Camp - Kwaluseni", date:"2026-05-08", group:"Youth"},{title:"Sigungu (Social Engagement)", date:"2026-05-10", group:"Youth"},{title:"Team Building & Discipleship", date:"2026-05-16", group:"Youth"},{title:"Sigungu Service (LCB)", date:"2026-05-17", group:"Youth"},{title:"Discipleship & Praise Team Practice", date:"2026-05-23", group:"Youth"},{title:"Baptism Service", date:"2026-05-24", group:"Church"},{title:"Month End Half Night & Fasting", date:"2026-05-29", group:"Prayer"},{title:"Discipleship & Practice", date:"2026-05-30", group:"Youth"},{title:"Youth Revivals + Youth Sunday", date:"2026-06-05", group:"Youth"},{title:"Discipleship Session", date:"2026-06-13", group:"Youth"},{title:"Lisango and Luguma", date:"2026-06-14", group:"Church"},{title:"Men's Weekend / Sports Day", date:"2026-06-19", group:"Men"},{title:"Month End Friday Prayer & Fasting", date:"2026-06-26", group:"Prayer"},{title:"Birthdays Celebration", date:"2026-06-27", group:"Fellowship"},{title:"Sigungu Service", date:"2026-06-28", group:"Youth"},{title:"Discipleship Training", date:"2026-07-04", group:"Youth"},{title:"Bible Study (Churchwide)", date:"2026-07-05", group:"Church"},{title:"Youth Empowerment", date:"2026-07-11", group:"Youth"},{title:"Team Building", date:"2026-07-18", group:"Youth"},{title:"Sigungu Service", date:"2026-07-19", group:"Youth"},{title:"Sports Day", date:"2026-07-25", group:"Youth"},{title:"Sigungu - Pastoral Team", date:"2026-07-26", group:"Church"},{title:"Soul Winning Outreach", date:"2026-08-01", group:"Evangelism"},{title:"Bible Study", date:"2026-08-02", group:"Church"},{title:"God's Chosen Generation Youth Camp", date:"2026-08-07", group:"Youth"},{title:"Soul Winning", date:"2026-08-15", group:"Evangelism"},{title:"Fasting Lesson", date:"2026-08-16", group:"Discipleship"},{title:"Evangelism Lesson", date:"2026-08-22", group:"Discipleship"},{title:"Evangelism Lesson (continued)", date:"2026-08-23", group:"Discipleship"},{title:"Mazwi Live Recording", date:"2026-08-28", group:"Worship"},{title:"YOUTH SUNDAY", date:"2026-08-30", group:"Youth"},{title:"Men's Half Night Prayers", date:"2026-03-27", group:"Men"},{title:"Men's Conference", date:"2026-06-19", group:"Men"},{title:"Home Visitation (Q1)", date:"2026-03-15", group:"Men"},{title:"Couples Outing", date:"2026-04-24", group:"Marriage"},{title:"Men's Soul Winning Challenge", date:"2026-01-01", group:"Men"},{title:"Give Food Hampers (Quarterly)", date:"2026-03-20", group:"Outreach"},{title:"Women's Home Visits", date:"2026-03-10", group:"Women"},{title:"Beginning of Year Prayer", date:"2026-02-07", group:"Women"},{title:"Women's Half Night Prayer", date:"2026-06-26", group:"Women"},{title:"Lesson on Building Healthy Families", date:"2026-05-16", group:"Women"},{title:"Women's Local Convention", date:"2026-08-28", group:"Women"},{title:"Women's Sunday", date:"2026-04-26", group:"Women"},{title:"Mother & Daughter Quarterly Lesson", date:"2026-03-21", group:"Women"},{title:"Pyjama Night", date:"2026-10-16", group:"Women"},{title:"Gift Exchange Among Ladies", date:"2026-12-18", group:"Women"},{title:"Cooking Lessons (Monthly)", date:"2026-01-10", group:"Women"},{title:"Health Issues Lesson", date:"2026-05-20", group:"Women"},{title:"CHURCH REVIVAL", date:"2026-03-25", group:"Church"},{title:"OPEN AIR CRUSADE", date:"2026-04-18", group:"Evangelism"},{title:"HALF NIGHT PRAYER", date:"2026-03-20", group:"Prayer"},{title:"CHILDREN'S MINISTRY SUNDAY", date:"2026-06-21", group:"Church"},{title:"MEN'S CONVENTION", date:"2026-07-31", group:"Men"},{title:"YOUTH WEEKEND", date:"2026-08-27", group:"Youth"},{title:"WOMEN'S WEEKEND", date:"2026-09-25", group:"Women"},{title:"SUNDAY SCHOOL CAMP", date:"2026-10-16", group:"Church"},{title:"YOUTH LOCAL CAMP", date:"2026-11-20", group:"Youth"}];
-function getGroupBadge(g){let c="group-badge ";if(g==="Youth")c+="youth";else if(g==="Men")c+="men";else if(g==="Women")c+="women";else c+="church";return `<span class="${c}">${g}</span>`;}
-function renderUpcoming(){let c=document.getElementById('upcomingEventsContainer');if(c){let now=new Date();let upcoming=masterEvents.filter(ev=>new Date(ev.date)>=now).sort((a,b)=>new Date(a.date)-new Date(b.date)).slice(0,4);c.innerHTML=upcoming.map(ev=>`<div class="event-card"><div class="event-date">📅 ${ev.date}</div><div class="event-title">${ev.title}</div>${getGroupBadge(ev.group)}</div>`).join('');}}
-function renderActivitiesGrid(){let groups={};masterEvents.forEach(ev=>{let g=ev.group;if(!groups[g])groups[g]=[];groups[g].push(ev);});for(let g in groups)groups[g].sort((a,b)=>new Date(a.date)-new Date(b.date));let order=["Youth","Women","Men","Church","Prayer","Evangelism","Discipleship","Fellowship","Worship","Marriage","Outreach"];let html='';for(let gr of order){if(groups[gr]&&groups[gr].length){html+=`<div style="margin-bottom:40px;"><h3 style="color:var(--gold); border-left:5px solid var(--sapphire); padding-left:16px;">${gr} Ministry</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;">`;groups[gr].forEach(ev=>{html+=`<div style="background:rgba(42,111,219,0.12); border-radius:20px; padding:16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`;});html+=`</div></div>`;}}document.getElementById('activitiesGrid').innerHTML=html;}
-function renderCalendar(){let grid=document.getElementById('calendarGrid');if(!grid)return;let monthMap=new Map();masterEvents.forEach(ev=>{let d=new Date(ev.date);if(isNaN(d.getTime()))return;let key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;if(!monthMap.has(key))monthMap.set(key,{month:d.getMonth(),year:d.getFullYear(),events:[]});monthMap.get(key).events.push(ev);});let sorted=Array.from(monthMap.entries()).sort((a,b)=>{let[yA,mA]=a[0].split('-').map(Number),[yB,mB]=b[0].split('-').map(Number);if(yA!==yB)return yA-yB;return mA-mB;});grid.innerHTML='';for(let[key,val]of sorted){let monthName=new Date(val.year,val.month,1).toLocaleString('default',{month:'long',year:'numeric'});let div=document.createElement('div');div.style.background='rgba(0,0,0,0.45)';div.style.padding='20px';div.style.borderRadius='24px';div.style.borderLeft=`3px solid var(--sapphire)`;div.innerHTML=`<h3 style="color:var(--gold);">${monthName}</h3>`;val.events.sort((a,b)=>new Date(a.date)-new Date(b.date)).forEach(ev=>{div.innerHTML+=`<div style="margin-bottom:10px;"><strong>${ev.date}</strong> – ${ev.title}<br>${getGroupBadge(ev.group)}</div>`;});grid.appendChild(div);}}
-const imageCodes=["MyG3QCkh","9mCLSJnV","5WzK9Dd9","nNX6cKZD","jkJKV0FT","zW3Q3LYC","4wLVdfkp","VYYTnC2R","DyPPRyY","d0N7tPbx","qL2RfGCk","YFR3Fzh8","YTDTrp8Q","5WyNbp4C","qLnVybD3","ZzD6bjNb","rRmPnmBN","vCrz7s1s"];
-function buildMediaGallery(){let g=document.getElementById('mediaGalleryGrid');if(g)g.innerHTML=imageCodes.map(code=>`<div class="gallery-item" onclick="window.open('https://ibb.co/${code}', '_blank')"><img src="https://i.ibb.co/${code}/0.jpg" loading="lazy" onerror="this.src='https://placehold.co/600x450/1e3a5f/white?text=Photo';"></div>`).join('');}
-window.toggleAccordion=function(h){let c=h.nextElementSibling;let i=h.querySelector('i:last-child');c.classList.toggle('show');if(i)i.style.transform=c.classList.contains('show')?'rotate(180deg)':'rotate(0)';};
-window.toggleDifference=function(){let c=document.getElementById('differenceContent');let i=document.getElementById('differenceIcon');c.classList.toggle('show');i.style.transform=c.classList.contains('show')?'rotate(180deg)':'rotate(0)';};
-function closeAll(){document.querySelectorAll('.accordion-content').forEach(c=>{if(c.classList.contains('show')){let h=c.previousElementSibling;if(h)h.click();}});}
-function expandAll(){document.querySelectorAll('.accordion-content').forEach(c=>{if(!c.classList.contains('show')){let h=c.previousElementSibling;if(h)h.click();}});}
+// MASTER EVENTS (full set)
+const masterEvents = [
+  {title:"Youth Committee Meeting & Bible Study", date:"2026-05-03", group:"Youth"},{title:"Youth Camp - Kwaluseni", date:"2026-05-08", group:"Youth"},{title:"Sigungu (Social Engagement)", date:"2026-05-10", group:"Youth"},{title:"Team Building & Discipleship", date:"2026-05-16", group:"Youth"},{title:"Sigungu Service (LCB)", date:"2026-05-17", group:"Youth"},{title:"Discipleship & Praise Team Practice", date:"2026-05-23", group:"Youth"},{title:"Baptism Service", date:"2026-05-24", group:"Church"},{title:"Month End Half Night & Fasting", date:"2026-05-29", group:"Prayer"},{title:"Discipleship & Practice", date:"2026-05-30", group:"Youth"},{title:"Youth Revivals + Youth Sunday", date:"2026-06-05", group:"Youth"},{title:"Discipleship Session", date:"2026-06-13", group:"Youth"},{title:"Lisango and Luguma", date:"2026-06-14", group:"Church"},{title:"Men's Weekend / Sports Day", date:"2026-06-19", group:"Men"},{title:"Month End Friday Prayer & Fasting", date:"2026-06-26", group:"Prayer"},{title:"Birthdays Celebration", date:"2026-06-27", group:"Fellowship"},{title:"Sigungu Service", date:"2026-06-28", group:"Youth"},{title:"Discipleship Training", date:"2026-07-04", group:"Youth"},{title:"Bible Study (Churchwide)", date:"2026-07-05", group:"Church"},{title:"Youth Empowerment", date:"2026-07-11", group:"Youth"},{title:"Team Building", date:"2026-07-18", group:"Youth"},{title:"Sigungu Service", date:"2026-07-19", group:"Youth"},{title:"Sports Day", date:"2026-07-25", group:"Youth"},{title:"Sigungu - Pastoral Team", date:"2026-07-26", group:"Church"},{title:"Soul Winning Outreach", date:"2026-08-01", group:"Evangelism"},{title:"Bible Study", date:"2026-08-02", group:"Church"},{title:"God's Chosen Generation Youth Camp", date:"2026-08-07", group:"Youth"},{title:"Soul Winning", date:"2026-08-15", group:"Evangelism"},{title:"Fasting Lesson", date:"2026-08-16", group:"Discipleship"},{title:"Evangelism Lesson", date:"2026-08-22", group:"Discipleship"},{title:"Evangelism Lesson (continued)", date:"2026-08-23", group:"Discipleship"},{title:"Mazwi Live Recording", date:"2026-08-28", group:"Worship"},{title:"YOUTH SUNDAY", date:"2026-08-30", group:"Youth"},{title:"Men's Half Night Prayers", date:"2026-03-27", group:"Men"},{title:"Men's Conference", date:"2026-06-19", group:"Men"},{title:"Home Visitation (Q1)", date:"2026-03-15", group:"Men"},{title:"Couples Outing", date:"2026-04-24", group:"Marriage"},{title:"Men's Soul Winning Challenge", date:"2026-01-01", group:"Men"},{title:"Give Food Hampers (Quarterly)", date:"2026-03-20", group:"Outreach"},{title:"Women's Home Visits", date:"2026-03-10", group:"Women"},{title:"Beginning of Year Prayer", date:"2026-02-07", group:"Women"},{title:"Women's Half Night Prayer", date:"2026-06-26", group:"Women"},{title:"Lesson on Building Healthy Families", date:"2026-05-16", group:"Women"},{title:"Women's Local Convention", date:"2026-08-28", group:"Women"},{title:"Women's Sunday", date:"2026-04-26", group:"Women"},{title:"Mother & Daughter Quarterly Lesson", date:"2026-03-21", group:"Women"},{title:"Pyjama Night", date:"2026-10-16", group:"Women"},{title:"Gift Exchange Among Ladies", date:"2026-12-18", group:"Women"},{title:"Cooking Lessons (Monthly)", date:"2026-01-10", group:"Women"},{title:"Health Issues Lesson", date:"2026-05-20", group:"Women"},{title:"CHURCH REVIVAL", date:"2026-03-25", group:"Church"},{title:"OPEN AIR CRUSADE", date:"2026-04-18", group:"Evangelism"},{title:"HALF NIGHT PRAYER", date:"2026-03-20", group:"Prayer"},{title:"CHILDREN'S MINISTRY SUNDAY", date:"2026-06-21", group:"Church"},{title:"MEN'S CONVENTION", date:"2026-07-31", group:"Men"},{title:"YOUTH WEEKEND", date:"2026-08-27", group:"Youth"},{title:"WOMEN'S WEEKEND", date:"2026-09-25", group:"Women"},{title:"SUNDAY SCHOOL CAMP", date:"2026-10-16", group:"Church"},{title:"YOUTH LOCAL CAMP", date:"2026-11-20", group:"Youth"}
+];
+
+function getGroupBadge(group) {
+  let cls = "group-badge ";
+  if (group === "Youth") cls += "youth";
+  else if (group === "Men") cls += "men";
+  else if (group === "Women") cls += "women";
+  else cls += "church";
+  return `<span class="${cls}">${group}</span>`;
+}
+function renderUpcoming(){
+  const container = document.getElementById('upcomingEventsContainer');
+  if(container){
+    const now = new Date();
+    const upcoming = masterEvents.filter(ev => new Date(ev.date) >= now).sort((a,b)=>new Date(a.date)-new Date(b.date)).slice(0,4);
+    container.innerHTML = upcoming.map(ev => `<div class="event-card"><div class="event-date">📅 ${ev.date}</div><div class="event-title">${ev.title}</div>${getGroupBadge(ev.group)}</div>`).join('');
+  }
+}
+function renderActivitiesGrid(){
+  const groups = {};
+  masterEvents.forEach(ev => { const g = ev.group; if (!groups[g]) groups[g] = []; groups[g].push(ev); });
+  for (let g in groups) groups[g].sort((a,b) => new Date(a.date) - new Date(b.date));
+  const groupOrder = ["Youth", "Women", "Men", "Church", "Prayer", "Evangelism", "Discipleship", "Fellowship", "Worship", "Marriage", "Outreach"];
+  let html = '';
+  for (let group of groupOrder) {
+    if (groups[group] && groups[group].length) {
+      html += `<div style="margin-bottom: 40px;"><h3 style="color: var(--gold); border-left: 5px solid var(--sapphire); padding-left: 16px; margin-bottom: 20px;">${group} Ministry</h3><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;">`;
+      groups[group].forEach(ev => { html += `<div style="background: rgba(42,111,219,0.1); border-radius: 20px; padding: 16px;"><strong>${ev.title}</strong><div>📅 ${ev.date}</div>${getGroupBadge(ev.group)}</div>`; });
+      html += `</div></div>`;
+    }
+  }
+  document.getElementById('activitiesGrid').innerHTML = html;
+}
+function renderCalendar(){
+  const grid = document.getElementById('calendarGrid');
+  if(!grid) return;
+  const monthMap = new Map();
+  masterEvents.forEach(ev => {
+    let d = new Date(ev.date);
+    if(isNaN(d.getTime())) return;
+    let key = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+    if(!monthMap.has(key)) monthMap.set(key, { month: d.getMonth(), year: d.getFullYear(), events: [] });
+    monthMap.get(key).events.push(ev);
+  });
+  const sortedMonths = Array.from(monthMap.entries()).sort((a,b) => {
+    const [yearA, monthA] = a[0].split('-').map(Number);
+    const [yearB, monthB] = b[0].split('-').map(Number);
+    if(yearA !== yearB) return yearA - yearB;
+    return monthA - monthB;
+  });
+  grid.innerHTML = '';
+  for(let [key, val] of sortedMonths){
+    const monthName = new Date(val.year, val.month, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
+    const div = document.createElement('div'); div.style.background='rgba(0,0,0,0.45)'; div.style.padding='20px'; div.style.borderRadius='24px'; div.style.borderLeft=`3px solid var(--sapphire)`;
+    div.innerHTML = `<h3 style="color:var(--gold);">${monthName}</h3>`;
+    val.events.sort((a,b)=>new Date(a.date)-new Date(b.date)).forEach(ev => { div.innerHTML += `<div style="margin-bottom:10px;"><strong>${ev.date}</strong> – ${ev.title}<br>${getGroupBadge(ev.group)}</div>`; });
+    grid.appendChild(div);
+  }
+}
+
+const imageCodes = ["MyG3QCkh", "9mCLSJnV", "5WzK9Dd9", "nNX6cKZD", "jkJKV0FT", "zW3Q3LYC", "4wLVdfkp", "VYYTnC2R", "DyPPRyY", "d0N7tPbx", "qL2RfGCk", "YFR3Fzh8", "YTDTrp8Q", "5WyNbp4C", "qLnVybD3", "ZzD6bjNb", "rRmPnmBN", "vCrz7s1s"];
+function buildMediaGallery(){
+  const gallery = document.getElementById('mediaGalleryGrid');
+  if(gallery) gallery.innerHTML = imageCodes.map(code => `<div class="gallery-item" onclick="window.open('https://ibb.co/${code}', '_blank')"><img src="https://i.ibb.co/${code}/0.jpg" loading="lazy" onerror="this.src='https://placehold.co/600x450/1e3a5f/white?text=Photo';"></div>`).join('');
+}
+
+window.toggleAccordion = function(h){ let c = h.nextElementSibling; let i = h.querySelector('i:last-child'); c.classList.toggle('show'); if(i) i.style.transform = c.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; };
+window.toggleDifference = function() { const content = document.getElementById('differenceContent'); const icon = document.getElementById('differenceIcon'); content.classList.toggle('show'); icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; };
+function closeAll(){ document.querySelectorAll('.accordion-content').forEach(c=>{ if(c.classList.contains('show')){ let h=c.previousElementSibling; if(h) h.click(); } }); }
+function expandAll(){ document.querySelectorAll('.accordion-content').forEach(c=>{ if(!c.classList.contains('show')){ let h=c.previousElementSibling; if(h) h.click(); } }); }
 document.getElementById('expandAllBtn')?.addEventListener('click',expandAll);
 document.getElementById('collapseAllBtn')?.addEventListener('click',closeAll);
-const sections={prayer:document.getElementById('prayer-section'),calendar:document.getElementById('calendar-section'),vision:document.getElementById('vision-section'),media:document.getElementById('media-section'),archives:document.getElementById('archives-section')};
-function showSection(id,focusAccordionId){Object.values(sections).forEach(s=>s?.classList.remove('active-section'));let target=sections[id];if(target)target.classList.add('active-section');if(focusAccordionId){let accordionDiv=document.getElementById(focusAccordionId);if(accordionDiv){let header=accordionDiv.querySelector('.accordion-header');let content=accordionDiv.querySelector('.accordion-content');if(content&&!content.classList.contains('show')&&header)header.click();accordionDiv.scrollIntoView({behavior:'smooth',block:'start'});if(focusAccordionId==='accordion-activities'){let btn=document.getElementById('toggleActivitiesBtn');let container=document.getElementById('activitiesContainer');if(container&&btn&&container.style.display!=='block')btn.click();}}}else if(target)target.scrollIntoView({behavior:'smooth',block:'start'});if(id==='prayer'&&target){let prayerAccordion=target.querySelector('.accordion-header');if(prayerAccordion){let contentDiv=prayerAccordion.nextElementSibling;if(contentDiv&&!contentDiv.classList.contains('show'))prayerAccordion.click();}}}
-document.querySelectorAll('.pill').forEach(p=>{p.addEventListener('click',()=>{let sec=p.getAttribute('data-section'),focus=p.getAttribute('data-focus');if(sec==='prayer-section')showSection('prayer');else if(sec==='calendar-section')showSection('calendar',focus);else if(sec==='vision-section')showSection('vision',focus==='history'?'accordion-history':'accordion-vision');else if(sec==='media-section')showSection('media','accordion-media');else if(sec==='archives-section')showSection('archives','accordion-archives');});});
-document.querySelector('.vision2037-trigger')?.addEventListener('click',(e)=>{e.preventDefault();showSection('vision','accordion-vision');});
-let act=false;document.getElementById('toggleActivitiesBtn')?.addEventListener('click',()=>{let c=document.getElementById('activitiesContainer');if(act){c.style.display='none';document.getElementById('toggleActivitiesBtn').innerHTML='📅 SHOW ALL ACTIVITIES';}else{c.style.display='block';renderActivitiesGrid();document.getElementById('toggleActivitiesBtn').innerHTML='✖️ HIDE ACTIVITIES';}act=!act;});
-document.getElementById('prayerForm')?.addEventListener('submit',(e)=>{e.preventDefault();let n=document.getElementById('prayerName').value.trim();let r=document.getElementById('prayerRequest').value.trim();if(n&&r){window.open(`https://wa.me/26876130566?text=Prayer%20from%20${encodeURIComponent(n)}%3A%20${encodeURIComponent(r)}`,'_blank');alert('Opened in WhatsApp.');e.target.reset();}else alert('Fill all fields');});
+
+const sections = { prayer: document.getElementById('prayer-section'), calendar: document.getElementById('calendar-section'), vision: document.getElementById('vision-section'), media: document.getElementById('media-section'), archives: document.getElementById('archives-section') };
+function showSection(id, focusAccordionId) {
+  Object.values(sections).forEach(s => s?.classList.remove('active-section'));
+  let target = sections[id];
+  if(target) target.classList.add('active-section');
+  if(focusAccordionId) {
+    let accordionDiv = document.getElementById(focusAccordionId);
+    if(accordionDiv) {
+      let header = accordionDiv.querySelector('.accordion-header');
+      let content = accordionDiv.querySelector('.accordion-content');
+      if(content && !content.classList.contains('show') && header) header.click();
+      accordionDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if(focusAccordionId === 'accordion-activities') {
+        let btn = document.getElementById('toggleActivitiesBtn');
+        let container = document.getElementById('activitiesContainer');
+        if(container && btn && container.style.display !== 'block') { btn.click(); }
+      }
+    }
+  } else if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.querySelectorAll('.pill').forEach(p => {
+  p.addEventListener('click', () => {
+    let sec = p.getAttribute('data-section'), focus = p.getAttribute('data-focus');
+    if(sec === 'prayer-section') showSection('prayer');
+    else if(sec === 'calendar-section') showSection('calendar', focus);
+    else if(sec === 'vision-section') showSection('vision', focus === 'history' ? 'accordion-history' : 'accordion-vision');
+    else if(sec === 'media-section') showSection('media', 'accordion-media');
+    else if(sec === 'archives-section') showSection('archives', 'accordion-archives');
+  });
+});
+document.querySelector('.vision2037-trigger')?.addEventListener('click',(e)=>{ e.preventDefault(); showSection('vision','accordion-vision'); });
+
+let act = false; document.getElementById('toggleActivitiesBtn')?.addEventListener('click',()=>{ let c=document.getElementById('activitiesContainer'); if(act){ c.style.display='none'; document.getElementById('toggleActivitiesBtn').innerHTML='📅 SHOW ALL ACTIVITIES'; } else { c.style.display='block'; renderActivitiesGrid(); document.getElementById('toggleActivitiesBtn').innerHTML='✖️ HIDE ACTIVITIES'; } act=!act; });
+document.getElementById('prayerForm')?.addEventListener('submit',(e)=>{ e.preventDefault(); let n=document.getElementById('prayerName').value.trim(); let r=document.getElementById('prayerRequest').value.trim(); if(n&&r){ window.open(`https://wa.me/26876130566?text=Prayer%20from%20${encodeURIComponent(n)}%3A%20${encodeURIComponent(r)}`,'_blank'); alert('Opened in WhatsApp.'); e.target.reset(); } else alert('Fill all fields'); });
 document.getElementById('menuToggle')?.addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('active'));
 document.getElementById('backToTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 document.getElementById('adminBtn')?.addEventListener('click',()=>alert('Admin dashboard coming soon'));
-renderUpcoming();renderCalendar();buildMediaGallery();
-document.querySelectorAll('[data-scroll]').forEach(l=>{l.addEventListener('click',(e)=>{e.preventDefault();let t=l.getAttribute('data-scroll');if(t==='home')window.scrollTo({top:0,behavior:'smooth'});else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'});else if(t==='ministries')document.getElementById('ministries')?.scrollIntoView({behavior:'smooth'});else if(t==='activities')showSection('calendar','accordion-activities');else if(t==='calendar')showSection('calendar','accordion-calendar');else if(t==='vision2037')showSection('vision','accordion-vision');else if(t==='media')showSection('media','accordion-media');else if(t==='archives')showSection('archives','accordion-archives');else if(t==='history')showSection('vision','accordion-history');else if(t==='about'){const aboutSec=document.getElementById('about');aboutSec.style.display='block';aboutSec.scrollIntoView({behavior:'smooth',block:'start'});}else if(t==='prayer')showSection('prayer');else if(t==='partner')showSection('prayer');});});
+renderUpcoming(); renderCalendar(); buildMediaGallery();
+document.querySelectorAll('[data-scroll]').forEach(l=>{ l.addEventListener('click',(e)=>{ e.preventDefault(); let t=l.getAttribute('data-scroll'); if(t==='home')window.scrollTo({top:0,behavior:'smooth'}); else if(t==='weekly')document.getElementById('weekly')?.scrollIntoView({behavior:'smooth'}); else if(t==='ministries')document.getElementById('ministries')?.scrollIntoView({behavior:'smooth'}); else if(t==='activities')showSection('calendar','accordion-activities'); else if(t==='calendar')showSection('calendar','accordion-calendar'); else if(t==='vision2037')showSection('vision','accordion-vision'); else if(t==='media')showSection('media','accordion-media'); else if(t==='archives')showSection('archives','accordion-archives'); else if(t==='history')showSection('vision','accordion-history'); else if(t==='about'){ const aboutSec = document.getElementById('about'); aboutSec.style.display = 'block'; aboutSec.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else if(t==='prayer')showSection('prayer'); else if(t==='partner')showSection('prayer'); }); });
 </script>
 </body>
 </html>

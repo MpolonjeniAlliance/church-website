@@ -23,13 +23,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5   # latest
 
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1.0.12
+        uses: actions/jekyll-build-pages@v1   # stable v1 tag (points to latest v1.x)
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3  # updated from v2
 
   deploy:
     environment:
@@ -40,4 +40,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4   # updated from v2

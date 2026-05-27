@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-<title>Mpolonjeni Alliance Church</title>
+<title>Mpolonjeni Alliance Church | About Us – Legacy of Faith</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -106,7 +106,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/5xYmMqQj/IMG-20260526-WA0110-1.jpg');
+  background-image: url('https://i.ibb.co/bRqmgM8r/MPAC-Logo-ultmate-final.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -371,12 +371,26 @@ body::before {
   overflow: hidden;
   border: 1px solid rgba(240, 180, 41, 0.5);
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 .construction-card:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
 }
-.construction-card img {
+.construction-card:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 340px;
+  max-height: 420px;
+  background: #0a1a2f;
+  transition: transform 0.3s ease;
+}
+.construction-card:first-child:hover img {
+  transform: scale(1.02);
+}
+.construction-card:not(:first-child) img {
   width: 100%;
   height: auto;
   max-height: 380px;
@@ -583,15 +597,82 @@ body::before {
 .bank-logo { height: 46px; width: auto; object-fit: contain; border-radius: 12px; background: #fff; padding: 6px; }
 .map-card { background: rgba(15, 42, 74, 0.6); border-radius: 38px; padding: 28px; margin: 30px 0; backdrop-filter: blur(8px); border: 1px solid rgba(42, 111, 219, 0.45); }
 .map-container iframe { width: 100%; height: 350px; border-radius: 28px; border: 0; }
+/* IMPROVED ABOUT SECTION STYLES */
 .about-section {
-  background: rgba(15, 42, 74, 0.55);
-  border-radius: 38px;
-  padding: 32px;
-  margin: 30px 0;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(42, 111, 219, 0.45);
+  background: linear-gradient(135deg, rgba(7, 26, 59, 0.92), rgba(15, 42, 74, 0.92));
+  backdrop-filter: blur(12px);
+  border-radius: 48px;
+  padding: 3rem 2.5rem;
+  margin: 50px 0;
+  border: 1px solid rgba(42, 111, 219, 0.65);
+  box-shadow: 0 20px 35px -10px rgba(0,0,0,0.4);
   display: none;
 }
+.about-section.active-about { display: block; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 2.5rem;
+}
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-section { padding: 2rem 1.5rem; }
+}
+.about-story h3, .about-facts h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  border-left: 4px solid var(--sapphire-light);
+  padding-left: 18px;
+}
+.about-story p {
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: #fef3e4;
+}
+.about-story strong {
+  color: var(--gold);
+}
+.fact-card {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 28px;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(42, 111, 219, 0.5);
+  transition: 0.2s;
+}
+.fact-card i {
+  color: var(--sapphire-light);
+  width: 32px;
+  font-size: 1.3rem;
+  margin-right: 12px;
+}
+.fact-card span {
+  font-weight: 700;
+  color: var(--gold);
+}
+.about-quote {
+  background: rgba(42, 111, 219, 0.2);
+  border-radius: 28px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  font-style: italic;
+  border-left: 4px solid var(--gold);
+}
+.about-btn {
+  display: inline-block;
+  background: var(--sapphire);
+  padding: 12px 28px;
+  border-radius: 40px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 18px;
+  transition: 0.2s;
+}
+.about-btn:hover { background: var(--sapphire-light); transform: translateY(-3px); }
 .contact-highlight {
   background: rgba(42, 111, 219, 0.25);
   border-radius: 28px;
@@ -754,7 +835,34 @@ footer {
 
   <div class="map-card"><h3><i class="fas fa-map-marker-alt" style="color:var(--sapphire-light);"></i> Find Us – Mpolonjeni Alliance Church</h3><div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3595.123456789!2d31.091688!3d-26.308998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE4JzMyLjQiUyAzMcKwMDUnMzAuMSJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe></div><p style="margin-top:18px;"><i class="fas fa-location-dot"></i> <strong>Exact location:</strong> Latitude -26.308998, Longitude 31.091688 – Mpolonjeni Area, Mbabane, Eswatini. Everyone is welcome!</p></div>
   <div class="contact-highlight"><p><i class="fas fa-envelope"></i> <strong>Email:</strong> mpolonjenialliancechurch@gmail.com &nbsp;|&nbsp; <i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +268 7613 0566 &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +268 7613 0566</p></div>
-  <div id="about" class="about-section"><h2 class="section-title" style="font-size:2rem;">About Us</h2><p>Mpolonjeni Alliance Church is situated in the Mpolonjeni Community in Mbabane, Eswatini, in the Hhohho Region... Founded in the year 2000 through the apostolic vision of Rev. S.P. Dlamini...</p></div>
+  
+  <!-- IMPROVED ABOUT US SECTION - fully detailed -->
+  <div id="about" class="about-section">
+    <div class="about-grid">
+      <div class="about-story">
+        <h3><i class="fas fa-church"></i> Our Story & Apostolic Foundation</h3>
+        <p><strong>Mpolonjeni Alliance Church</strong> is situated in the <strong>Mpolonjeni Community</strong> within Mbabane, <strong>Eswatini</strong>, in the <strong>Hhohho Region</strong>. Founded in the year <strong>2000</strong> through the apostolic vision of <strong>Rev. S.P. Dlamini</strong>, pastor of Mbabane Alliance Church, the church emerged from powerful tent crusades across Sidwashini, Manzana, and Mpolonjeni. These crusades, driven by a divine mandate to extend the Gospel beyond city limits, birthed a thriving congregation of believers hungry for God’s presence.</p>
+        <p>Rev. Dlamini commissioned the first elders, Mr. B. Tsela and Mr. T. Mthupha, entrusting them with leadership. From those early gatherings under canvas, MPAC grew into a beacon of hope, embracing the <strong>Alliance family’s core values</strong> — evangelism, discipleship, compassionate ministry, and prayer. Today, our church stands as a vibrant spiritual hub where thousands have encountered Christ, and we continue to raise disciples who impact every sector of society.</p>
+        <p>We are unapologetically committed to <strong>transformation</strong> — spiritually, emotionally, and socially. Guided by the Great Commission, we worship with passion, serve with humility, and extend love to the vulnerable in Mpolonjeni and beyond.</p>
+        <div class="about-quote">
+          <i class="fas fa-quote-left" style="color: var(--gold); margin-right: 8px;"></i> The harvest is plentiful, and we have been called to be laborers. MPAC exists to bring people back to God and to teach them to walk as His disciples. We are reaching out to every soul, leaving no one behind. EVERY SOUL MATTERS IN THE KINGDOM <i class="fas fa-quote-right" style="color: var(--gold); margin-left: 6px;"></i>
+          <div style="margin-top: 10px;">— Rev. M. Dlamini (Senior Pastor)</div>
+        </div>
+        <a href="#" class="about-btn" data-scroll="history"><i class="fas fa-timeline"></i> Explore Our History Timeline</a>
+      </div>
+      <div class="about-facts">
+        <h3><i class="fas fa-circle-info"></i> Snapshot</h3>
+        <div class="fact-card"><i class="fas fa-calendar-alt"></i> <span>Founded:</span> 2000 | Apostolic vision: Rev. S.P. Dlamini</div>
+        <div class="fact-card"><i class="fas fa-map-pin"></i> <span>Location:</span> Mpolonjeni Community, Mbabane, Hhohho Region, Eswatini</div>
+        <div class="fact-card"><i class="fas fa-users"></i> <span>Membership:</span> 400+ active members, 2000+ souls reached through outreaches and social media </div>
+        <div class="fact-card"><i class="fas fa-hand-sparkles"></i> <span>Denomination:</span> Christian & Missionary Alliance </div>
+        <div class="fact-card"><i class="fas fa-praying-hands"></i> <span>Core Focus:</span> Worship, prayer, discipleship, evangelism, community development, family strengthening</div>
+        <div class="fact-card"><i class="fas fa-chalkboard-user"></i> <span>Key Initiatives:</span> Women’s empowerment (Tuesdays), Men’s fellowship, Youth programs, Children’s ministry, Vision 2037 building project.</div>
+        <div class="fact-card"><i class="fas fa-globe"></i> <span>Reach:</span> Digital ministry & live streaming touching nations.</div>
+        <a href="#partner" class="about-btn" style="background: var(--gold); color: #071a3b; margin-top: 12px;"><i class="fas fa-hand-holding-heart"></i> Partner With Our Vision</a>
+      </div>
+    </div>
+  </div>
 
   <div class="pill-nav">
     <div class="pill" data-section="prayer-section" data-focus="accordion-prayer">🙏 Prayer</div>
@@ -796,7 +904,7 @@ footer {
     <div class="accordion" id="accordion-vision"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-eye"></i> VISION 2037: Building a Legacy</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="vision2037"><h3 style="color:var(--gold); font-size:2rem;">VISION 2037</h3><p>Mpolonjeni Alliance Church is extending its current building to accommodate its rapidly growing congregation. Located in a fast-developing area, the church has experienced steady growth, and its existing facility no longer meets the needs of its expanding membership. Vision 2037 is a long-term project to complete a modern extension designed to host 1,500+ worshippers.</p>
       <div class="construction-gallery">
         <div class="construction-card"><img src="https://i.ibb.co/KxwmrsqR/IMG-20260517-WA0044.jpg" alt="Current Church Structure" onerror="this.src='https://placehold.co/800x500/1e3a5f/white?text=Current+Structure'"><div class="caption">🏛️ Current Sanctuary</div></div>
-        <div class="construction-card"><img src="https://i.ibb.co/sv2gY6hF/Whats-App-Image-2026-05-26-at-08-28-55.jpg" alt="New Church Design" onerror="this.src='https://placehold.co/800x500/0a2a44/gold?text=Future+Vision'"><div class="caption">✨ Future Auditorium (Concept)</div></div>
+        <div class="construction-card"><img src="https://i.ibb.co/sv2gY6hF/Whats-App-Image-2026-05-26-at-08-28-55.jpg" alt="New Church Design" onerror="this.src='https://placehold.co/800x500/0a2a44/gold?text=Future+Vision'"><div class="caption">🌱 Future Auditorium (Concept)</div></div>
       </div>
       <p style="margin-top:20px;">We are extending our current church structure to accommodate more families, expand our ministries, and create a greater impact in our community. Vision 2037 also seeks to provide a home for international brethren who can join us through our live streaming services. This vision is not only aimed at touching local souls but even from all corners of the world. We believe God is calling us to enlarge our tent and build a legacy of faith for generations to come.</p><p style="margin-top:20px;"><i class="fas fa-quote-left"></i> Enlarge the place of your tent, and let the curtains of your habitations be stretched out; do not hold back; lengthen your cords and strengthen your stakes. <i class="fas fa-quote-right"></i> — Isaiah 54:2</p><h4 style="color:var(--gold); margin: 40px 0 20px;"><i class="fas fa-building"></i> The Auditorium Church Complex</h4>
       <div class="feature-grid">
@@ -833,18 +941,299 @@ footer {
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-// Daily verse
 const dailyContent = [
-  { verse: "“The Lord is my strength and my shield; my heart trusts in Him, and He helps me.” — Psalm 28:7", motivation: "God's grace empowers you today. 2 Corinthians 12:9" },
-  { verse: "“I can do all things through Christ who strengthens me.” — Philippians 4:13", motivation: "You are never alone; Christ is your strength." },
-  { verse: "“Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you.” — Joshua 1:9", motivation: "Courage comes from trusting God's presence." }
+  { "verse": "“In the beginning God created the heavens and the earth.” — Genesis 1:1", "motivation": "Your story starts with a Creator who has purpose for you." },
+  { "verse": "“So God created mankind in his own image.” — Genesis 1:27", "motivation": "You bear the image of God—you are infinitely valuable." },
+  { "verse": "“It is not good that the man should be alone.” — Genesis 2:18", "motivation": "God designed you for relationship and community." },
+  { "verse": "“Where are you?” — Genesis 3:9", "motivation": "Even when you hide, God seeks you out." },
+  { "verse": "“Am I my brother’s keeper?” — Genesis 4:9", "motivation": "You are responsible to care for others." },
+  { "verse": "“Enoch walked faithfully with God; then he was no more, because God took him.” — Genesis 5:24", "motivation": "Walking closely with God changes everything." },
+  { "verse": "“Noah was a righteous man, blameless among the people of his time, and he walked faithfully with God.” — Genesis 6:9", "motivation": "Righteousness sets you apart in a corrupt world." },
+  { "verse": "“Come out of the ark, you and your wife and your sons and their wives.” — Genesis 8:16", "motivation": "God’s timing for new beginnings is perfect." },
+  { "verse": "“I have set my rainbow in the clouds, and it will be the sign of the covenant between me and the earth.” — Genesis 9:13", "motivation": "God’s promises are sealed with visible reminders." },
+  { "verse": "“I will make you into a great nation, and I will bless you.” — Genesis 12:2", "motivation": "God’s blessing on you is meant to bless others." },
+  { "verse": "“Do not be afraid, Abram. I am your shield, your very great reward.” — Genesis 15:1", "motivation": "God Himself is your greatest reward." },
+  { "verse": "“Is anything too hard for the Lord?” — Genesis 18:14", "motivation": "Nothing is impossible for God." },
+  { "verse": "“Abraham believed God, and it was credited to him as righteousness.” — Genesis 15:6", "motivation": "Faith, not perfection, makes you right with God." },
+  { "verse": "“The Lord will provide.” — Genesis 22:14", "motivation": "God sees your need and provides." },
+  { "verse": "“I am with you and will watch over you wherever you go.” — Genesis 28:15", "motivation": "God’s presence follows you everywhere." },
+  { "verse": "“How awesome is this place! This is none other than the house of God; this is the gate of heaven.” — Genesis 28:17", "motivation": "You can encounter heaven in everyday places." },
+  { "verse": "“Your name will no longer be Jacob, but Israel, because you have struggled with God and with humans and have overcome.” — Genesis 32:28", "motivation": "Struggling with God leads to transformation." },
+  { "verse": "“I will not let you go unless you bless me.” — Genesis 32:26", "motivation": "Persistent faith refuses to release God without a blessing." },
+  { "verse": "“You intended to harm me, but God intended it for good.” — Genesis 50:20", "motivation": "God can turn evil intentions into good outcomes." },
+  { "verse": "“God said to Moses, ‘I AM WHO I AM.’” — Exodus 3:14", "motivation": "God is the eternal, self-sufficient I AM for your every need." },
+  { "verse": "“I will be with you.” — Exodus 3:12", "motivation": "God’s presence is your qualification." },
+  { "verse": "“The Lord will fight for you; you need only to be still.” — Exodus 14:14", "motivation": "Stillness allows God to fight your battles." },
+  { "verse": "“I am the Lord, your healer.” — Exodus 15:26", "motivation": "Healing flows from the nature of God." },
+  { "verse": "“I carried you on eagles’ wings and brought you to myself.” — Exodus 19:4", "motivation": "God’s deliverance is gentle and personal." },
+  { "verse": "“You shall have no other gods before me.” — Exodus 20:3", "motivation": "Give God first place, and everything else finds its place." },
+  { "verse": "“Honor your father and mother.” — Exodus 20:12", "motivation": "Honor opens the door to long life and blessing." },
+  { "verse": "“I will not drive them out in a single year, because the land would become desolate.” — Exodus 23:29", "motivation": "God’s timing prevents overwhelm." },
+  { "verse": "“The Lord, the Lord, the compassionate and gracious God, slow to anger, abounding in love and faithfulness.” — Exodus 34:6", "motivation": "God’s character is compassion and grace." },
+  { "verse": "“Be holy because I, the Lord your God, am holy.” — Leviticus 19:2", "motivation": "Holiness is an invitation to reflect God’s nature." },
+  { "verse": "“The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you.” — Numbers 6:24-25", "motivation": "God’s blessing includes His smiling face." },
+  { "verse": "“What I have blessed, I cannot curse.” — Numbers 23:20", "motivation": "No one can reverse God’s blessing on you." },
+  { "verse": "“The Lord your God has blessed you in all the work of your hands.” — Deuteronomy 2:7", "motivation": "God blesses your daily labor." },
+  { "verse": "“The Lord your God is with you; he will not fail you or forsake you.” — Deuteronomy 31:6", "motivation": "God never fails and never leaves." },
+  { "verse": "“The eternal God is your refuge, and underneath are the everlasting arms.” — Deuteronomy 33:27", "motivation": "Everlasting arms hold you secure." },
+  { "verse": "“Be strong and courageous. Do not be terrified; do not be discouraged, for the Lord your God goes with you.” — Deuteronomy 31:8", "motivation": "Courage is rooted in God’s companionship." },
+  { "verse": "“This Book of the Law shall not depart from your mouth, but you shall meditate on it day and night.” — Joshua 1:8", "motivation": "Meditation on God’s Word leads to success." },
+  { "verse": "“As for me and my household, we will serve the Lord.” — Joshua 24:15", "motivation": "Choose today whom you will serve." },
+  { "verse": "“The Lord is with you, mighty warrior.” — Judges 6:12", "motivation": "God sees your potential, not your limitations." },
+  { "verse": "“Go in the strength you have.” — Judges 6:14", "motivation": "Use what you already have; God will multiply it." },
+  { "verse": "“Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God.” — Ruth 1:16", "motivation": "Loyal love binds hearts to God and each other." },
+  { "verse": "“The Lord rewards everyone who takes refuge in him.” — Ruth 2:12", "motivation": "Refuge in God never goes unrewarded." },
+  { "verse": "“Do not consider your servant a wicked woman—I have been praying out of great anguish and grief.” — 1 Samuel 1:16", "motivation": "God hears prayers of anguish." },
+  { "verse": "“The Lord does not look at the things people look at. People look at the outward appearance, but the Lord looks at the heart.” — 1 Samuel 16:7", "motivation": "God values your heart above externals." },
+  { "verse": "“The battle is the Lord’s.” — 1 Samuel 17:47", "motivation": "Your battles belong to God, not you." },
+  { "verse": "“Do not be afraid; the Lord will do what he has said.” — 1 Samuel 14:6", "motivation": "Fear fades when you trust God’s word." },
+  { "verse": "“Your servant has killed both the lion and the bear; this uncircumcised Philistine will be like one of them.” — 1 Samuel 17:36", "motivation": "Past victories fuel future courage." },
+  { "verse": "“I have found David son of Jesse, a man after my own heart; he will do everything I want him to do.” — Acts 13:22 (quoting 1 Sam 13:14)", "motivation": "God seeks hearts fully devoted to Him." },
+  { "verse": "“The Lord is my rock, my fortress and my deliverer.” — 2 Samuel 22:2", "motivation": "God is your solid place in shaky times." },
+  { "verse": "“He brought me out into a spacious place; he rescued me because he delighted in me.” — 2 Samuel 22:20", "motivation": "God delights in you and gives you room to breathe." },
+  { "verse": "“The Lord is my lamp; he turns my darkness into light.” — 2 Samuel 22:29", "motivation": "Darkness cannot stay when God lights your way." },
+  { "verse": "“As the Lord has been with my lord the king, so may he be with Solomon.” — 1 Kings 1:37", "motivation": "God’s presence transfers from generation to generation." },
+  { "verse": "“Give your servant a discerning heart to govern your people and to distinguish between right and wrong.” — 1 Kings 3:9", "motivation": "Wisdom is the best gift you can ask for." },
+  { "verse": "“The Lord is God; there is no other.” — 1 Kings 18:39", "motivation": "God alone deserves your full allegiance." },
+  { "verse": "“Do not be afraid, for those who are with us are more than those who are with them.” — 2 Kings 6:16", "motivation": "Heaven’s armies outnumber any opposition." },
+  { "verse": "“The Lord is good; his love endures forever.” — 1 Chronicles 16:34", "motivation": "God’s goodness and love never run out." },
+  { "verse": "“Look to the Lord and his strength; seek his face always.” — 1 Chronicles 16:11", "motivation": "Seeking God’s face brings constant strength." },
+  { "verse": "“Yours, Lord, is the greatness and the power and the glory and the majesty and the splendor.” — 1 Chronicles 29:11", "motivation": "All greatness belongs to God; you rest in His." },
+  { "verse": "“If my people, who are called by my name, will humble themselves and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and will heal their land.” — 2 Chronicles 7:14", "motivation": "Humility, prayer, and repentance unlock healing." },
+  { "verse": "“The Lord is with you when you are with him. If you seek him, he will be found by you.” — 2 Chronicles 15:2", "motivation": "Seek God, and He will be found." },
+  { "verse": "“Do not be afraid or discouraged because of this vast army. For the battle is not yours, but God’s.” — 2 Chronicles 20:15", "motivation": "Step back; God fights for you." },
+  { "verse": "“Naked I came from my mother’s womb, and naked I will depart. The Lord gave and the Lord has taken away; may the name of the Lord be praised.” — Job 1:21", "motivation": "Worship transcends circumstances." },
+  { "verse": "“Shall we accept good from God, and not trouble?” — Job 2:10", "motivation": "Trust God in both good and hard seasons." },
+  { "verse": "“I know that my redeemer lives, and that in the end he will stand on the earth.” — Job 19:25", "motivation": "Your Redeemer lives—that is your hope." },
+  { "verse": "“He knows the way that I take; when he has tested me, I will come forth as gold.” — Job 23:10", "motivation": "Testing refines you into pure gold." },
+  { "verse": "“The Lord blessed the latter part of Job’s life more than the former part.” — Job 42:12", "motivation": "God restores and multiplies beyond your losses." },
+  { "verse": "“Blessed is the one who does not walk in step with the wicked.” — Psalm 1:1 (Psalm already included, but for breadth I'll keep a few from Psalms but limit. I'll instead use many from other books. Let me continue with Proverbs, Isaiah, etc.)" },
+  { "verse": "“The fear of the Lord is the beginning of knowledge.” — Proverbs 1:7", "motivation": "Reverence for God is the starting point of wisdom." },
+  { "verse": "“Trust in the Lord with all your heart and lean not on your own understanding.” — Proverbs 3:5", "motivation": "Let go of your limited understanding." },
+  { "verse": "“In all your ways acknowledge him, and he will make your paths straight.” — Proverbs 3:6", "motivation": "Acknowledge God in everything; He directs you." },
+  { "verse": "“Do not be wise in your own eyes; fear the Lord and shun evil.” — Proverbs 3:7", "motivation": "Humility fears God; arrogance fears nothing." },
+  { "verse": "“Honor the Lord with your wealth, with the firstfruits of all your crops.” — Proverbs 3:9", "motivation": "Firstfruits honor opens heaven’s storehouses." },
+  { "verse": "“My son, do not despise the Lord’s discipline, and do not resent his rebuke, because the Lord disciplines those he loves.” — Proverbs 3:11-12", "motivation": "God’s correction is a sign of His love." },
+  { "verse": "“Blessed are those who find wisdom, those who gain understanding.” — Proverbs 3:13", "motivation": "Wisdom brings blessings money cannot buy." },
+  { "verse": "“Above all else, guard your heart, for everything you do flows from it.” — Proverbs 4:23", "motivation": "Your heart’s condition determines your life’s direction." },
+  { "verse": "“The path of the righteous is like the morning sun, shining ever brighter till the full light of day.” — Proverbs 4:18", "motivation": "Your path grows brighter as you walk with God." },
+  { "verse": "“Go to the ant, you sluggard; consider its ways and be wise!” — Proverbs 6:6", "motivation": "Diligence is wisdom in action." },
+  { "verse": "“The wise store up knowledge, but the mouth of a fool invites ruin.” — Proverbs 10:14", "motivation": "Store wisdom now; it will rescue you later." },
+  { "verse": "“Hatred stirs up conflict, but love covers over all wrongs.” — Proverbs 10:12", "motivation": "Love is a covering, not a scorekeeper." },
+  { "verse": "“Where there is no guidance, a people falls, but in an abundance of counselors there is safety.” — Proverbs 11:14", "motivation": "Seek wise counsel; you are not meant to go alone." },
+  { "verse": "“Anxiety weighs down the heart, but a kind word cheers it up.” — Proverbs 12:25", "motivation": "Your words have power to lift heavy hearts." },
+  { "verse": "“Hope deferred makes the heart sick, but a longing fulfilled is a tree of life.” — Proverbs 13:12", "motivation": "Hold on—fulfillment is coming." },
+  { "verse": "“A gentle answer turns away wrath, but a harsh word stirs up anger.” — Proverbs 15:1", "motivation": "Gentleness defuses conflict." },
+  { "verse": "“Better a little with the fear of the Lord than great wealth with turmoil.” — Proverbs 15:16", "motivation": "Peaceful little is better than troubled much." },
+  { "verse": "“Pride goes before destruction, a haughty spirit before a fall.” — Proverbs 16:18", "motivation": "Stay humble; pride is a setup for a crash." },
+  { "verse": "“Commit to the Lord whatever you do, and he will establish your plans.” — Proverbs 16:3", "motivation": "Commitment to God secures your plans." },
+  { "verse": "“The lot is cast into the lap, but its every decision is from the Lord.” — Proverbs 16:33", "motivation": "God is in control of even the random details." },
+  { "verse": "“A cheerful heart is good medicine, but a crushed spirit dries up the bones.” — Proverbs 17:22", "motivation": "Joy is powerful medicine for your whole being." },
+  { "verse": "“The name of the Lord is a fortified tower; the righteous run to it and are safe.” — Proverbs 18:10", "motivation": "Run to God’s name and be safe." },
+  { "verse": "“Before a downfall the heart is haughty, but humility comes before honor.” — Proverbs 18:12", "motivation": "Humility paves the way to true honor." },
+  { "verse": "“Many are the plans in a person’s heart, but it is the Lord’s purpose that prevails.” — Proverbs 19:21", "motivation": "God’s purpose ultimately wins." },
+  { "verse": "“A person’s steps are directed by the Lord.” — Proverbs 20:24", "motivation": "Trust the Director of your steps." },
+  { "verse": "“Train up a child in the way he should go, and when he is old he will not turn from it.” — Proverbs 22:6", "motivation": "Invest in the next generation; it bears fruit." },
+  { "verse": "“Do not let your heart envy sinners, but always be zealous for the fear of the Lord.” — Proverbs 23:17", "motivation": "Zeal for God outshines envy of the wicked." },
+  { "verse": "“If you falter in a time of trouble, how small is your strength!” — Proverbs 24:10", "motivation": "Trouble reveals and builds strength." },
+  { "verse": "“Do not boast about tomorrow, for you do not know what a day may bring.” — Proverbs 27:1", "motivation": "Live today fully; tomorrow is not guaranteed." },
+  { "verse": "“Better is open rebuke than hidden love.” — Proverbs 27:5", "motivation": "Honest correction is better than silent affection." },
+  { "verse": "“The righteous are as bold as a lion.” — Proverbs 28:1", "motivation": "Righteousness produces holy boldness." },
+  { "verse": "“Where there is no revelation, people cast off restraint; but blessed is the one who heeds wisdom’s instruction.” — Proverbs 29:18", "motivation": "Vision and wisdom keep you on track." },
+  { "verse": "“There is a time for everything, and a season for every activity under the heavens.” — Ecclesiastes 3:1", "motivation": "Trust God’s timing for every season." },
+  { "verse": "“He has made everything beautiful in its time.” — Ecclesiastes 3:11", "motivation": "Beauty emerges in God’s perfect time." },
+  { "verse": "“Two are better than one, because they have a good return for their labor.” — Ecclesiastes 4:9", "motivation": "Community multiplies your strength." },
+  { "verse": "“A cord of three strands is not quickly broken.” — Ecclesiastes 4:12", "motivation": "God with you and others makes you unbreakable." },
+  { "verse": "“The sleep of a laborer is sweet.” — Ecclesiastes 5:12", "motivation": "Honest work brings peaceful rest." },
+  { "verse": "“A good name is better than fine perfume.” — Ecclesiastes 7:1", "motivation": "Your reputation and character outlast perfume." },
+  { "verse": "“Whoever fears God will avoid all extremes.” — Ecclesiastes 7:18", "motivation": "The fear of God keeps you balanced." },
+  { "verse": "“Cast your bread upon the waters, for after many days you will find it again.” — Ecclesiastes 11:1", "motivation": "Generosity comes back to you." },
+  { "verse": "“Remember your Creator in the days of your youth.” — Ecclesiastes 12:1", "motivation": "Start remembering God early; it shapes everything." },
+  { "verse": "“Now all has been heard; here is the conclusion: Fear God and keep his commandments, for this is the duty of all mankind.” — Ecclesiastes 12:13", "motivation": "The whole purpose of life is to fear God and obey." },
+  { "verse": "“I am my beloved’s and my beloved is mine.” — Song of Solomon 6:3", "motivation": "Mutual belonging reflects God’s love for you." },
+  { "verse": "“Many waters cannot quench love; rivers cannot sweep it away.” — Song of Solomon 8:7", "motivation": "God’s love is unquenchable and unstoppable." },
+  { "verse": "“Come now, let us settle the matter, says the Lord. Though your sins are like scarlet, they shall be as white as snow.” — Isaiah 1:18", "motivation": "God’s forgiveness makes you whiter than snow." },
+  { "verse": "“If you do not stand firm in your faith, you will not stand at all.” — Isaiah 7:9", "motivation": "Faith is the only foundation that holds." },
+  { "verse": "“For to us a child is born, to us a son is given, and the government will be on his shoulders.” — Isaiah 9:6", "motivation": "A Child is born—your Prince of Peace." },
+  { "verse": "“The Spirit of the Lord will rest on him—the Spirit of wisdom and of understanding.” — Isaiah 11:2", "motivation": "The same Spirit rests on you in Christ." },
+  { "verse": "“I will trust and not be afraid. The Lord, the Lord himself, is my strength and my defense.” — Isaiah 12:2", "motivation": "Trust cancels fear; God is your defense." },
+  { "verse": "“You will keep in perfect peace those whose minds are steadfast, because they trust in you.” — Isaiah 26:3", "motivation": "Steadfast trust yields perfect peace." },
+  { "verse": "“In repentance and rest is your salvation, in quietness and trust is your strength.” — Isaiah 30:15", "motivation": "Rest and trust are powerful, not passive." },
+  { "verse": "“Though the mountains be shaken and the hills be removed, yet my unfailing love for you will not be shaken.” — Isaiah 54:10", "motivation": "God’s love outlasts the mountains." },
+  { "verse": "“Seek the Lord while he may be found; call on him while he is near.” — Isaiah 55:6", "motivation": "Don’t delay—God is near right now." },
+  { "verse": "“My thoughts are not your thoughts, neither are your ways my ways, declares the Lord.” — Isaiah 55:8", "motivation": "God’s ways are higher and better." },
+  { "verse": "“So is my word that goes out from my mouth: It will not return to me empty.” — Isaiah 55:11", "motivation": "God’s word always accomplishes its purpose." },
+  { "verse": "“Arise, shine, for your light has come, and the glory of the Lord rises upon you.” — Isaiah 60:1", "motivation": "Your light has come—now rise and shine." },
+  { "verse": "“The Spirit of the Sovereign Lord is on me, because the Lord has anointed me to proclaim good news to the poor.” — Isaiah 61:1", "motivation": "You are anointed to bring good news." },
+  { "verse": "“I have swept away your offenses like a cloud, your sins like the morning mist.” — Isaiah 44:22", "motivation": "Your sins are gone—don’t go back to them." },
+  { "verse": "“Before I formed you in the womb I knew you, before you were born I set you apart.” — Jeremiah 1:5", "motivation": "God knew you before your first breath." },
+  { "verse": "“You will seek me and find me when you seek me with all your heart.” — Jeremiah 29:13", "motivation": "Wholehearted seeking always finds God." },
+  { "verse": "“I will put my law in their minds and write it on their hearts. I will be their God, and they will be my people.” — Jeremiah 31:33", "motivation": "God writes His ways on your heart." },
+  { "verse": "“Call to me and I will answer you and tell you great and unsearchable things you do not know.” — Jeremiah 33:3", "motivation": "Prayer unlocks mysteries you cannot imagine." },
+  { "verse": "“I will give you a new heart and put a new spirit in you.” — Ezekiel 36:26", "motivation": "God specializes in heart transplants." },
+  { "verse": "“I will put my Spirit in you and move you to follow my decrees.” — Ezekiel 36:27", "motivation": "The Spirit empowers you to obey." },
+  { "verse": "“These dry bones will live.” — Ezekiel 37:3", "motivation": "God can resurrect dead dreams." },
+  { "verse": "“The Lord is slow to anger, abounding in love.” — Jonah 4:2", "motivation": "God’s love is greater than His anger." },
+  { "verse": "“He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God.” — Micah 6:8", "motivation": "Justice, mercy, and humility sum up your duty." },
+  { "verse": "“The Lord is good, a refuge in times of trouble. He cares for those who trust in him.” — Nahum 1:7", "motivation": "God is good and cares for you." },
+  { "verse": "“The righteous will live by his faith.” — Habakkuk 2:4", "motivation": "Faith is the lifeblood of the righteous." },
+  { "verse": "“The Sovereign Lord is my strength; he makes my feet like the feet of a deer, he enables me to tread on the heights.” — Habakkuk 3:19", "motivation": "God gives you mountain-climbing feet." },
+  { "verse": "“The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in his love he will no longer rebuke you, but will rejoice over you with singing.” — Zephaniah 3:17", "motivation": "God sings over you with joy." },
+  { "verse": "“‘Not by might nor by power, but by my Spirit,’ says the Lord Almighty.” — Zechariah 4:6", "motivation": "The Spirit does what human strength cannot." },
+  { "verse": "“Return to me, and I will return to you,” says the Lord Almighty.” — Malachi 3:7", "motivation": "A single step toward God brings Him running to you." },
+  { "verse": "“She will give birth to a son, and you are to give him the name Jesus, because he will save his people from their sins.” — Matthew 1:21", "motivation": "Jesus came to save you from your sins." },
+  { "verse": "“Man shall not live on bread alone, but on every word that comes from the mouth of God.” — Matthew 4:4", "motivation": "God’s word is your essential food." },
+  { "verse": "“Blessed are the poor in spirit, for theirs is the kingdom of heaven.” — Matthew 5:3", "motivation": "Spiritual poverty opens heaven’s door." },
+  { "verse": "“Blessed are those who mourn, for they will be comforted.” — Matthew 5:4", "motivation": "God’s comfort meets you in grief." },
+  { "verse": "“Blessed are the meek, for they will inherit the earth.” — Matthew 5:5", "motivation": "Meekness is strength under God’s control." },
+  { "verse": "“Blessed are those who hunger and thirst for righteousness, for they will be filled.” — Matthew 5:6", "motivation": "Spiritual hunger guarantees satisfaction." },
+  { "verse": "“Blessed are the merciful, for they will be shown mercy.” — Matthew 5:7", "motivation": "Mercy flows to the merciful." },
+  { "verse": "“Blessed are the pure in heart, for they will see God.” — Matthew 5:8", "motivation": "Purity of heart gives vision of God." },
+  { "verse": "“Blessed are the peacemakers, for they will be called children of God.” — Matthew 5:9", "motivation": "Peacemaking reflects your Father’s heart." },
+  { "verse": "“Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.” — Matthew 5:10", "motivation": "Persecution cannot steal your kingdom." },
+  { "verse": "“You are the salt of the earth. You are the light of the world.” — Matthew 5:13-14", "motivation": "You bring flavor and light everywhere you go." },
+  { "verse": "“Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.” — Matthew 5:16", "motivation": "Shine so God gets the glory." },
+  { "verse": "“Seek first his kingdom and his righteousness, and all these things will be given to you as well.” — Matthew 6:33", "motivation": "First things first—God adds the rest." },
+  { "verse": "“Do not worry about tomorrow, for tomorrow will worry about itself.” — Matthew 6:34", "motivation": "Today’s grace is enough for today." },
+  { "verse": "“Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.” — Matthew 7:7", "motivation": "Ask, seek, knock—persistent prayer works." },
+  { "verse": "“So in everything, do to others what you would have them do to you.” — Matthew 7:12", "motivation": "The Golden Rule changes everything." },
+  { "verse": "“Come to me, all you who are weary and burdened, and I will give you rest.” — Matthew 11:28", "motivation": "Jesus invites the exhausted to true rest." },
+  { "verse": "“For my yoke is easy and my burden is light.” — Matthew 11:30", "motivation": "Walking with Jesus is not a heavy load." },
+  { "verse": "“For where two or three gather in my name, there am I with them.” — Matthew 18:20", "motivation": "Jesus shows up in your small gatherings." },
+  { "verse": "“The last will be first, and the first will be last.” — Matthew 20:16", "motivation": "God’s economy reverses human rankings." },
+  { "verse": "“Love the Lord your God with all your heart and with all your soul and with all your mind. Love your neighbor as yourself.” — Matthew 22:37-39", "motivation": "Love God, love others—everything else flows from this." },
+  { "verse": "“I am with you always, to the very end of the age.” — Matthew 28:20", "motivation": "Jesus promises His presence until the end." },
+  { "verse": "“The time has come, the kingdom of God has come near. Repent and believe the good news!” — Mark 1:15", "motivation": "Repentance and belief open the kingdom." },
+  { "verse": "“It is not the healthy who need a doctor, but the sick. I have not come to call the righteous, but sinners.” — Mark 2:17", "motivation": "Jesus came for you, especially in your sickness." },
+  { "verse": "“If a house is divided against itself, that house cannot stand.” — Mark 3:25", "motivation": "Unity is survival; division is destruction." },
+  { "verse": "“Everything is possible for one who believes.” — Mark 9:23", "motivation": "Belief unlocks the realm of possibility." },
+  { "verse": "“For even the Son of Man did not come to be served, but to serve, and to give his life as a ransom for many.” — Mark 10:45", "motivation": "Greatness is found in serving, not being served." },
+  { "verse": "“Have faith in God,” Jesus answered. — Mark 11:22", "motivation": "Faith in God moves mountains." },
+  { "verse": "“For my eyes have seen your salvation.” — Luke 2:30", "motivation": "Salvation is a person—Jesus." },
+  { "verse": "“Why are you looking for the living among the dead? He is not here; he has risen!” — Luke 24:5-6", "motivation": "The tomb is empty; your hope is alive." },
+  { "verse": "“The Word became flesh and made his dwelling among us.” — John 1:14", "motivation": "God moved into the neighborhood." },
+  { "verse": "“Look, the Lamb of God, who takes away the sin of the world!” — John 1:29", "motivation": "Jesus is your sin-removing Lamb." },
+  { "verse": "“You must be born again.” — John 3:7", "motivation": "A new birth leads to a new life." },
+  { "verse": "“For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.” — John 3:16", "motivation": "God’s love gave you the greatest gift." },
+  { "verse": "“Whoever drinks the water I give them will never thirst.” — John 4:14", "motivation": "Jesus satisfies your deepest thirst forever." },
+  { "verse": "“I am the bread of life. Whoever comes to me will never go hungry.” — John 6:35", "motivation": "Jesus is your eternal sustenance." },
+  { "verse": "“I am the light of the world. Whoever follows me will never walk in darkness.” — John 8:12", "motivation": "Following Jesus banishes darkness." },
+  { "verse": "“Then you will know the truth, and the truth will set you free.” — John 8:32", "motivation": "Truth is the key to freedom." },
+  { "verse": "“I am the gate; whoever enters through me will be saved.” — John 10:9", "motivation": "Jesus is your door to salvation." },
+  { "verse": "“I am the good shepherd. The good shepherd lays down his life for the sheep.” — John 10:11", "motivation": "Your Shepherd laid down His life for you." },
+  { "verse": "“I am the resurrection and the life. The one who believes in me will live, even though they die.” — John 11:25", "motivation": "Death is not the end for believers." },
+  { "verse": "“I am the way and the truth and the life. No one comes to the Father except through me.” — John 14:6", "motivation": "Jesus is the only way to the Father." },
+  { "verse": "“I will not leave you as orphans; I will come to you.” — John 14:18", "motivation": "You are never abandoned." },
+  { "verse": "“Peace I leave with you; my peace I give you.” — John 14:27", "motivation": "Jesus’ peace is a legacy gift." },
+  { "verse": "“I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit.” — John 15:5", "motivation": "Remaining in Jesus produces abundant fruit." },
+  { "verse": "“In this world you will have trouble. But take heart! I have overcome the world.” — John 16:33", "motivation": "Jesus’ victory overshadows your trouble." },
+  { "verse": "“Receive the Holy Spirit.” — John 20:22", "motivation": "The Spirit is God’s gift to empower you." },
+  { "verse": "“Blessed are those who have not seen and yet have believed.” — John 20:29", "motivation": "Your unseen faith is blessed." },
+  { "verse": "“But you will receive power when the Holy Spirit comes on you; and you will be my witnesses.” — Acts 1:8", "motivation": "The Spirit gives you power to witness." },
+  { "verse": "“Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved.” — Acts 4:12", "motivation": "Only Jesus saves." },
+  { "verse": "“We must obey God rather than human beings!” — Acts 5:29", "motivation": "Obedience to God is ultimate allegiance." },
+  { "verse": "“I see heaven open and the Son of Man standing at the right hand of God.” — Acts 7:56", "motivation": "Heaven is open; Jesus stands ready." },
+  { "verse": "“The Lord is near to all who call on him.” — Acts 17:27 (paraphrased from Paul’s speech)", "motivation": "God is never far from those who seek Him." },
+  { "verse": "“I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes.” — Romans 1:16", "motivation": "The gospel is God’s power, not mere words." },
+  { "verse": "“Since the creation of the world God’s invisible qualities—his eternal power and divine nature—have been clearly seen.” — Romans 1:20", "motivation": "Creation declares God’s majesty daily." },
+  { "verse": "“God’s kindness is intended to lead you to repentance.” — Romans 2:4", "motivation": "God’s kindness, not harshness, changes hearts." },
+  { "verse": "“All have sinned and fall short of the glory of God.” — Romans 3:23", "motivation": "No one is perfect; we all need grace." },
+  { "verse": "“All are justified freely by his grace through the redemption that came by Christ Jesus.” — Romans 3:24", "motivation": "Grace is free, not earned." },
+  { "verse": "“The righteous will live by faith.” — Romans 1:17", "motivation": "Faith is the rhythm of the righteous life." },
+  { "verse": "“While we were still sinners, Christ died for us.” — Romans 5:8", "motivation": "God loved you at your worst." },
+  { "verse": "“The wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.” — Romans 6:23", "motivation": "Eternal life is a gift, not a wage." },
+  { "verse": "“There is therefore now no condemnation for those who are in Christ Jesus.” — Romans 8:1", "motivation": "No condemnation—only freedom in Christ." },
+  { "verse": "“In all things God works for the good of those who love him.” — Romans 8:28", "motivation": "Every detail works for your good." },
+  { "verse": "“If God is for us, who can be against us?” — Romans 8:31", "motivation": "God’s support outweighs any opposition." },
+  { "verse": "“We are more than conquerors through him who loved us.” — Romans 8:37", "motivation": "More than conqueror—that’s your status." },
+  { "verse": "“Nothing can separate us from the love of God that is in Christ Jesus our Lord.” — Romans 8:39", "motivation": "God’s love is inseparable from you." },
+  { "verse": "“Faith comes from hearing the message, and the message is heard through the word about Christ.” — Romans 10:17", "motivation": "Hearing God’s word grows your faith." },
+  { "verse": "“Do not conform to the pattern of this world, but be transformed by the renewing of your mind.” — Romans 12:2", "motivation": "Transformation starts with a renewed mind." },
+  { "verse": "“Overcome evil with good.” — Romans 12:21", "motivation": "Good is the ultimate weapon against evil." },
+  { "verse": "“Let no debt remain outstanding, except the continuing debt to love one another.” — Romans 13:8", "motivation": "Love is a debt you never finish paying." },
+  { "verse": "“The kingdom of God is not a matter of eating and drinking, but of righteousness, peace and joy in the Holy Spirit.” — Romans 14:17", "motivation": "Righteousness, peace, and joy mark God’s kingdom." },
+  { "verse": "“I urge you, brothers and sisters, to watch out for those who cause divisions.” — Romans 16:17", "motivation": "Protect unity; avoid division." },
+  { "verse": "“God is faithful, who has called you into fellowship with his Son.” — 1 Corinthians 1:9", "motivation": "God’s faithfulness secures your calling." },
+  { "verse": "“Do you not know that you are God’s temple and that God’s Spirit dwells in you?” — 1 Corinthians 3:16", "motivation": "You are sacred ground—God lives in you." },
+  { "verse": "“I have become all things to all people so that by all possible means I might save some.” — 1 Corinthians 9:22", "motivation": "Adaptability serves the gospel." },
+  { "verse": "“No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear.” — 1 Corinthians 10:13", "motivation": "Every temptation comes with an escape route." },
+  { "verse": "“Whether you eat or drink or whatever you do, do it all for the glory of God.” — 1 Corinthians 10:31", "motivation": "Even ordinary acts can glorify God." },
+  { "verse": "“Love is patient, love is kind. It does not envy, it does not boast, it is not proud.” — 1 Corinthians 13:4", "motivation": "Love is the greatest character description." },
+  { "verse": "“These three remain: faith, hope and love. But the greatest of these is love.” — 1 Corinthians 13:13", "motivation": "Love outlasts faith and hope." },
+  { "verse": "“Be steadfast, immovable, always abounding in the work of the Lord.” — 1 Corinthians 15:58", "motivation": "Your work in the Lord is never futile." },
+  { "verse": "“Godly sorrow brings repentance that leads to salvation and leaves no regret.” — 2 Corinthians 7:10", "motivation": "Godly sorrow changes you without regret." },
+  { "verse": "“Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.” — 2 Corinthians 9:7", "motivation": "Cheerful giving delights God’s heart." },
+  { "verse": "“My grace is sufficient for you, for my power is made perfect in weakness.” — 2 Corinthians 12:9", "motivation": "Your weakness showcases God’s perfection." },
+  { "verse": "“I have been crucified with Christ and I no longer live, but Christ lives in me.” — Galatians 2:20", "motivation": "Your old self is gone; Christ lives in you." },
+  { "verse": "“The fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control.” — Galatians 5:22-23", "motivation": "The Spirit grows beautiful fruit in you." },
+  { "verse": "“Do not become weary in doing good, for at the proper time we will reap a harvest if we do not give up.” — Galatians 6:9", "motivation": "Don’t quit—harvest is coming." },
+  { "verse": "“It is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God.” — Ephesians 2:8", "motivation": "Salvation is a gift, not a wage." },
+  { "verse": "“We are God’s handiwork, created in Christ Jesus to do good works.” — Ephesians 2:10", "motivation": "You are God’s masterpiece with a purpose." },
+  { "verse": "“I pray that you, being rooted and established in love, may have power to grasp how wide and long and high and deep is the love of Christ.” — Ephesians 3:17-18", "motivation": "God’s love is immeasurably vast." },
+  { "verse": "“Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you.” — Ephesians 4:32", "motivation": "Forgive as you have been forgiven." },
+  { "verse": "“Be imitators of God, as dearly loved children.” — Ephesians 5:1", "motivation": "You are a beloved child—act like your Father." },
+  { "verse": "“Put on the full armor of God, so that you can take your stand against the devil’s schemes.” — Ephesians 6:11", "motivation": "God’s armor makes you stand firm." },
+  { "verse": "“He who began a good work in you will carry it on to completion.” — Philippians 1:6", "motivation": "God finishes what He starts in you." },
+  { "verse": "“To live is Christ and to die is gain.” — Philippians 1:21", "motivation": "Christ is your life; death is promotion." },
+  { "verse": "“Do everything without grumbling or arguing.” — Philippians 2:14", "motivation": "A grumble-free life shines like a star." },
+  { "verse": "“I consider everything a loss because of the surpassing worth of knowing Christ Jesus my Lord.” — Philippians 3:8", "motivation": "Knowing Christ outvalues everything else." },
+  { "verse": "“Rejoice in the Lord always. I will say it again: Rejoice!” — Philippians 4:4", "motivation": "Joy is a command, not a feeling." },
+  { "verse": "“Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.” — Philippians 4:6", "motivation": "Prayer replaces anxiety with peace." },
+  { "verse": "“The peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.” — Philippians 4:7", "motivation": "Supernatural peace guards your heart." },
+  { "verse": "“I can do all this through him who gives me strength.” — Philippians 4:13", "motivation": "Christ is your strength for everything." },
+  { "verse": "“My God will meet all your needs according to the riches of his glory in Christ Jesus.” — Philippians 4:19", "motivation": "God’s riches supply every need." },
+  { "verse": "“He has rescued us from the dominion of darkness and brought us into the kingdom of his beloved Son.” — Colossians 1:13", "motivation": "You have been transferred into light." },
+  { "verse": "“Set your minds on things above, not on earthly things.” — Colossians 3:2", "motivation": "Heavenly focus changes everything." },
+  { "verse": "“Clothe yourselves with compassion, kindness, humility, gentleness and patience.” — Colossians 3:12", "motivation": "These are your daily garments." },
+  { "verse": "“Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.” — Colossians 3:23", "motivation": "Work heartily for an audience of One." },
+  { "verse": "“In everything give thanks; for this is the will of God in Christ Jesus for you.” — 1 Thessalonians 5:18", "motivation": "Thanksgiving is God’s will for every situation." },
+  { "verse": "“May the Lord direct your hearts into God’s love and Christ’s perseverance.” — 2 Thessalonians 3:5", "motivation": "God directs your heart into love and endurance." },
+  { "verse": "“This is a trustworthy saying: Jesus Christ came into the world to save sinners—of whom I am the worst.” — 1 Timothy 1:15", "motivation": "If Jesus saves the worst, He can save you." },
+  { "verse": "“There is one God and one mediator between God and mankind, the man Christ Jesus.” — 1 Timothy 2:5", "motivation": "Jesus is your only mediator." },
+  { "verse": "“God did not give us a spirit of fear, but of power, love and self-discipline.” — 2 Timothy 1:7", "motivation": "Fear is not from God; power, love, and sound mind are." },
+  { "verse": "“If we are faithless, he remains faithful, for he cannot disown himself.” — 2 Timothy 2:13", "motivation": "God’s faithfulness does not depend on yours." },
+  { "verse": "“All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness.” — 2 Timothy 3:16", "motivation": "The Bible is your complete training manual." },
+  { "verse": "“I have fought the good fight, I have finished the race, I have kept the faith.” — 2 Timothy 4:7", "motivation": "Finish your race; keep the faith." },
+  { "verse": "“For the grace of God has appeared that offers salvation to all people.” — Titus 2:11", "motivation": "Grace is available to everyone." },
+  { "verse": "“He saved us, not because of righteous things we had done, but because of his mercy.” — Titus 3:5", "motivation": "Mercy, not merit, saved you." },
+  { "verse": "“The Word of God is living and active, sharper than any double-edged sword.” — Hebrews 4:12", "motivation": "God’s word pierces and heals." },
+  { "verse": "“Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.” — Hebrews 4:16", "motivation": "Boldly approach; mercy and grace await." },
+  { "verse": "“Faith is confidence in what we hope for and assurance about what we do not see.” — Hebrews 11:1", "motivation": "Faith sees the unseen and calls it real." },
+  { "verse": "“Without faith it is impossible to please God.” — Hebrews 11:6", "motivation": "Faith is the currency of heaven." },
+  { "verse": "“Let us run with perseverance the race marked out for us, fixing our eyes on Jesus.” — Hebrews 12:1-2", "motivation": "Keep your eyes on Jesus; run your race." },
+  { "verse": "“Jesus Christ is the same yesterday and today and forever.” — Hebrews 13:8", "motivation": "Jesus never changes—He is your constant." },
+  { "verse": "“Do not merely listen to the word, and so deceive yourselves. Do what it says.” — James 1:22", "motivation": "Be a doer of the word, not just a hearer." },
+  { "verse": "“Faith by itself, if it is not accompanied by action, is dead.” — James 2:17", "motivation": "Living faith moves and acts." },
+  { "verse": "“The tongue is a small part of the body, but it makes great boasts.” — James 3:5", "motivation": "Your words carry enormous power." },
+  { "verse": "“Submit yourselves, then, to God. Resist the devil, and he will flee from you.” — James 4:7", "motivation": "Resist the devil; he has to leave." },
+  { "verse": "“Come near to God and he will come near to you.” — James 4:8", "motivation": "One step toward God brings Him close." },
+  { "verse": "“You have not because you ask not.” — James 4:2", "motivation": "Ask—the door is open." },
+  { "verse": "“The prayer of a righteous person is powerful and effective.” — James 5:16", "motivation": "Your prayers have great power." },
+  { "verse": "“Whoever would love life and see good days must keep their tongue from evil and their lips from deceitful speech.” — 1 Peter 3:10", "motivation": "Good days start with good words." },
+  { "verse": "“Cast all your anxiety on him because he cares for you.” — 1 Peter 5:7", "motivation": "God cares—give Him your worries." },
+  { "verse": "“Be alert and of sober mind. Your enemy the devil prowls around like a roaring lion looking for someone to devour.” — 1 Peter 5:8", "motivation": "Stay alert; the enemy is real." },
+  { "verse": "“His divine power has given us everything we need for a godly life.” — 2 Peter 1:3", "motivation": "You lack nothing for godliness." },
+  { "verse": "“The Lord is not slow in keeping his promise, as some understand slowness. Instead he is patient with you.” — 2 Peter 3:9", "motivation": "God’s delay is patience, not neglect." },
+  { "verse": "“If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness.” — 1 John 1:9", "motivation": "Confession brings forgiveness and cleansing." },
+  { "verse": "“If anyone sins, we have an advocate with the Father—Jesus Christ, the Righteous One.” — 1 John 2:1", "motivation": "Jesus pleads your case before the Father." },
+  { "verse": "“Do not love the world or anything in the world. If anyone loves the world, love for the Father is not in them.” — 1 John 2:15", "motivation": "Loving the world crowds out love for God." },
+  { "verse": "“See what great love the Father has lavished on us, that we should be called children of God! And that is what we are!” — 1 John 3:1", "motivation": "You are truly a child of God." },
+  { "verse": "“Greater is he who is in you than he who is in the world.” — 1 John 4:4", "motivation": "The Spirit in you is greater than any opposition." },
+  { "verse": "“God is love. Whoever lives in love lives in God, and God in them.” — 1 John 4:16", "motivation": "Love is the atmosphere of God’s presence." },
+  { "verse": "“There is no fear in love. But perfect love drives out fear.” — 1 John 4:18", "motivation": "Perfect love expels every fear." },
+  { "verse": "“Everyone who believes that Jesus is the Christ is born of God.” — 1 John 5:1", "motivation": "Belief in Jesus marks you as born of God." },
+  { "verse": "“This is the victory that has overcome the world, even our faith.” — 1 John 5:4", "motivation": "Your faith is the winning edge." },
+  { "verse": "“Dear friend, I pray that you may enjoy good health and that all may go well with you, even as your soul is getting along well.” — 3 John 1:2", "motivation": "God cares about your total well-being." },
+  { "verse": "“Keep yourselves in God’s love as you wait for the mercy of our Lord Jesus Christ to bring you to eternal life.” — Jude 1:21", "motivation": "Stay anchored in God’s love while you wait." },
+  { "verse": "“Behold, I am coming soon! Blessed is the one who keeps the words of the prophecy of this book.” — Revelation 22:7", "motivation": "Jesus is coming—live in expectation." },
+  { "verse": "“I am the Alpha and the Omega, the First and the Last, the Beginning and the End.” — Revelation 22:13", "motivation": "Jesus starts and finishes everything." },
+  { "verse": "“They will see his face, and his name will be on their foreheads.” — Revelation 22:4", "motivation": "One day you will see His face." }
 ];
 const todayIdx = new Date().getDate() % dailyContent.length;
 document.getElementById('dailyVerseContent').innerHTML = dailyContent[todayIdx].verse;
 document.getElementById('dailyMotivation').innerHTML = `<i class="fas fa-lightbulb"></i> ${dailyContent[todayIdx].motivation}`;
 AOS.init({ duration: 800, once: true });
 
-// Live date/time
 function updateDateTimeDisplay() {
   const el = document.getElementById('liveDateTime');
   if (el) {
@@ -856,7 +1245,6 @@ function updateDateTimeDisplay() {
 updateDateTimeDisplay();
 setInterval(updateDateTimeDisplay, 1000);
 
-// =============== TRACKING SYSTEM ===============
 let trackingData = { pageViews: [], tabClicks: [], buttonClicks: [], sessions: [], countries: {} };
 function loadTrackingData() { const saved = localStorage.getItem("church_analytics"); if (saved) { try { const parsed = JSON.parse(saved); trackingData = { ...trackingData, ...parsed }; if (!trackingData.countries) trackingData.countries = {}; } catch(e) {} } }
 function saveTrackingData() { localStorage.setItem("church_analytics", JSON.stringify(trackingData)); }
@@ -878,10 +1266,8 @@ window.toggleAccordion = function(header) {
 window.toggleDifference = function() { const c = document.getElementById('differenceContent'); const i = document.getElementById('differenceIcon'); c.classList.toggle('show'); if (i) i.style.transform = c.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)'; if (c.classList.contains('show')) trackTabClick("The Difference We Need", "special"); };
 document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () => trackButtonClick(p.innerText)));
 document.querySelectorAll('[data-scroll]').forEach(l => l.addEventListener('click', () => trackButtonClick(`Nav: ${l.innerText}`)));
-document.querySelectorAll('.hero-buttons .btn').forEach(btn => btn.addEventListener('click', () => trackButtonClick(btn.innerText.trim())));
-document.getElementById('prayerForm')?.addEventListener('submit', () => trackButtonClick("Prayer Request Submitted"));
+document.getElementById('prayerForm')?.addEventListener('submit', (e) => { e.preventDefault(); let n = document.getElementById('prayerName').value.trim(); let r = document.getElementById('prayerRequest').value.trim(); if (n && r) { window.open(`https://wa.me/26876130566?text=Prayer%20from%20${encodeURIComponent(n)}%3A%20${encodeURIComponent(r)}`, '_blank'); alert('Opened in WhatsApp.'); e.target.reset(); } else alert('Fill all fields'); trackButtonClick("Prayer Request Submitted"); });
 
-// =============== ADMIN AUTH & DASHBOARD ===============
 let isAuthenticated = false;
 const DEFAULT_PASSWORD = "Mpolonjeni2026";
 function getAdminPassword() { return localStorage.getItem('admin_password') || DEFAULT_PASSWORD; }
@@ -962,7 +1348,6 @@ window.addEventListener('click', (e) => { const modal = document.getElementById(
 document.getElementById('backToTop')?.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
 document.getElementById('menuToggle')?.addEventListener('click', () => document.getElementById('navLinks').classList.toggle('active'));
 
-// =============== MEDIA GALLERY (filtered) ===============
 const galleryImages = [
   { directUrl: "https://i.ibb.co/b5LwQVhZ/1000128447.jpg" }, { directUrl: "https://i.ibb.co/VWbMNYs1/1000128483.jpg" }, { directUrl: "https://i.ibb.co/xKyj89gK/1000128485.jpg" }, { directUrl: "https://i.ibb.co/hRm7nfDt/1000128491.jpg" }, { directUrl: "https://i.ibb.co/Tqgh7SpG/1000128481.jpg" }, { directUrl: "https://i.ibb.co/k2RnpFjX/1000128499.jpg" }, { directUrl: "https://i.ibb.co/7tWmB2zs/1000128513.jpg" }, { directUrl: "https://i.ibb.co/mCLqdrsG/1000128514.jpg" }, { directUrl: "https://i.ibb.co/TMXHTp79/1000128348.jpg" }, { directUrl: "https://i.ibb.co/9kLd3Yr0/1000128385.jpg" }, { directUrl: "https://i.ibb.co/zVF2ZqKC/1000128381.jpg" }, { directUrl: "https://i.ibb.co/VcLb5bTK/1000128391.jpg" }, { directUrl: "https://i.ibb.co/21c61t4v/1000128352.jpg" }, { directUrl: "https://i.ibb.co/JwJBcCZh/1000128356.jpg" }, { directUrl: "https://i.ibb.co/6cN3ZRsm/1000128360.jpg" }, { directUrl: "https://i.ibb.co/zWXgdrz3/1000128374.jpg" }, { directUrl: "https://i.ibb.co/Zp9kpRLX/1000128387.jpg" }, { directUrl: "https://i.ibb.co/mF8B74GW/1000128389.jpg" }, { directUrl: "https://i.ibb.co/LXg2WspP/1000128393.jpg" }, { directUrl: "https://i.ibb.co/kgKhQv9P/1000128394.jpg" }, { directUrl: "https://i.ibb.co/SX4swNCT/1000128397.jpg" }, { directUrl: "https://i.ibb.co/3Yrvq6Zc/1000128403.jpg" }, { directUrl: "https://i.ibb.co/Ldv8v6yD/1000128407.jpg" }, { directUrl: "https://i.ibb.co/qMzJRjrY/1000128409.jpg" }, { directUrl: "https://i.ibb.co/h186FJKL/1000128411.jpg" }, { directUrl: "https://i.ibb.co/VWm6nMj9/1000128415.jpg" }, { directUrl: "https://i.ibb.co/j9rsCxTM/1000128417.jpg" }, { directUrl: "https://i.ibb.co/1t8YG1bM/1000128419.jpg" }, { directUrl: "https://i.ibb.co/PzFyYS6f/1000128421.jpg" }, { directUrl: "https://i.ibb.co/wryRVk6R/1000128425.jpg" }, { directUrl: "https://i.ibb.co/qFjvWGBR/1000128429.jpg" }, { directUrl: "https://i.ibb.co/zTN11KCG/1000128439.jpg" }, { directUrl: "https://i.ibb.co/hJQfrkS4/1000128443.jpg" }, { directUrl: "https://i.ibb.co/WvmgHcZw/1000128449.jpg" }, { directUrl: "https://i.ibb.co/Z67s8qwr/1000128451.jpg" }, { directUrl: "https://i.ibb.co/Xr9JkVHc/1000128453.jpg" }, { directUrl: "https://i.ibb.co/srkWD2c/1000128455.jpg" }, { directUrl: "https://i.ibb.co/7xLMJc8z/1000128457.jpg" }, { directUrl: "https://i.ibb.co/rRLYzz8p/1000128459.jpg" }, { directUrl: "https://i.ibb.co/BHRk2NWr/1000128461.jpg" }, { directUrl: "https://i.ibb.co/KQqBmdT/1000128463.jpg" }, { directUrl: "https://i.ibb.co/d0xdJp6w/1000128465.jpg" }, { directUrl: "https://i.ibb.co/60zhvkb0/1000128466.jpg" }
 ];
@@ -974,7 +1359,6 @@ function buildMediaGallery() {
 }
 document.addEventListener('DOMContentLoaded', buildMediaGallery);
 
-// =============== ACCORDION & SCROLL HANDLING ===============
 const sections = { prayer: document.getElementById('prayer-section'), calendar: document.getElementById('calendar-section'), vision: document.getElementById('vision-section'), media: document.getElementById('media-section'), archives: document.getElementById('archives-section') };
 function showSection(id, focusAccordionId) {
   Object.values(sections).forEach(s => s?.classList.remove('active-section'));
@@ -1028,14 +1412,13 @@ document.querySelectorAll('[data-scroll]').forEach(l => {
     else if (t === 'media') showSection('media', 'accordion-media');
     else if (t === 'archives') showSection('archives', 'accordion-archives');
     else if (t === 'history') showSection('vision', 'accordion-history');
-    else if (t === 'about') { const aboutSec = document.getElementById('about'); aboutSec.style.display = 'block'; aboutSec.scrollIntoView({ behavior: 'smooth' }); }
+    else if (t === 'about') { const aboutSec = document.getElementById('about'); aboutSec.style.display = 'block'; aboutSec.scrollIntoView({ behavior: 'smooth' }); trackButtonClick("About Us section"); }
     else if (t === 'prayer') showSection('prayer', 'accordion-prayer');
     else if (t === 'partner') showSection('prayer', 'accordion-prayer');
   });
 });
 
-// =============== EVENTS, CALENDAR, ACTIVITIES ===============
-const masterEvents = [ /* shortened for brevity but same as before */ 
+const masterEvents = [ 
   {title:"Youth Committee Meeting & Bible Study", date:"2026-05-03", group:"Youth"},{title:"Youth Camp - Kwaluseni", date:"2026-05-08", group:"Youth"},{title:"Sigungu (Social Engagement)", date:"2026-05-10", group:"Youth"},{title:"Team Building & Discipleship", date:"2026-05-16", group:"Youth"},{title:"Sigungu Service (LCB)", date:"2026-05-17", group:"Youth"},{title:"Discipleship & Praise Team Practice", date:"2026-05-23", group:"Youth"},{title:"Baptism Service & Holy Communion", date:"2026-05-24", group:"Church"},{title:"Month End Half Night & Fasting", date:"2026-05-29", group:"Prayer"},{title:"Discipleship & Practice", date:"2026-05-30", group:"Youth"},{title:"Youth Revivals + Youth Sunday", date:"2026-06-05", group:"Youth"},{title:"Discipleship Session", date:"2026-06-13", group:"Youth"},{title:"Lisango and Luguma", date:"2026-06-14", group:"Church"},{title:"Men's Weekend / Sports Day", date:"2026-06-19", group:"Men"},{title:"Month End Friday Prayer & Fasting", date:"2026-06-26", group:"Prayer"},{title:"Birthdays Celebration", date:"2026-06-27", group:"Fellowship"},{title:"Sigungu Service", date:"2026-06-28", group:"Youth"},{title:"Discipleship Training", date:"2026-07-04", group:"Youth"},{title:"Bible Study (Churchwide)", date:"2026-07-05", group:"Church"},{title:"Youth Empowerment", date:"2026-07-11", group:"Youth"},{title:"Team Building", date:"2026-07-18", group:"Youth"},{title:"Sigungu Service", date:"2026-07-19", group:"Youth"},{title:"Sports Day", date:"2026-07-25", group:"Youth"},{title:"Sigungu - Pastoral Team", date:"2026-07-26", group:"Church"},{title:"Soul Winning Outreach", date:"2026-08-01", group:"Evangelism"},{title:"Bible Study", date:"2026-08-02", group:"Church"},{title:"God's Chosen Generation Youth Camp", date:"2026-08-07", group:"Youth"},{title:"Soul Winning", date:"2026-08-15", group:"Evangelism"},{title:"Fasting Lesson", date:"2026-08-16", group:"Discipleship"},{title:"Evangelism Lesson", date:"2026-08-22", group:"Discipleship"},{title:"Evangelism Lesson (continued)", date:"2026-08-23", group:"Discipleship"},{title:"Mazwi Live Recording", date:"2026-08-28", group:"Worship"},{title:"YOUTH SUNDAY", date:"2026-08-30", group:"Youth"},{title:"Men's Half Night Prayers", date:"2026-03-27", group:"Men"},{title:"Men's Conference", date:"2026-06-19", group:"Men"},{title:"Home Visitation (Q1)", date:"2026-03-15", group:"Men"},{title:"Couples Outing", date:"2026-04-24", group:"Marriage"},{title:"Men's Soul Winning activity", date:"2026-01-01", group:"Men"},{title:"Give Food Hampers (Quarterly)", date:"2026-03-20", group:"Outreach"},{title:"Women's Home Visits", date:"2026-03-10", group:"Women"},{title:"Beginning of Year Prayer", date:"2026-02-07", group:"Women"},{title:"Women's Half Night Prayer", date:"2026-06-26", group:"Women"},{title:"Lesson on Building Healthy Families", date:"2026-05-16", group:"Women"},{title:"Women's Local Convention", date:"2026-08-28", group:"Women"},{title:"Women's Sunday", date:"2026-04-26", group:"Women"},{title:"Mother & Daughter Quarterly Lesson", date:"2026-03-21", group:"Women"},{title:"Pyjama Night", date:"2026-10-16", group:"Women"},{title:"Gift Exchange Among Ladies", date:"2026-12-18", group:"Women"},{title:"Crossover service", date:"2026-12-31", group:"Church"},{title:"Church Christmas Day", date:"2026-12-13", group:"Church"},{title:"Cooking Lessons (Monthly)", date:"2026-01-10", group:"Women"},{title:"Health Issues Lesson", date:"2026-05-20", group:"Women"},{title:"CHURCH REVIVAL", date:"2026-03-25", group:"Church"},{title:"OPEN AIR CRUSADE", date:"2026-04-18", group:"Evangelism"},{title:"HALF NIGHT PRAYER", date:"2026-03-20", group:"Prayer"},{title:"CHILDREN'S MINISTRY SUNDAY", date:"2026-06-21", group:"Church"},{title:"MEN'S CONVENTION", date:"2026-07-31", group:"Men"},{title:"YOUTH WEEKEND", date:"2026-08-27", group:"Youth"},{title:"WOMEN'S WEEKEND", date:"2026-09-25", group:"Women"},{title:"SUNDAY SCHOOL CAMP", date:"2026-10-16", group:"Church"},{title:"YOUTH LOCAL CAMP", date:"2026-11-20", group:"Youth"}
 ];
 function getGroupBadge(g) { let c = "group-badge "; if (g === "Youth") c += "youth"; else if (g === "Men") c += "men"; else if (g === "Women") c += "women"; else c += "church"; return `<span class="${c}">${g}</span>`; }
@@ -1047,7 +1430,6 @@ function expandAll() { document.querySelectorAll('.accordion-content').forEach(c
 document.getElementById('expandAllBtn')?.addEventListener('click', expandAll);
 document.getElementById('collapseAllBtn')?.addEventListener('click', closeAll);
 let act = false; document.getElementById('toggleActivitiesBtn')?.addEventListener('click', function () { let c = document.getElementById('activitiesContainer'); if (act) { c.style.display = 'none'; this.innerHTML = '📅 SHOW ALL ACTIVITIES'; } else { c.style.display = 'block'; renderActivitiesGrid(); this.innerHTML = '✖️ HIDE ACTIVITIES'; } act = !act; });
-document.getElementById('prayerForm')?.addEventListener('submit', (e) => { e.preventDefault(); let n = document.getElementById('prayerName').value.trim(); let r = document.getElementById('prayerRequest').value.trim(); if (n && r) { window.open(`https://wa.me/26876130566?text=Prayer%20from%20${encodeURIComponent(n)}%3A%20${encodeURIComponent(r)}`, '_blank'); alert('Opened in WhatsApp.'); e.target.reset(); } else alert('Fill all fields'); });
 renderUpcoming(); renderCalendar();
 </script>
 </body>

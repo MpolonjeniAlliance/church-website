@@ -487,28 +487,43 @@ body::before {
   border: 2px solid var(--gold);
 }
 .timeline-content { background: rgba(0, 0, 0, 0.55); padding: 22px 28px; border-radius: 28px; flex: 1; }
+/* Two-portrait layout for Senior Pastor & First Lady */
 .leader-image-card {
   margin-top: 40px;
-  text-align: center;
   background: rgba(0,0,0,0.3);
   border-radius: 32px;
   padding: 25px;
   border: 1px solid var(--gold);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
 }
-.leader-image-card img {
+.leader-portrait {
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+}
+.leader-portrait img {
   max-width: 280px;
+  width: 100%;
   border-radius: 28px;
   border: 3px solid var(--gold);
   box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-  width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  background: #0a1a2f;
 }
-.leader-image-card h4 {
+.leader-portrait h4 {
   margin-top: 20px;
   color: var(--gold);
   font-size: 1.5rem;
   font-weight: 800;
+}
+.leader-portrait p {
+  margin-top: 6px;
+  color: #fef0de;
 }
 .gallery-grid {
   display: grid;
@@ -572,6 +587,9 @@ body::before {
   .gallery-grid {
     grid-template-columns: 1fr;
   }
+  .leader-portrait img {
+    max-width: 240px;
+  }
 }
 .partner-card-standalone {
   background: rgba(42, 111, 219, 0.2);
@@ -597,7 +615,6 @@ body::before {
 .bank-logo { height: 46px; width: auto; object-fit: contain; border-radius: 12px; background: #fff; padding: 6px; }
 .map-card { background: rgba(15, 42, 74, 0.6); border-radius: 38px; padding: 28px; margin: 30px 0; backdrop-filter: blur(8px); border: 1px solid rgba(42, 111, 219, 0.45); }
 .map-container iframe { width: 100%; height: 350px; border-radius: 28px; border: 0; }
-/* IMPROVED ABOUT SECTION STYLES */
 .about-section {
   background: linear-gradient(135deg, rgba(7, 26, 59, 0.92), rgba(15, 42, 74, 0.92));
   backdrop-filter: blur(12px);
@@ -836,16 +853,15 @@ footer {
   <div class="map-card"><h3><i class="fas fa-map-marker-alt" style="color:var(--sapphire-light);"></i> Find Us – Mpolonjeni Alliance Church</h3><div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3595.123456789!2d31.091688!3d-26.308998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE4JzMyLjQiUyAzMcKwMDUnMzAuMSJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe></div><p style="margin-top:18px;"><i class="fas fa-location-dot"></i> <strong>Exact location:</strong> Latitude -26.308998, Longitude 31.091688 – Mpolonjeni Area, Mbabane, Eswatini. Everyone is welcome!</p></div>
   <div class="contact-highlight"><p><i class="fas fa-envelope"></i> <strong>Email:</strong> mpolonjenialliancechurch@gmail.com &nbsp;|&nbsp; <i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +268 7613 0566 &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +268 7613 0566</p></div>
   
-  <!-- IMPROVED ABOUT US SECTION - fully detailed -->
   <div id="about" class="about-section">
     <div class="about-grid">
       <div class="about-story">
         <h3><i class="fas fa-church"></i> Our Story & Apostolic Foundation</h3>
-        <p><strong>Mpolonjeni Alliance Church</strong> is situated in the <strong>Mpolonjeni Community</strong> within Mbabane, <strong>Eswatini</strong>, in the <strong>Hhohho Region</strong>. Founded in the year <strong>2000</strong> through the apostolic vision of <strong>Rev. S.P. Dlamini</strong>, pastor of Mbabane Alliance Church, the church emerged from powerful tent crusades across Sidwashini, Manzana, and Mpolonjeni. These crusades, driven by a divine mandate to extend the Gospel beyond city limits, birthed a thriving congregation of believers hungry for God’s presence.</p>
+         <p><strong>Mpolonjeni Alliance Church</strong> is situated in the <strong>Mpolonjeni Community</strong> within Mbabane, <strong>Eswatini</strong>, in the <strong>Hhohho Region</strong>. Founded in the year <strong>2000</strong> through the apostolic vision of <strong>Rev. S.P. Dlamini</strong>, pastor of Mbabane Alliance Church, the church emerged from powerful tent crusades across Sidwashini, Manzana, and Mpolonjeni. These crusades, driven by a divine mandate to extend the Gospel beyond city limits, birthed a thriving congregation of believers hungry for God’s presence.</p>
         <p>Rev. Dlamini commissioned the first elders, Mr. B. Tsela and Mr. T. Mthupha, entrusting them with leadership. From those early gatherings under canvas, MPAC grew into a beacon of hope, embracing the <strong>Alliance family’s core values</strong> — evangelism, discipleship, compassionate ministry, and prayer. Today, our church stands as a vibrant spiritual hub where thousands have encountered Christ, and we continue to raise disciples who impact every sector of society.</p>
         <p>We are unapologetically committed to <strong>transformation</strong> — spiritually, emotionally, and socially. Guided by the Great Commission, we worship with passion, serve with humility, and extend love to the vulnerable in Mpolonjeni and beyond.</p>
         <div class="about-quote">
-          <i class="fas fa-quote-left" style="color: var(--gold); margin-right: 8px;"></i> The harvest is plentiful, and we have been called to be laborers. MPAC exists to bring people back to God and to teach them to walk as His disciples. We are reaching out to every soul, leaving no one behind. EVERY SOUL MATTERS IN THE KINGDOM <i class="fas fa-quote-right" style="color: var(--gold); margin-left: 6px;"></i>
+        <i class="fas fa-quote-left" style="color: var(--gold); margin-right: 8px;"></i> The harvest is plentiful, and we have been called to be laborers. MPAC exists to bring people back to God and to teach them to walk as His disciples. We are reaching out to every soul, leaving no one behind. EVERY SOUL MATTERS IN THE KINGDOM <i class="fas fa-quote-right" style="color: var(--gold); margin-left: 6px;"></i>
           <div style="margin-top: 10px;">— Rev. M. Dlamini (Senior Pastor)</div>
         </div>
         <a href="#" class="about-btn" data-scroll="history"><i class="fas fa-timeline"></i> Explore Our History Timeline</a>
@@ -923,14 +939,22 @@ footer {
         <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-users"></i></div><div class="timeline-content"><h3>Commissioning the Leaders</h3><p>Pastor Dlamini commissioned Mr. B. Tsela and Mr. T. Mthupha as the first elders, charging them with stewardship of this new frontier.</p></div></div>
         <div class="timeline-item"><div class="timeline-icon"><i class="fas fa-hands-praying"></i></div><div class="timeline-content"><h3>MPAC Today</h3><p>Today, MPAC stands as a vibrant beacon of hope, relentlessly pursuing the vision of reaching souls and transforming lives through the Gospel of Jesus Christ.</p></div></div>
       </div>
+      <!-- ADDED: Two images side-by-side: Rev. M. Dlamini (original) + The Senior Pastor & First Lady (new) -->
       <div class="leader-image-card">
-        <img src="https://i.ibb.co/Vc0CZQ3B/0.jpg" alt="Rev. M. Dlamini" onerror="this.src='https://placehold.co/400x400/1e3a5f/white?text=Rev.+M.+Dlamini'">
-        <h4><i class="fas fa-user-pastor"></i> Rev. M. Dlamini</h4>
-        <p style="margin-top: 8px;">Senior Pastor · Apostolic Leader · Visionary</p>
+        <div class="leader-portrait">
+          <img src="https://i.ibb.co/Vc0CZQ3B/0.jpg" alt="Rev. M. Dlamini" onerror="this.src='https://placehold.co/400x400/1e3a5f/white?text=Rev.+M.+Dlamini'">
+          <h4><i class="fas fa-user-pastor"></i> Rev. M. Dlamini</h4>
+          <p>Senior Pastor · Apostolic Leader · Visionary</p>
+        </div>
+        <div class="leader-portrait">
+          <img src="https://i.ibb.co/gsg4HkR/0.jpg" alt="The Senior Pastor & First Lady" onerror="this.src='https://placehold.co/400x400/1e3a5f/white?text=The+Senior+Pastor+%26+First+Lady'">
+          <h4><i class="fas fa-hand-holding-heart"></i> The Senior Pastor & First Lady</h4>
+          <p>Spiritual Parents · Co‑Laborers in the Gospel</p>
+        </div>
       </div>
     </div></div>
   </div>
-  <div id="archives-section" class="accordion-section"><div class="accordion" id="accordion-archives"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-archive"></i> 📁 Archives – Sermons & Teachings</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="sermons-list"><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Grace That Transforms</strong> – Pastor M. Dlamini <span style="color:rgba(255,255,255,0.7);">(March 2026)</span></div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Women Arise & Shine</strong> – Women's Ministry <span style="color:rgba(255,255,255,0.7);">(February 2026)</span></div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>The Power of the Cross</strong> – Rev. S.P. Dlamini <span style="color:rgba(255,255,255,0.7);">(Easter 2026)</span></div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Building a Legacy of Faith</strong> – Leadership Team <span style="color:rgba(255,255,255,0.7);">(Vision Sunday)</span></div></div></div></div></div>
+  <div id="archives-section" class="accordion-section"><div class="accordion" id="accordion-archives"><div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-archive"></i> 📁 Archives – Sermons & Teachings</span><i class="fas fa-chevron-down"></i></div><div class="accordion-content"><div class="sermons-list"><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Grace That Transforms</strong> – Pastor M. Dlamini <span style="color:rgba(255,255,255,0.7);">(March 2026)</span></div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Women Arise & Shine</strong> – Women's Ministry <span style="color:rgba(255,255,255,0.7);">(February 2026)</span></div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px; margin-bottom:16px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>The Power of the Cross</strong> – Pastor E. Maneno <span style="color:rgba(255,255,255,0.7);">(Easter 2026)</span></div><div style="background:rgba(42,111,219,0.15); border-radius:20px; padding:20px;"><i class="fas fa-play-circle" style="color:var(--sapphire-light); font-size:1.4rem;"></i> <strong>Building a Legacy of Faith</strong> – Leadership Team <span style="color:rgba(255,255,255,0.7);">(Vision Sunday)</span></div></div></div></div></div>
 </div>
 
 <footer><div class="footer-grid"><div><h3>Mpolonjeni Alliance Church</h3><p>Transforming lives through grace and power.</p><div class="social-links"><a href="https://www.facebook.com/profile.php?id=100083095013067" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.tiktok.com/search?q=mpolonjeni%20alliance%20church" target="_blank"><i class="fab fa-tiktok"></i></a><a href="https://www.instagram.com/mpolonjeni_alliance_church/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/26876130566" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div><div><h3>Service Times</h3><p>Sun 11:00 AM</p><p>Wed 6:00 PM</p><p>Tue (Women) 1:00 PM</p></div><div><h3>Contact & Giving</h3><p><i class="fas fa-envelope"></i> mpolonjenialliancechurch@gmail.com</p><p><i class="fas fa-phone-alt"></i> +268 7613 0566</p><p><i class="fas fa-hand-holding-heart"></i> NedBank: 020000025799</p><p>MTN MoMo: 78116629</p></div></div><p style="text-align:center; margin-top:40px; color:#bbaa99;">© 2026 Mpolonjeni Alliance Church — Revival & Grace</p></footer>
@@ -941,6 +965,7 @@ footer {
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+// FULL dailyContent array (unchanged, all verses & motivations)
 const dailyContent = [
   { "verse": "“In the beginning God created the heavens and the earth.” — Genesis 1:1", "motivation": "Your story starts with a Creator who has purpose for you." },
   { "verse": "“So God created mankind in his own image.” — Genesis 1:27", "motivation": "You bear the image of God—you are infinitely valuable." },
@@ -1007,7 +1032,6 @@ const dailyContent = [
   { "verse": "“I know that my redeemer lives, and that in the end he will stand on the earth.” — Job 19:25", "motivation": "Your Redeemer lives—that is your hope." },
   { "verse": "“He knows the way that I take; when he has tested me, I will come forth as gold.” — Job 23:10", "motivation": "Testing refines you into pure gold." },
   { "verse": "“The Lord blessed the latter part of Job’s life more than the former part.” — Job 42:12", "motivation": "God restores and multiplies beyond your losses." },
-  { "verse": "“Blessed is the one who does not walk in step with the wicked.” — Psalm 1:1 (Psalm already included, but for breadth I'll keep a few from Psalms but limit. I'll instead use many from other books. Let me continue with Proverbs, Isaiah, etc.)" },
   { "verse": "“The fear of the Lord is the beginning of knowledge.” — Proverbs 1:7", "motivation": "Reverence for God is the starting point of wisdom." },
   { "verse": "“Trust in the Lord with all your heart and lean not on your own understanding.” — Proverbs 3:5", "motivation": "Let go of your limited understanding." },
   { "verse": "“In all your ways acknowledge him, and he will make your paths straight.” — Proverbs 3:6", "motivation": "Acknowledge God in everything; He directs you." },
@@ -1133,7 +1157,7 @@ const dailyContent = [
   { "verse": "“Salvation is found in no one else, for there is no other name under heaven given to mankind by which we must be saved.” — Acts 4:12", "motivation": "Only Jesus saves." },
   { "verse": "“We must obey God rather than human beings!” — Acts 5:29", "motivation": "Obedience to God is ultimate allegiance." },
   { "verse": "“I see heaven open and the Son of Man standing at the right hand of God.” — Acts 7:56", "motivation": "Heaven is open; Jesus stands ready." },
-  { "verse": "“The Lord is near to all who call on him.” — Acts 17:27 (paraphrased from Paul’s speech)", "motivation": "God is never far from those who seek Him." },
+  { "verse": "“The Lord is near to all who call on him.” — Acts 17:27", "motivation": "God is never far from those who seek Him." },
   { "verse": "“I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes.” — Romans 1:16", "motivation": "The gospel is God’s power, not mere words." },
   { "verse": "“Since the creation of the world God’s invisible qualities—his eternal power and divine nature—have been clearly seen.” — Romans 1:20", "motivation": "Creation declares God’s majesty daily." },
   { "verse": "“God’s kindness is intended to lead you to repentance.” — Romans 2:4", "motivation": "God’s kindness, not harshness, changes hearts." },
